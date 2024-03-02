@@ -10,6 +10,8 @@ function App() {
   return (
     <>
       <Navbar />
+      {/* <MainContent /> */}
+
       <Routes>
         <Route path="/" element={<MainContent />} > </Route>
         <Route path="/Projects" element={<Projects />} > </Route>
