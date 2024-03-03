@@ -1,26 +1,24 @@
-*{
+html {
   margin: 0;
   background: linear-gradient(45deg, #150c0c, #030321);
   color: white;
   font-family: "Kode Mono", monospace;
 }
-.company-logo{
-  height: 30px;
-}
 
 
-
-.navbar{
-
+.navbar {
   font-optical-sizing: auto;
   font-style: normal;
-
 }
 
-.box-card {
+.box-card >div{
+  font-family: "Poppins", sans-serif;
+}
+
+.box-card{
+
   border: 1px solid rgb(15, 20, 71);
   backdrop-filter: calc(20px);
-  background: rgb(7, 8, 16,.5);
+  background: rgb(7, 8, 16, 0.5);
   border-radius: 50px;
 }
-
