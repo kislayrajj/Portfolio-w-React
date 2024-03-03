@@ -24,7 +24,8 @@ const Projects = () => {
   });
 
   return (
-    <div className="flex justify-around m-2 pt-16 text-xs ">
+    
+    <div className=" w-full   flex flex-col gap-6 items-center  justify-around md:flex-row md:gap-1 md:items-start m-2 pt-16 text-xs ">
       <div
         className="box-card clock border-2 rounded-xl h-72 w-64 p-8 text-lg"
         dangerouslySetInnerHTML={{ __html: dateTime }}
@@ -59,14 +60,15 @@ const Projects = () => {
         </div></Link>
       <Link to="/ReactCard"><div className="box-card border-2 rounded-xl h-72 w-64">
         <img src={ReactCardThumb} alt="" className="" />
-        <div className=" p-2 pt-4  text-gray-300">•Business Card</div>
-          <div className="p-2 pt-0 text-gray-300">
-          •I built this simple version of the game while learnig React. <br />
+        <div className=" p-2 pt-4 pb-0 text-gray-300">•Business Card</div>
+          <div className="p-2 pt-0 pb-0 text-gray-300">
+          •Custom business card design using React for a personalized touch. <br />
             Click to view.
           </div>
-          <div className="pl-2 text-gray-300">•Language used - React & Tailwind CSS</div>
+          <div className="pl-2  text-gray-300">•Language used - React & Tailwind CSS</div>
         </div></Link>
     </div>
+   
   );
 };
 

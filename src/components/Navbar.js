@@ -9,7 +9,7 @@ const body = "Hello Kislay,";
   return (
     <div>
       
-      <nav className='navbar h-auto  flex justify-around p-3 bg-gradient-to-r from-dark-start to-dark-end'>
+      <nav className='navbar h-auto w-full flex justify-around p-3 bg-gradient-to-r from-dark-start to-dark-end'>
         <img src={Logo} alt='' class="company-logo h-12 object-cover"/>
         <div className='menu-1 m-2 '>
           <ul className='flex gap-10'>
