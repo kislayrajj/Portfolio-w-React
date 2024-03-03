@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Portfolio-w-React/static/css/main.bd2e3a14.css",
+    "main.js": "/Portfolio-w-React/static/js/main.1bea4bb7.js",
+    "static/js/453.acca0757.chunk.js": "/Portfolio-w-React/static/js/453.acca0757.chunk.js",
+    "static/media/portfolioWeb.png": "/Portfolio-w-React/static/media/portfolioWeb.6874074f9dd1f8141554.png",
+    "static/media/RockPaperScissor.png": "/Portfolio-w-React/static/media/RockPaperScissor.f8d973ea08212bbeb405.png",
+    "static/media/MAcard.png": "/Portfolio-w-React/static/media/MAcard.b2288a4f01d4ce8eb8ca.png",
+    "static/media/companylogo.png": "/Portfolio-w-React/static/media/companylogo.3091c8a657d2ac1aa58d.png",
+    "static/media/ReactCard-Thumb.png": "/Portfolio-w-React/static/media/ReactCard-Thumb.000c965040424dd42012.png",
+    "static/media/krmoon.jpg": "/Portfolio-w-React/static/media/krmoon.79cd1a11735d5cfb888f.jpg",
+    "index.html": "/Portfolio-w-React/index.html",
+    "main.bd2e3a14.css.map": "/Portfolio-w-React/static/css/main.bd2e3a14.css.map",
+    "main.1bea4bb7.js.map": "/Portfolio-w-React/static/js/main.1bea4bb7.js.map",
+    "453.acca0757.chunk.js.map": "/Portfolio-w-React/static/js/453.acca0757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd2e3a14.css",
+    "static/js/main.1bea4bb7.js"
+  ]
+}
