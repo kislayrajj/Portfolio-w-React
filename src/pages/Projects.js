@@ -24,7 +24,7 @@ const Projects = () => {
   });
 
   return (
-    <div className=" w-full  flex flex-wrap gap-6 items-center  justify-around md:flex-row md:gap-1 md:items-start m-2 pt-16 text-xs ">
+    <div className=" w-full box-border flex flex-wrap  gap-6 items-center  justify-around md:flex-row md:gap-1 md:items-start m-2 pt-16 text-xs ">
       <div
         className="box-card clock border-2 rounded-xl h-72 w-64 p-8 text-lg"
         dangerouslySetInnerHTML={{ __html: dateTime }}
