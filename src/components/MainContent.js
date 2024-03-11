@@ -19,13 +19,13 @@ const MainContent = () => {
             autoPlay
             muted
             loop
-            className="absolute  inset-0 object-cover w-full h-full z-[-1]"
+            className="absolute  inset-0 object-cover ml- w-full h-full z-[-1]"
           >
             <source src={bgVideo} type="video/mp4" />
           </video>
           <div className="sloga mt-32 md:mt-0">
             <h1
-              className=" text-8xl font-bold  "
+              className=" text-7xl m-2 md:text-8xl font-bold  "
               style={{
                 WebkitTextStroke: "2px white",
                 WebkitTextFillColor: isHovered ? "white" : "transparent",
