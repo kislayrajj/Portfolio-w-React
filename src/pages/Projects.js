@@ -29,12 +29,12 @@ const Projects = () => {
     initial ={{y:-2000}}
     animate ={{y:0}}
     transition={{duration:1}}
-      className=" w-full box-border flex flex-wrap  gap-6 items-center  justify-around md:flex-row md:gap-1 md:items-start m-2 pt-16 text-xs
+      className=" w-full box-border flex flex-wrap  gap-6 items-center  justify-around md:flex-row md:gap-1 md:items-start  pt-32 text-xs
     
    "
     >
       <div
-        className="box-card clock border-2 rounded-xl h-72 w-64 p-8 text-lg"
+        className="box-card clock border-2 rounded-xl h-72 w-64 p-8 text-xl"
         dangerouslySetInnerHTML={{ __html: dateTime }}
       ></div>
       <Link

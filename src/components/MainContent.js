@@ -7,6 +7,7 @@ import cssLogo from "../assests/csspng.png";
 import jsLogo from "../assests/jspng.png";
 import reactLogo from "../assests/reactpng.png";
 import tailwindLogo from "../assests/tailwindpng.png";
+import About from './About'
 const MainContent = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -22,9 +23,9 @@ const MainContent = () => {
           >
             <source src={bgVideo} type="video/mp4" />
           </video>
-          <div className="sloga ">
+          <div className="sloga mt-32 md:mt-0">
             <h1
-              className=" text-8xl font-bold "
+              className=" text-8xl font-bold  "
               style={{
                 WebkitTextStroke: "2px white",
                 WebkitTextFillColor: isHovered ? "white" : "transparent",
@@ -37,7 +38,9 @@ const MainContent = () => {
           </div>
         </div>
       </div>
-
+<div>
+  <About />
+</div>
       <div className="flex  flex-wrap justify-around pt-12 h-screen">
         <Skills
           image={htmlLogo}

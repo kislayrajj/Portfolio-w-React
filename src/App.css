@@ -10,9 +10,13 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
   font-family: "Kode Mono", monospace;
+  backdrop-filter: blur(3px);
   
 }
 
+.clock{
+  font-family: "Kode Mono", monospace;
+}
 .main-component{
   font-family: "Kode Mono", monospace;
 }
@@ -28,7 +32,6 @@ html {
   border-radius: 50px;
 }
 
-/* .slogan{
-  -webkit-text-stroke: 3px red;
-  -webkit-text-fill-color: white;
-} */
+.about{
+  background-image: linear-gradient(to top, #e40fab, #9536a2, #4e3885, #192b59, #091828);
+}

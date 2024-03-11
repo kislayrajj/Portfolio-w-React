@@ -6,7 +6,7 @@ const Skills = ({image,title,disc,bg}) => {
     let logoBg=bg
   return (
     
-    <div className='h-96 text-black bg-white/100  w-64  rounded-lg relative border-b-4 hover:border-b-green-600 hover:scale-105 transition-transform duration-700 shadow-2xl overflow-hidden'> 
+    <div className='h-96 text-black bg-white/100  w-64  rounded-lg relative border-b-4 hover:border-b-green-600 hover:scale-105 transition-transform duration-700 shadow-2xl overflow-hidden m-2'> 
       <div className={`${logoBg} h-1/2 flex justify-center rounded-t-lg rounded-br-[100px] shadow-2xl hover:scale-110 transition-transform duration-700`} >
         <img src={image} alt="" className='h-32 mt-4 backdrop-blur-[1px] '/> </div>
       <div className="title text-center text-xl font-bold p-2 pb-1">

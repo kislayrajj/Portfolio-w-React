@@ -9,14 +9,13 @@ function App() {
   return (
     <div className="Main">
       <div className="relative">
-        <Navbar />
+       <Navbar />
       </div>
+     
       <Routes>
         <Route path="/" element={<MainContent />}>
-          {" "}
         </Route>
         <Route path="/Projects" element={<Projects />}>
-          {" "}
         </Route>
         <Route path="/ReactCard" element={<ReactCard />}></Route>
       </Routes>
