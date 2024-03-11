@@ -106,7 +106,8 @@ const Projects = () => {
           </div>
         </div>
       </Link>
-      <Link to="/ReactCard">
+      <a href="https://react-business-card-wheat.vercel.app/"
+      target="_blanck">
         <div
           className="box-card border-2 rounded-xl h-72 w-64
         
@@ -127,7 +128,7 @@ const Projects = () => {
             •Language used - React & Tailwind CSS
           </div>
         </div>
-      </Link>
+      </a>
     </motion.div>
   );
 };

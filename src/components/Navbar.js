@@ -15,14 +15,14 @@ const Navbar = () => {
       .catch((error) => console.error("Error downloading file:", error));
   };
   let [IsBurger, setIsBurger] = useState(false);
-  // let [IsBurgerOpen, setIsBurgerOpen]= useState(false);
+
   const handleMenuClick = () => {
     setIsBurger(false); //close the menu
   };
 
   return (
     <div>
-      <nav className="navbar h-auto w-screen flex justify-around p-3 fixed  z-10 rela\">
+      <nav className="navbar h-auto w-screen flex justify-around p-3 fixed  z-10 ">
         <img
           src={Logo}
           alt=""

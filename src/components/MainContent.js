@@ -41,7 +41,7 @@ const MainContent = () => {
 <div>
   <About />
 </div>
-      <div className="flex  flex-wrap justify-around pt-12 h-screen">
+      <div className=" skills flex  flex-wrap justify-around pt-12 h-screen">
         <Skills
           image={htmlLogo}
           bg="bg-gradient-to-r from-purple-600 to-yellow-300"
