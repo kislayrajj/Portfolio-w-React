@@ -113,7 +113,7 @@ const Projects = () => {
         opacity-90 hover:opacity-100 transition-opacity duration-300
         hover:border-b-green-500 relative"
         >
-          <img src={ReactCardThumb} alt="" className="" />
+          <img src={ReactCardThumb} alt="" className="rounded-t-lg" />
           <div className="flex  items-center justify-center absolute top-0  border-1 rounded-t-xl  h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
           <i class="fa-brands fa-github   mt-24 pr-3 text-3xl text-green-500 "></i>
           </div>
