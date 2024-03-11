@@ -42,8 +42,8 @@ const Projects = () => {
         target="_blank"
       >
         
-        <div className="box-card border-2 rounded-xl  h-72 w-64 opacity-90 hover:opacity-100 transition-opacity duration-300 hover:border-b-green-500  relative">
-          <img src={MAcard} alt="" className="h-44 flex pl-16  rounded-lg " />
+        <div className="box-card border-2 rounded-xl  h-72 w-64 opacity-90 hover:opacity-100 transition-opacity duration-300 hover:border-b-green-500 overflow-hidden  relative">
+          <img src={MAcard} alt="" className="h-44 flex pl-16  rounded-xl " />
           <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl border-transparent h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
           <i class="fa-brands fa-github   mt-24 pr-3 text-3xl text-green-500 "></i>
           </div>
@@ -60,10 +60,10 @@ const Projects = () => {
           className="box-card border-2 rounded-xl h-80 w-72 
         
         opacity-90 hover:opacity-100 transition-opacity duration-300
-        hover:border-b-green-500 relative
+        hover:border-b-green-500  overflow-hidden   relative
         "
         >
-          <img src={PortfThumb} alt="" className=" object-fill rounded-t-lg " />
+          <img src={PortfThumb} alt="" className=" object-fill rounded-t-xl " />
           <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl  h-40 w-72 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
           <i class="fa-brands fa-github   mt-24 pr-4 text-4xl text-green-500 "></i>
           </div>
@@ -86,10 +86,10 @@ const Projects = () => {
       >
         <div
           className="box-card border-2 rounded-xl h-72 w-64
-         opacity-90 hover:opacity-100 transition-opacity duration-300 hover:border-b-green-500 relative
+         opacity-90 hover:opacity-100 transition-opacity duration-300 hover:border-b-green-500  overflow-hidden   relative
         "
         >
-          <img src={RockPaperScissor} alt="" className="rounded-t-lg" />
+          <img src={RockPaperScissor} alt="" className="rounded-t-xl" />
           <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl border-transparent h-40 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
           <i class="fa-brands fa-github   mt-24 pr-3 text-3xl text-green-500 "></i>
           </div>
@@ -111,9 +111,9 @@ const Projects = () => {
           className="box-card border-2 rounded-xl h-72 w-64
         
         opacity-90 hover:opacity-100 transition-opacity duration-300
-        hover:border-b-green-500 relative"
+        hover:border-b-green-500  overflow-hidden   relative"
         >
-          <img src={ReactCardThumb} alt="" className="rounded-t-lg" />
+          <img src={ReactCardThumb} alt="" className="rounded-t-xl" />
           <div className="flex  items-center justify-center absolute top-0  border-1 rounded-t-xl  h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
           <i class="fa-brands fa-github   mt-24 pr-3 text-3xl text-green-500 "></i>
           </div>
