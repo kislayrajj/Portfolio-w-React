@@ -23,14 +23,14 @@ const MainContent = () => {
     <div>
       <div>
         <div className="main-component flex  justify-around items-center  w-full h-screen">
-          {/* <video
+          <video
             autoPlay
             muted
             loop
             className="absolute  inset-0 object-cover ml- w-full h-full z-[-1]"
           >
             <source src={bgVideo} type="video/mp4" />
-          </video> */}
+          </video>
           <div className="sloga mt-32 md:mt-0">
             <h1
               className=" text-7xl m-2 md:text-8xl font-bold  "
