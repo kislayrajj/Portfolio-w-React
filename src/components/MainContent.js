@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import bgVideo from "../assests/bgPortfolio.mp4";
 import Skills from "./Skills";
 import htmlLogo from "../assests/htmlpng.png";
@@ -15,14 +15,50 @@ import thumbVideobg3 from '../assests/ux-designer.mp4'
 import thumbVideobg4 from '../assests/texhnical-experties.mp4'
 import thumbVideobg5 from '../assests/digital-marketing.mp4'
 import thumbVideobg6 from '../assests/thumbnail-of-maintenance.mp4'
-
+import {motion} from "framer-motion"
 const MainContent = () => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const aboutRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false); 
+
+const aboutContentMotion = {
+  initial: { opacity: 0, y: 300 },
+  animate: { 
+    opacity: isVisible ? 1 : 0, // Control animation based on visibility
+    y: isVisible ? 0 : 300,
+    transition: {  
+      duration: 1.5,
+      delay: .5,
+      type: 'spring', // You can use different types of transitions like spring
+      damping: 10, // Adjust the damping for a smoother animation
+    } 
+  } 
+};
+
+  
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const [entry] = entries; 
+      setIsVisible(entry.isIntersecting); 
+    }, { threshold:.1 }); 
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
   return (
     <div>
       <div>
-        <div className="main-component flex  justify-around items-center  w-full h-screen">
+        <div id="home" className="main-component flex  justify-around items-center  w-full h-screen">
           <video
             autoPlay
             muted
@@ -46,17 +82,21 @@ const MainContent = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className=" about h-auto w-full text-gray-700 p-5  ">
+      <div  id="about" className="scroll-m-12" ref={aboutRef}>
+        <div  className=" about h-auto w-full text-gray-700 p-5 ">
           <h1 className=" bg-gradient-to-r from-red-500 via-blue-500 to-black text-transparent bg-clip-text font-extrabold text-3xl ">What we do :</h1>
-          <p className=" md:w-1/2 3/4 m-2  text-xs md:text-base text-gray-700">
+          <p className=" md:w-1/2 3/4 m-2  text-xs md:text-base text-white">
             At DevStudio, we specialize in delivering top-notch web development
             solutions tailored to meet your unique needs. With our expert team
             of developers, designers, and strategists, we offer a comprehensive
             range of services to help you succeed online. Here's what we can do
             for you:
           </p>
-          <div className="Boxes m-10 flex flex-wrap justify-between gap-2 ">
+          <motion.div
+          variants={aboutContentMotion}
+         initial="initial"
+          animate="animate"        
+          className="Boxes m-10 flex flex-wrap justify-between gap-5 scroll-smooth ">
           <About 
           thumbVideo={thumbVideobg}
           snumber="01"
@@ -108,7 +148,7 @@ const MainContent = () => {
               ListTwo="Performance Monitoring"
         
            />
-        </div>
+        </motion.div>
         </div>
      
       </div>

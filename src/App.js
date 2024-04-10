@@ -6,7 +6,7 @@ import Projects from "./pages/Projects.js";
 
 function App() {
   return (
-    <div className="Main">
+    <div className="Main scroll-smooth">
       <div className="relative">
        <Navbar />
       </div>

@@ -3,7 +3,7 @@ import React from 'react'
 const About = ({ thumbVideo, service, ListOne, ListTwo, ListThree, snumber}) => {
   return (
       <div
-       className='webdev  border-2 flex justify-between flex-grow p-2  sm:w-1/3 md:max-w-[500px]  h-auto md:min-h-72 relative  text-white/90  rounded-md overflow-hidden'>
+       className='webdev  border-2 flex justify-between flex-grow p-2  sm:w-1/3 md:max-w-[450px]  h-auto md:min-h-72 relative  text-white/90  rounded-md overflow-hidden bg-black/30 '>
 <div>
 <div className='  font-bold text-md md:text-xl tracking-wider pl-2'>{service}
           </div>

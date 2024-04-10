@@ -7,10 +7,9 @@ html {
 
 
 .navbar {
-  font-optical-sizing: auto;
-  font-style: normal;
   font-family: "Kode Mono", monospace;
   backdrop-filter: blur(3px);
+
 }
 
 .clock{
@@ -32,17 +31,11 @@ html {
 }
 
 .about{
-  background-image: linear-gradient(to top, #110b0f, #291728, #3d2247, #4a316b, #4c4394, #475bb3, #3774d0, #008ded, #00acfb, #00c9fd, #00e3f8, #5ffbf1);
+  background-image: linear-gradient(to left bottom, #000000, #080407, #0e090f, #100e16, #0f131b, #111922, #111f2a, #102531, #132f3e, #15394c, #17435a, #194e69);
+  /* background-image: linear-gradient(to top, #110b0f, #291728, #3d2247, #4a316b, #4c4394, #475bb3, #3774d0, #008ded, #00acfb, #00c9fd, #00e3f8, #5ffbf1); */
 }
 .skills{
   background-image: linear-gradient(67.5deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(90deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(135deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(0deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(90deg, rgb(8, 8, 8),rgb(221, 221, 221)); background-blend-mode:overlay,overlay,overlay,overlay,normal;
   height: 100%;
 }
 
-.what-we-do {
-  background: #959595;
-  background: linear-gradient(to right, #959595 0%, #0D0D0D 46%, #010101 50%, #0A0A0A 53%, #4E4E4E 76%, #383838 87%, #1B1B1B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-}
