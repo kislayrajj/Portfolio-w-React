@@ -39,7 +39,9 @@ const Projects = () => {
           target="_blank">
           <div className="box-card border-2 rounded-xl  h-72 w-64 opacity-90 hover:opacity-100 transition-opacity duration-300 hover:border-b-green-500 overflow-hidden  relative">
             <img src={MAcard} alt="" className="h-44 flex pl-16  rounded-xl " />
+           
             <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl border-transparent h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute hover:scale-105 ease-in-out duration-500 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
               <a
                 href="https://github.com/kislayrajj/DynamicCard-html-css"
                 target="_blank">
@@ -73,6 +75,7 @@ const Projects = () => {
               className=" object-fill rounded-t-xl "
             />
             <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl  h-40 w-72 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
               <a
                 href="https://github.com/kislayrajj/DevMen-Portfolio"
                 target="_blank">
@@ -101,6 +104,7 @@ const Projects = () => {
         ">
             <img src={RockPaperScissor} alt="" className="rounded-t-xl" />
             <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl border-transparent h-40 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
               <a
                 href="https://github.com/kislayrajj/Rock-Paper-Scissor "
                 target="_blank">
@@ -130,6 +134,7 @@ const Projects = () => {
         hover:border-b-green-500  overflow-hidden   relative">
             <img src={ReactCardThumb} alt="" className="rounded-t-xl" />
             <div className="flex  items-center justify-center absolute top-0  border-1 rounded-t-xl  h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
               <a
                 href="https://github.com/kislayrajj/React-BusinessCard"
                 target="_blank">
@@ -161,7 +166,8 @@ const Projects = () => {
               className="h-44 w-full  rounded-xl "
             />
             <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl border-transparent h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <a
+            <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
+               <a
                 href="https://github.com/kislayrajj/CalculatorUsingReact"
                 target="_blank">
                 <i class="fa-brands fa-github   mt-24 pr-3 text-3xl text-green-500 hover:text-black hover:scale-125 transition-all duration-300 "></i>
@@ -183,6 +189,7 @@ const Projects = () => {
           <div className="box-card border-2 rounded-xl  h-72 w-64 opacity-90 hover:opacity-100 transition-opacity duration-300 hover:border-b-green-500 overflow-hidden  relative">
             <img src={MAcard} alt="" className="h-44 flex pl-16  rounded-xl " />
             <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl border-transparent h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
               <a
                 href="https://github.com/kislayrajj/CalculatorUsingReact"
                 target="_blank">
@@ -216,6 +223,7 @@ const Projects = () => {
               className=" object-fill rounded-t-xl "
             />
             <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl  h-40 w-72 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
               <a
                 href="https://github.com/kislayrajj/CalculatorUsingReact"
                 target="_blank">
@@ -244,6 +252,7 @@ const Projects = () => {
         ">
             <img src={RockPaperScissor} alt="" className="rounded-t-xl" />
             <div className="flex items-center justify-center absolute top-0  border-1 rounded-t-xl border-transparent h-40 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
               <a
                 href="https://github.com/kislayrajj/CalculatorUsingReact"
                 target="_blank">
@@ -273,12 +282,13 @@ const Projects = () => {
         hover:border-b-green-500  overflow-hidden   relative">
             <img src={ReactCardThumb} alt="" className="rounded-t-xl" />
             <div className="flex  items-center justify-center absolute top-0  border-1 rounded-t-xl  h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
-              {" "}
-              <a
+          
+              <span className="absolute hover:scale-105 ease-in-out duration-400 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">Click To See Demo</span>
+                <a
                 href="https://github.com/kislayrajj/CalculatorUsingReact"
                 target="_blank">
                 <i class="fa-brands fa-github   mt-24 pr-3 text-3xl text-green-500 hover:text-black hover:scale-125 transition-all duration-300 "></i>
-              </a>{" "}
+              </a>
             </div>
             <div className=" p-2 pt-4 pb-0 text-gray-300">•Business Card</div>
             <div className="p-2 pt-0 pb-0 text-gray-300">

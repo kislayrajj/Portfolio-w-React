@@ -4,8 +4,17 @@ import { Link } from 'react-router-dom'
 
 const Skills = ({image,title,disc,bg}) => {
     let logoBg=bg
+    const settings = {
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: "linear"
+    };
   return (
-    
     <div className='h-52 lg:h-96 text-black bg-white/100 w-32 lg:w-64  rounded-lg relative border-b-4 hover:border-b-green-600 hover:scale-105 transition-transform duration-700 shadow-2xl overflow-hidden m-2'> 
       <div className={`${logoBg} h-1/2 flex justify-center rounded-t-lg rounded-br-[20px] lg:rounded-br-[100px] shadow-2xl hover:scale-110 transition-transform duration-700 p-1 lg:p-0`} >
         <img src={image} alt="" className='lg:h-32 mt-4 backdrop-blur-[1px] '/> </div>
@@ -21,6 +30,7 @@ const Skills = ({image,title,disc,bg}) => {
       </div>
      
     </div>
+
   )
 }
 

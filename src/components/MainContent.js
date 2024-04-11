@@ -16,6 +16,19 @@ import thumbVideobg4 from '../assests/texhnical-experties.mp4'
 import thumbVideobg5 from '../assests/digital-marketing.mp4'
 import thumbVideobg6 from '../assests/thumbnail-of-maintenance.mp4'
 import {motion} from "framer-motion"
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+
 const MainContent = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -55,6 +68,7 @@ const aboutContentMotion = {
       }
     };
   }, []);
+
   return (
     <div>
       <div>
@@ -85,7 +99,7 @@ const aboutContentMotion = {
       <div  id="about" className="scroll-m-12" ref={aboutRef}>
         <div  className=" about h-auto w-full text-gray-700 p-5 ">
           <h1 className=" bg-gradient-to-r from-red-500 via-blue-500 to-black text-transparent bg-clip-text font-extrabold text-3xl ">What we do :</h1>
-          <p className=" md:w-1/2 3/4 m-2  text-xs md:text-base text-white">
+          <p className=" md:w-3/4 3/4 m-2 font-light  text-xs md:text-sm text-white">
             At DevStudio, we specialize in delivering top-notch web development
             solutions tailored to meet your unique needs. With our expert team
             of developers, designers, and strategists, we offer a comprehensive
@@ -96,7 +110,7 @@ const aboutContentMotion = {
           variants={aboutContentMotion}
          initial="initial"
           animate="animate"        
-          className="Boxes m-10 flex flex-wrap justify-between gap-5 scroll-smooth ">
+          className="  Boxes m-10 flex flex-wrap justify-between gap-5 scroll-smooth ">
           <About 
           thumbVideo={thumbVideobg}
           snumber="01"
@@ -152,38 +166,62 @@ const aboutContentMotion = {
         </div>
      
       </div>
-      <div className=" skills flex  flex-wrap justify-around pt-12 h-screen">
+
+      <div className=" skills flex  flex-wrap justify-around pt-12 h-screen ">
+     <div className="w-[80%]"> <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'4'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier:1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
         <Skills
           image={htmlLogo}
           bg="bg-gradient-to-r from-purple-600 to-yellow-300"
           title="HTML"
           disc="Proficient in HTML for web development, creating structured and semantic content."
-        />
+        /></SwiperSlide>
+        <SwiperSlide>
         <Skills
           image={cssLogo}
           title="CSS"
           disc="Skilled in styling web, layout elements,, and responsiveness  for visually appealing designs."
           bg="bg-gradient-to-br from-blue-600 to-pink-500"
         />
-
+</SwiperSlide>
+<SwiperSlide>
         <Skills
           image={jsLogo}
           title="JavaScript"
           disc="Competent in JavaScript for interactive and dynamic web development."
           bg="bg-gradient-to-br from-pink-600 to-black"
         />
+        </SwiperSlide>
+        <SwiperSlide>
         <Skills
           image={reactLogo}
           title="React.js"
           disc="Experienced in building UI components for modern web applications."
           bg="bg-gradient-to-tr from-blue-500 via-indigo-400 to-purple-300"
-        />
+        /></SwiperSlide><SwiperSlide>
         <Skills
           image={tailwindLogo}
           title="Tailwind"
           disc=" Skilled in leveraging Tailwind utility-first CSS framework CSS for highly efficient styling"
           bg="bg-gradient-to-tr from-blue-900 via-blue-600 to-green-400"
-        />
+        /></SwiperSlide>
+   </Swiper>
+   </div>
       </div>
     </div>
   );
