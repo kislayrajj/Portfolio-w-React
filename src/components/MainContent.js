@@ -7,9 +7,9 @@ import cssLogo from "../assests/csspng.png";
 import jsLogo from "../assests/jspng.png";
 import reactLogo from "../assests/reactpng.png";
 import tailwindLogo from "../assests/tailwindpng.png";
-import jaqueryLogo from "../assests/jqueryblack.png"
-import jiraLogo from "../assests/jiraLogo.png"
-import gitLogo from "../assests/Git-Icon-Black.png"
+import jaqueryLogo from "../assests/jqueryblack.png";
+import jiraLogo from "../assests/jiraLogo.png";
+import gitLogo from "../assests/Git-Icon-Black.png";
 import About from "./About";
 import websiteDev_img from "../assests/websitedev.png";
 import thumbVideobg from "../assests/website-development.mp4";
@@ -28,47 +28,59 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+} from "swiper/modules";
 
 const MainContent = () => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const aboutRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  // const aboutRef = useRef(null);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  const aboutContentMotion = {
-    initial: { opacity: 0, y: 300 },
-    animate: {
-      opacity: isVisible ? 1 : 0, // Control animation based on visibility
-      y: isVisible ? 0 : 300,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-        type: "spring", // You can use different types of transitions like spring
-        damping: 10, // Adjust the damping for a smoother animation
-      },
-    },
+  // const aboutContentMotion = {
+  //   initial: { opacity: 0, y: 300 },
+  //   animate: {
+  //     opacity: isVisible ? 1 : 0, // Control animation based on visibility
+  //     y: isVisible ? 0 : 300,
+  //     transition: {
+  //       duration: 1.5,
+  //       delay: 0.5,
+  //       type: "spring", // You can use different types of transitions like spring
+  //       damping: 10, // Adjust the damping for a smoother animation
+  //     },
+  //   },
+  // };
+
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       const [entry] = entries;
+  //       setIsVisible(entry.isIntersecting);
+  //     },
+  //     { threshold: 0.1 }
+  //   );
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
-    }
+  //   if (aboutRef.current) {
+  //     observer.observe(aboutRef.current);
+  //   }
 
-    return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (aboutRef.current) {
+  //       observer.unobserve(aboutRef.current);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div>
@@ -97,9 +109,11 @@ const MainContent = () => {
           </div>
         </div>
       </div>
-      <div id="about" className="scroll-m-12" ref={aboutRef}>
+      <div id="about" className="scroll-m-12">
         <div className=" about h-auto w-full text-gray-700 p-5 ">
-          <h1 className=" bg-gradient-to-r from-red-500 via-blue-500 to-black text-transparent bg-clip-text font-extrabold text-3xl ">
+          <h1
+            className="bg-gradient-to-br from-red-500 via-green-500 to-red-200 bg-clip-text text-transparent
+          font-bold text-3xl inline ">
             What we do :
           </h1>
           <p className=" md:w-3/4 3/4 m-2 font-light  text-xs md:text-sm text-white">
@@ -109,66 +123,177 @@ const MainContent = () => {
             range of services to help you succeed online. Here's what we can do
             for you:
           </p>
-          <motion.div
-            variants={aboutContentMotion}
-            initial="initial"
-            animate="animate"
-            className="  Boxes m-10 flex flex-wrap justify-between gap-5 scroll-smooth ">
-            <About
-              thumbVideo={thumbVideobg}
-              snumber="01"
-              service="Website Developments"
-              img={websiteDev_img}
-              ListOne="Custom Website Design"
-              ListTwo="Responsive Development"
-              ListThree="E-commerce Solutions"
-            />
-            <About
-              snumber="02"
-              thumbVideo={thumbVideobg2}
-              service="Web Application Development"
-              ListOne="Bespoke Web Applications: "
-              ListTwo="API Integration"
-              ListThree="Content Management Systems (CMS)"
-            />
-            <About
-              snumber="03"
-              thumbVideo={thumbVideobg3}
-              service="UI/UX Design"
-              ListOne="User-Centric Design"
-              ListTwo="Wireframing and Prototyping"
-              ListThree="Usability Testing"
-            />
-            <About
-              snumber="04"
-              thumbVideo={thumbVideobg4}
-              service="Technology Expertise"
-              ListOne="Frontend Development"
-              ListTwo="Backend Development:"
-              ListThree="Database Management & Cloud Services"
-            />
-            <About
-              snumber="05"
-              thumbVideo={thumbVideobg5}
-              service="Digital Strategy & Marketing"
-              ListOne="Consultation and Planning"
-              ListTwo="Digital Marketing"
-              ListThree="Search Engine Optimization (SEO)"
-            />
-            <About
-              snumber="06"
-              thumbVideo={thumbVideobg6}
-              service="Support and Maintenance"
-              ListOne="Ongoing Support:"
-              ListTwo="Performance Monitoring"
-            />
-          </motion.div>
+          <div className=" Boxes m-10 flex flex-wrap justify-center  gap-5 scroll-smooth ">
+            <div className="lg:w-[90%] w-[95%] hidden lg:block ">
+              {" "}
+              <Swiper
+                spaceBetween={-200}
+                slidesPerView={2}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                loop={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
+                className="mySwiper   md:h-96 ">
+                <SwiperSlide>
+                  {" "}
+                  <About
+                    thumbVideo={thumbVideobg}
+                    snumber="01"
+                    service="Website Developments"
+                    img={websiteDev_img}
+                    ListOne="Custom Website Design"
+                    ListTwo="Responsive Development"
+                    ListThree="E-commerce Solutions"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="02"
+                    thumbVideo={thumbVideobg2}
+                    service="Web Application Development"
+                    ListOne="Bespoke Web Applications: "
+                    ListTwo="API Integration"
+                    ListThree="Content Management Systems (CMS)"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="03"
+                    thumbVideo={thumbVideobg3}
+                    service="UI/UX Design"
+                    ListOne="User-Centric Design"
+                    ListTwo="Wireframing and Prototyping"
+                    ListThree="Usability Testing"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="04"
+                    thumbVideo={thumbVideobg4}
+                    service="Technology Expertise"
+                    ListOne="Frontend Development"
+                    ListTwo="Backend Development:"
+                    ListThree="Database Management & Cloud Services"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="05"
+                    thumbVideo={thumbVideobg5}
+                    service="Digital Strategy & Marketing"
+                    ListOne="Consultation and Planning"
+                    ListTwo="Digital Marketing"
+                    ListThree="Search Engine Optimization (SEO)"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="06"
+                    thumbVideo={thumbVideobg6}
+                    service="Support and Maintenance"
+                    ListOne="Ongoing Support:"
+                    ListTwo="Performance Monitoring"
+                  />
+                </SwiperSlide>
+                <div className="autoplay-progress" slot="container-end">
+                  <svg viewBox="0 0 48 48" ref={progressCircle}>
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span ref={progressContent}></span>
+                </div>
+              </Swiper>
+            </div>
+            <div className="mobile w-full lg:hidden block ">
+              <Swiper
+                direction={"vertical"}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay, Pagination, Navigation]}
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
+                className="mySwiper h-[300px]">
+                <SwiperSlide>
+                  <About
+                    thumbVideo={thumbVideobg}
+                    snumber="01"
+                    service="Website Developments"
+                    img={websiteDev_img}
+                    ListOne="Custom Website Design"
+                    ListTwo="Responsive Development"
+                    ListThree="E-commerce Solutions"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="02"
+                    thumbVideo={thumbVideobg2}
+                    service="Web Application Development"
+                    ListOne="Bespoke Web Applications: "
+                    ListTwo="API Integration"
+                    ListThree="Content Management Systems (CMS)"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="03"
+                    thumbVideo={thumbVideobg3}
+                    service="UI/UX Design"
+                    ListOne="User-Centric Design"
+                    ListTwo="Wireframing and Prototyping"
+                    ListThree="Usability Testing"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="04"
+                    thumbVideo={thumbVideobg4}
+                    service="Technology Expertise"
+                    ListOne="Frontend Development"
+                    ListTwo="Backend Development:"
+                    ListThree="Database Management & Cloud Services"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="05"
+                    thumbVideo={thumbVideobg5}
+                    service="Digital Strategy & Marketing"
+                    ListOne="Consultation and Planning"
+                    ListTwo="Digital Marketing"
+                    ListThree="Search Engine Optimization (SEO)"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <About
+                    snumber="06"
+                    thumbVideo={thumbVideobg6}
+                    service="Support and Maintenance"
+                    ListOne="Ongoing Support:"
+                    ListTwo="Performance Monitoring"
+                  />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className=" skills flex  flex-wrap justify-around pt-12 h-screen ">
-        <div className="w-[80%]">
-          {" "}
+        <div className="lg:w-[80%] w-[95%]">
           <Swiper
             effect={"coverflow"}
             grabCursor={true}

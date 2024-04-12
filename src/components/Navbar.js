@@ -101,7 +101,8 @@ const Navbar = () => {
               transition={{ duration: 1, delay: 1 }}
               onClick={() => downloadResume()}
               className="cursor-pointer hover:text-green-500">
-              Resume <i class="fa-solid fa-file-lines text-xs"></i>
+              Resume{" "}
+              <i className="fa-solid fa-file-lines text-xs hidden md:inline"></i>
             </motion.li>
           </ul>
         </div>
