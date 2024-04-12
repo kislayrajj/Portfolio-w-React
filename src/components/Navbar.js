@@ -55,7 +55,8 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.6, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold">
+              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold"
+              onClick={handleMenuClick}>
             <a href="#services"></a>  Services
             </motion.li>
             </Link>
@@ -76,7 +77,9 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.4, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold">
+              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold"
+              onClick={handleMenuClick}>
+                
               Contact
             </motion.li>
            
@@ -85,7 +88,8 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold active:scale-[1.4]">
+              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold active:scale-[1.4]"
+              onClick={handleMenuClick}>
               <a href="#about"> About</a>
             </motion.li>
             </Link>
@@ -97,7 +101,8 @@ const Navbar = () => {
               initial={{ opacity: 0, x: -500 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className="cursor-pointer hover:text-green-500 hover:scale-[1.4]">
+              className="cursor-pointer hover:text-green-500 hover:scale-[1.4]"
+              onClick={handleMenuClick}>
               FAQs
             </motion.li>
             <motion.li
@@ -105,7 +110,8 @@ const Navbar = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}
               onClick={() => downloadResume()}
-              className="cursor-pointer hover:text-green-500">
+              className="cursor-pointer hover:text-green-500"
+              >
               Resume{" "}
               <i className="fa-solid fa-file-lines text-xs hidden md:inline"></i>
             </motion.li>
