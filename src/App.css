@@ -151,7 +151,7 @@ html {
 }
 
 .mobile .swiper-pagination {
-  background-color: rgb(33, 155, 33);
+  background-image: linear-gradient(to bottom, #0b3705, #1c5e1c, #2d8834, #3bb44e, #47e36c);
   border-radius: 20px;
   padding: 2px 0;
   display: flex;
