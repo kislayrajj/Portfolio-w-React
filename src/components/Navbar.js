@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assests/companylogo.png";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
 const Navbar = () => {
@@ -40,24 +40,26 @@ const Navbar = () => {
             className={`md:flex text-xl text-white lg:gap-20 md:gap-10  absolute lg:static  w-screen md:z-auto left-0 md:w-auto md:pl-0 pl-20 transition-all duration-500 ease-in-out ${
               IsBurger ? "left-0 top-24" : "left-[-800px] top-20"
             } bg-gray-900/75 md:bg-inherit`}>
-            <Link to="/">
+            <Link smooth to="/#main-content">
               <motion.li
                 initial={{ opacity: 0, y: -200 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1 }}
                 className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold"
                 onClick={handleMenuClick}>
-                Home
+                <a href="#main-content">Home</a>
               </motion.li>
             </Link>
+            <Link smooth to="/#services">
             <motion.li
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold active:scale-[1.4]">
-              <a href="#about"> About</a>
+              transition={{ duration: 1.6, delay: 1 }}
+              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold">
+            <a href="#services"></a>  Services
             </motion.li>
-            <Link to="/Projects">
+            </Link>
+            <Link smooth to="/Projects">
               <motion.li
                 initial={{ opacity: 0, y: -200 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -77,13 +79,16 @@ const Navbar = () => {
               className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold">
               Contact
             </motion.li>
+           
+            <Link smooth to="/#about">
             <motion.li
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.6, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold">
-              Services
+              transition={{ duration: 1, delay: 1 }}
+              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold active:scale-[1.4]">
+              <a href="#about"> About</a>
             </motion.li>
+            </Link>
           </ul>
         </div>
         <div className="menu-2 m-2">

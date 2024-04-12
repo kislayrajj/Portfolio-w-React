@@ -26,7 +26,7 @@ const Skills = ({ image, title, disc, bg }) => {
       <div className="text-center text-white/90">
         <Link to="/Projects">
           <button
-            className={`${bg}   text-[8px] lg:text-base   rounded-lg p-1 lg:p-2 absolute bottom-1 left-10 lg:bottom-5 lg:left-20`}>
+            className={`${bg}   text-[8px] lg:text-base   rounded-lg p-1 lg:p-2 absolute bottom-1 left-10 lg:bottom-5 lg:left-20 opacity-80`}>
             Projects
           </button>{" "}
         </Link>

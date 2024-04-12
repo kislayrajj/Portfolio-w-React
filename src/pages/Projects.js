@@ -32,7 +32,7 @@ const Projects = () => {
       transition={{ duration: 1 }}>
       <div className=" w-full box-border flex flex-wrap  gap-6 items-center  justify-around md:flex-row md:gap-1 md:items-start  pt-32 text-xs">
         <div
-          className="box-card clock border-2 rounded-xl h-72 w-64 p-8 text-xl"
+          className="box-card theme-font border-2 rounded-xl h-72 w-64 p-8 text-xl"
           dangerouslySetInnerHTML={{ __html: dateTime }}></div>
         <Link
           to="https://kislayrajj.github.io/DynamicCard-html-css/"

@@ -10,7 +10,7 @@ import tailwindLogo from "../assests/tailwindpng.png";
 import jaqueryLogo from "../assests/jqueryblack.png";
 import jiraLogo from "../assests/jiraLogo.png";
 import gitLogo from "../assests/Git-Icon-Black.png";
-import About from "./About";
+import Service from "./Services";
 import websiteDev_img from "../assests/websitedev.png";
 import thumbVideobg from "../assests/website-development.mp4";
 import thumbVideobg2 from "../assests/thumbnail-of-web-application-development.mp4";
@@ -18,7 +18,7 @@ import thumbVideobg3 from "../assests/ux-designer.mp4";
 import thumbVideobg4 from "../assests/texhnical-experties.mp4";
 import thumbVideobg5 from "../assests/digital-marketing.mp4";
 import thumbVideobg6 from "../assests/thumbnail-of-maintenance.mp4";
-import { motion } from "framer-motion";
+import About from "./About"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -86,7 +86,7 @@ const MainContent = () => {
     <div>
       <div>
         <div
-          id="home"
+          id="main-content"
           className="main-component flex  justify-around items-center  w-full h-screen">
           <video
             autoPlay
@@ -109,11 +109,11 @@ const MainContent = () => {
           </div>
         </div>
       </div>
-      <div id="about" className="scroll-m-12">
-        <div className=" about h-auto w-full text-gray-700 p-5 ">
+      <div id="services" className="scroll-m-12">
+        <div className=" services h-auto w-full text-gray-700 p-5 ">
           <h1
-            className="bg-gradient-to-br from-red-500 via-green-500 to-red-200 bg-clip-text text-transparent
-          font-bold text-3xl inline ">
+            className=" text-green-400
+          font-bold text-3xl inline theme-font">
             What we do :
           </h1>
           <p className=" md:w-3/4 3/4 m-2 font-light  text-xs md:text-sm text-white">
@@ -123,8 +123,8 @@ const MainContent = () => {
             range of services to help you succeed online. Here's what we can do
             for you:
           </p>
-          <div className=" Boxes m-10 flex flex-wrap justify-center  gap-5 scroll-smooth ">
-            <div className="lg:w-[90%] w-[95%] hidden lg:block ">
+          <div className=" Boxes m-10 flex flex-wrap justify-center gap-5 scroll-smooth ">
+            <div className="lg:w-[90%] w-[95%] hidden lg:block px-0.5 pt-5 shadow-[0px_0px_30px_3px_#48bb78] rounded-lg ">
               {" "}
               <Swiper
                 spaceBetween={-200}
@@ -144,7 +144,7 @@ const MainContent = () => {
                 className="mySwiper   md:h-96 ">
                 <SwiperSlide>
                   {" "}
-                  <About
+                  <Service
                     thumbVideo={thumbVideobg}
                     snumber="01"
                     service="Website Developments"
@@ -155,7 +155,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="02"
                     thumbVideo={thumbVideobg2}
                     service="Web Application Development"
@@ -165,7 +165,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="03"
                     thumbVideo={thumbVideobg3}
                     service="UI/UX Design"
@@ -175,7 +175,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="04"
                     thumbVideo={thumbVideobg4}
                     service="Technology Expertise"
@@ -185,7 +185,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="05"
                     thumbVideo={thumbVideobg5}
                     service="Digital Strategy & Marketing"
@@ -195,7 +195,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="06"
                     thumbVideo={thumbVideobg6}
                     service="Support and Maintenance"
@@ -211,7 +211,7 @@ const MainContent = () => {
                 </div>
               </Swiper>
             </div>
-            <div className="mobile w-full lg:hidden block ">
+            <div className="mobile w-full lg:hidden block px-3 pt-5 shadow-[0px_0px_30px_3px_#48bb78] rounded-lg">
               <Swiper
                 direction={"vertical"}
                 pagination={{
@@ -227,7 +227,7 @@ const MainContent = () => {
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 className="mySwiper h-[300px]">
                 <SwiperSlide>
-                  <About
+                  <Service
                     thumbVideo={thumbVideobg}
                     snumber="01"
                     service="Website Developments"
@@ -238,7 +238,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="02"
                     thumbVideo={thumbVideobg2}
                     service="Web Application Development"
@@ -248,7 +248,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="03"
                     thumbVideo={thumbVideobg3}
                     service="UI/UX Design"
@@ -258,7 +258,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="04"
                     thumbVideo={thumbVideobg4}
                     service="Technology Expertise"
@@ -268,7 +268,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="05"
                     thumbVideo={thumbVideobg5}
                     service="Digital Strategy & Marketing"
@@ -278,7 +278,7 @@ const MainContent = () => {
                   />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <About
+                  <Service
                     snumber="06"
                     thumbVideo={thumbVideobg6}
                     service="Support and Maintenance"
@@ -292,8 +292,9 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className=" skills flex  flex-wrap justify-around pt-12 h-screen ">
-        <div className="lg:w-[80%] w-[95%]">
+      <div className=" skills flex flex-col flex-wrap justify-around items-center pt-12 h-screen ">
+        <div className="w-full text-start text-3xl pl-12 theme-font font-semibold text-green-400">Experties</div>
+        <div className="lg:w-[80%] w-[95%] ">
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -370,12 +371,15 @@ const MainContent = () => {
               <Skills
                 image={gitLogo}
                 title="Git/Version Control"
-                disc="Git/version control for managing codebase, facilitating collaboration, and ensuring project integrity"
+                disc="Experienced in Git for collaborative code management and version control."
                 bg="bg-gradient-to-br from-gray-800 via-gray-600 to-gray-400"
               />
             </SwiperSlide>
           </Swiper>
         </div>
+      </div>
+      <div id="about">
+        <About />
       </div>
     </div>
   );
