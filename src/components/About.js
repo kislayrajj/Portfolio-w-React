@@ -35,8 +35,13 @@ const aboutInfo = {
 
 const About = () => {
   return (
-    <div>
-      hi
+    <div className='h-screen'>
+      <div className='about-top h-1/2 bg-gradient-to-r from-zinc-900 to-zinc-300 relative'>
+        <span className=' absolute text-4xl lg:text-6xl bottom-[-20px] lg:bottom-[-30px] left-[25%] lg:left-[40%] '><i className="fa-regular fa-fade theme-font font-bold ">KISLAY RAJ</i></span>
+      
+      
+      </div>
+      <div className='about-bottom h-1/2 bg-gradient-to-r from-lime-400 to-green-900'></div>
       
     </div>
   )
