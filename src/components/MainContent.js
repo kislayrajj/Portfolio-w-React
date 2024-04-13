@@ -296,7 +296,7 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className=" skills flex flex-col flex-wrap justify-around items-center pt-12 h-screen ">
+      <div className=" skills flex flex-col flex-wrap justify-around items-center pt-12 h-screen pb-10">
         <div className="w-full text-start text-3xl pl-12 theme-font font-semibold text-green-400">
           Experties
         </div>
