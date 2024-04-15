@@ -57,7 +57,7 @@ const Navbar = () => {
               transition={{ duration: 1.6, delay: 1 }}
               className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold"
               onClick={handleMenuClick}>
-            <a href="#services"></a>  Services
+            <a href="#services">Services</a>  
             </motion.li>
             </Link>
             <Link smooth to="/Projects">

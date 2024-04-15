@@ -126,9 +126,9 @@ const Projects = () => {
             </div>
           </div>
         </Link>
-        <a
-          href="https://react-business-card-wheat.vercel.app/"
-          target="_blanck">
+        <Link
+          to="https://react-business-card-wheat.vercel.app/"
+          target="_blank">
           <div
             className="box-card border-2 rounded-xl h-72 w-64  hover:-translate-y-2 ease-in-out transition-all duration-500 opacity-90 hover:opacity-100
         hover:border-b-green-500  overflow-hidden   relative">
@@ -153,12 +153,12 @@ const Projects = () => {
               •Language used - React & Tailwind CSS
             </div>
           </div>
-        </a>
+        </Link>
       </div>
 
       <div className=" w-full box-border flex flex-wrap  gap-6 items-center  justify-around md:flex-row md:gap-1 md:items-start  pt-12 text-xs">
-        <a
-          href="https://calculator-using-react-ten.vercel.app/"
+        <Link
+          to="https://calculator-using-react-ten.vercel.app/"
           target="_blank">
           {" "}
           <div
@@ -187,7 +187,7 @@ const Projects = () => {
               •Language used - Reactjs, Tailwind CSS
             </div>
           </div>
-        </a>
+        </Link>
 
         <Link
           to="https://bmi-calculator-using-react-eta.vercel.app/"
@@ -276,8 +276,8 @@ const Projects = () => {
             </div>
           </div>
         </Link>
-        <a
-          href="https://react-business-card-wheat.vercel.app/"
+        <Link
+          to="https://react-business-card-wheat.vercel.app/"
           target="_blanck">
           <div
             className="box-card border-2 rounded-xl h-72 w-64  hover:-translate-y-2 ease-in-out transition-all duration-500 opacity-90 hover:opacity-100 
@@ -303,7 +303,7 @@ const Projects = () => {
               •Language used - React & Tailwind CSS
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </motion.div>
   );
