@@ -45,7 +45,7 @@ const About = () => {
         </div>
         <div className="w-full p-2 pl-12 lg:px-12 flex justify-between">
           <div className="">
-            <div className="title md:text-xl">{aboutInfo.title}</div>
+            <div className="title text-xl">{aboutInfo.title}</div>
             <div className="location flex gap-2 items-center">
               {aboutInfo.location}{" "}
               <img src={IndianFlag} alt="" className="h-5" />{" "}
@@ -66,12 +66,12 @@ const About = () => {
         </span>
       </div>
       <div className="about-bottom h-1/2 bg-gradient-to-r from-blue-800 to-indigo-900">
-        <div className="w-full flex flex-col lg:flex-row justify-between items-center p-2 pl-12 pt-12">
-          <div className="dp  h-60">
+        <div className="w-full flex flex-col lg:flex-row justify-between gap-10 items-center  p-2 md:pl-12 pt-12">
+          <div className="dp md:h-60">
             {/* <img src={dp} alt="" className="h-44 w-44 rounded-full" /> */}
             <SvgIcon />
           </div>
-          <div className="experience ">
+          <div className="experience text-center ">
             <div className="md:text-xl text-green-400 font-bold">{aboutInfo.experience[0].title}</div>
             <div className="text-green-300">{aboutInfo.experience[0].company}</div>
             <div className="text-green-300">{aboutInfo.experience[0].date}</div>

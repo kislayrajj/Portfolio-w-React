@@ -9,7 +9,7 @@ function Icon() {
       width="623.65"
       height="623.63"
       viewBox="0 0 623.65 623.63"
-      className="h-60 w-fit"
+      className="h-44 md:h-60 w-fit"
     >
       <path
       id="frame"
