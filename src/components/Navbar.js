@@ -4,6 +4,18 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
 const Navbar = () => {
+  let [IsBurger, setIsBurger] = useState(false);
+  const [isActive, setIsActive]=useState ("");
+
+  const handleMenuClick = () => {
+    setIsBurger(false); //close the menu
+  };
+
+const handleActive=(section)=>{
+  // setIsActive(!isActive);
+  setIsActive(section);
+  handleMenuClick()
+}
   const subject = "Let's work together (edit as per requirement)";
   const body = "Hello Kislay,";
 
@@ -14,12 +26,9 @@ const Navbar = () => {
       .then((blob) => saveAs(blob, "krRESUME.pdf"))
       .catch((error) => console.error("Error downloading file:", error));
   };
-  let [IsBurger, setIsBurger] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsBurger(false); //close the menu
-  };
 
+ 
   return (
     <div className="flex justify-center">
       <nav className="navbar h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-10 ">
@@ -45,8 +54,8 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -200 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1 }}
-                className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold"
-                onClick={handleMenuClick}>
+                className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="home" ? "text-2xl text-green-500 border-b-2 border-green-500 ":""}`}
+                onClick={()=>handleActive("home")}>
                 <a href="#main-content">Home</a>
               </motion.li>
             </Link>
@@ -55,8 +64,8 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.6, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold"
-              onClick={handleMenuClick}>
+              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="services" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              onClick={()=>handleActive("services")}>
             <a href="#services">Services</a>  
             </motion.li>
             </Link>
@@ -66,8 +75,8 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 1 }}
                 className=" cursor-pointer hover:text-green-500 md:hover:font-bold"
-                onClick={handleMenuClick}>
-                <button className="border-2 border-green-600 rounded-sm pl-2 pr-2 ">
+                onClick={()=>handleActive("projects")}>
+                <button className={`border-2 border-green-600 rounded-sm pl-2 pr-2 ${isActive =="projects" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}>
                   {" "}
                   Projects
                 </button>{" "}
@@ -77,8 +86,8 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.4, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold"
-              onClick={handleMenuClick}>
+              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="contact" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              onClick={()=>handleActive("contact")}>
                 
               Contact
             </motion.li>
@@ -88,8 +97,8 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className=" cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold active:scale-[1.4]"
-              onClick={handleMenuClick}>
+              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="about" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              onClick={()=>handleActive("about")}>
               <a href="#about"> About</a>
             </motion.li>
             </Link>
@@ -101,8 +110,8 @@ const Navbar = () => {
               initial={{ opacity: 0, x: -500 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className="cursor-pointer hover:text-green-500 hover:scale-[1.4]"
-              onClick={handleMenuClick}>
+              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="faqs" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              onClick={()=>handleActive("faqs")}>
               FAQs
             </motion.li>
             <motion.li
