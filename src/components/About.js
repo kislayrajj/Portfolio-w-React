@@ -139,6 +139,7 @@ const About = () => {
           transition={{
             type: 'sprig',
             duration: 1,
+            delay: 1
           }}
         className=" absolute text-4xl lg:text-6xl bottom-[-20px] lg:bottom-[-30px] left-[25%] lg:left-[40%] ">
           <i className="fa-regular fa-fade theme-font font-bold uppercase">
@@ -160,6 +161,7 @@ const About = () => {
              transition={{
                type: 'sprig',
                duration: 1,
+               delay: 1
              }}
             className="md:text-xl text-green-400 font-bold">{aboutInfo.experience[0].title}</motion.div>
             <motion.div
@@ -168,7 +170,7 @@ const About = () => {
              transition={{
                type: 'sprig',
                duration: 1,
-               delay:.3
+               delay:1.3
              }}
             className="text-green-300">{aboutInfo.experience[0].company}</motion.div>
             <motion.div
@@ -177,7 +179,7 @@ const About = () => {
              transition={{
                type: 'sprig',
                duration: 1,
-               delay:.4
+               delay:1.4
              }}
             className="text-green-300">{aboutInfo.experience[0].date}</motion.div>
             <motion.div
@@ -186,7 +188,7 @@ const About = () => {
              transition={{
                type: 'sprig',
                duration: 1,
-               delay:.5
+               delay:1.5
              }}
             className="w-[300px] text-green-300">
               {aboutInfo.experience[0].description}
