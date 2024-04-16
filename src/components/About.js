@@ -91,7 +91,7 @@ const About = () => {
 
   return (
     <div
-    className="h-screen " ref={aboutRef}>
+    className="h-screen overflow-hidden" ref={aboutRef}>
       <div className="about-top h-1/2 bg-gradient-to-r from-zinc-900 to-zinc-300 relative pt-8">
         <div className="w-full text-start text-3xl pl-12 theme-font font-semibold text-green-400">
           About Me
