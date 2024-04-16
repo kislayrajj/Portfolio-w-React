@@ -43,26 +43,15 @@ const About = () => {
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  // const aboutContentMotion = {
-  //   initial: { opacity: 0, y: 300 },
-  //   animate: {
-  //     opacity: isVisible ? 1 : 0, // Control animation based on visibility
-  //     y: isVisible ? 0 : 300,
-  //     transition: {
-  //       duration: 1.5,
-  //       delay: 0.5,
-  //       type: "spring", // You can use different types of transitions like spring
-  //       damping: 10, // Adjust the damping for a smoother animation
-  //     },
-  //   },
-  // };
+  const [isHover, setIsHover]=useState(false)
 
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
+  const handleMouseEnter=()=>{
+    setIsHover(true);
+  }
+
+  const handleMouseLeave=()=>{
+    setIsHover(false)
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -154,6 +143,96 @@ const About = () => {
             {/* <img src={dp} alt="" className="h-44 w-44 rounded-full" /> */}
             <SvgIcon />
           </div>
+
+<div className="follow lg:pl-12  text-2xl lg:text-4xl flex gap-10">
+<motion.span
+ initial= {{ opacity: 0, y: 100 }}
+ animate ={isVisible ?{ opacity: 1, y:0} : ""}
+ transition={{
+   type: 'sprig',
+   duration: 1,
+   delay: 2,
+ }}
+
+><motion.i
+ whileHover={{ scale: 1.2, rotate: 360,  }}
+ whileTap={{
+   scale: 0.8,
+   rotate: -360,
+ }}
+ transition={{ duration:0.3}} 
+onMouseEnter={handleMouseEnter} 
+onMouseLeave={handleMouseLeave}
+className={`fa-brands fa-github hover:text-green-400 ${isHover ? " ":"fa-beat-fade"}`}></motion.i></motion.span>
+<motion.span
+initial= {{ opacity: 0, y: 200 }}
+animate ={isVisible ?{ opacity: 1, y:0} : ""}
+transition={{
+  type: 'sprig',
+  duration: 1,
+  delay: 2.1,
+}}
+><motion.i
+ whileHover={{ scale: 1.2, rotate: 360,  }}
+ whileTap={{
+   scale: 0.8,
+   rotate: -360,
+ }}
+ transition={{ duration:0.3}} 
+onMouseEnter={handleMouseEnter} 
+onMouseLeave={handleMouseLeave} className={`fa-brands fa-linkedin hover:text-green-400 ${isHover ? " ":"fa-beat-fade"}`}></motion.i></motion.span>
+<motion.span  
+initial= {{ opacity: 0, y: 300 }}
+animate ={isVisible ?{ opacity: 1, y:0} : ""}
+transition={{
+  type: 'sprig',
+  duration: 1,
+  delay: 2.2
+}}
+><motion.i
+ whileHover={{ scale: 1.2, rotate: 360,  }}
+ whileTap={{
+   scale: 0.8,
+   rotate: -360,
+ }}
+ transition={{ duration:0.3}} 
+onMouseEnter={handleMouseEnter} 
+onMouseLeave={handleMouseLeave} className={`fa-brands fa-square-instagram  hover:text-green-400`}></motion.i></motion.span>
+<motion.span
+initial= {{ opacity: 0, y: 400 }}
+animate ={isVisible ?{ opacity: 1, y:0} : ""}
+transition={{
+  type: 'sprig',
+  duration: 1,
+  delay: 2.3
+}}><motion.i whileHover={{ scale: 1.2, rotate: 360,  }}
+whileTap={{
+  scale: 0.8,
+  rotate: -360,
+}}
+transition={{ duration:0.3}} 
+onMouseEnter={handleMouseEnter} 
+onMouseLeave={handleMouseLeave} className={`fa-brands fa-square-x-twitter  hover:text-green-400 ${isHover ? " ":"fa-beat-fade"}`}></motion.i></motion.span>
+<motion.span
+
+initial= {{ opacity: 0, y: 500 }}
+ animate ={isVisible ?{ opacity: 1, y:0} : ""}
+ transition={{
+   type: 'sprig',
+   duration: 1,
+   delay: 2.4
+ }}><motion.i whileHover={{ scale: 1.2, rotate: 360,  }}
+ whileTap={{
+   scale: 0.8,
+   rotate: -360,
+ }}
+ transition={{ duration:0.3}} 
+onMouseEnter={handleMouseEnter} 
+onMouseLeave={handleMouseLeave} className={`fa-solid fa-envelope hover:text-green-400 ${isHover ? " ":"fa-beat-fade"}`}></motion.i></motion.span>
+</div>
+
+
+
           <div className="experience text-center ">
             <motion.div
              initial= {{ opacity: 0, x: 300 }}
