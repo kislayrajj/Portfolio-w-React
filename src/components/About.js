@@ -2,6 +2,8 @@ import React from "react";
 import IndianFlag from "../assests/Indianflag.png";
 import dp from "../assests/profilepic2.jpg";
 import SvgIcon from "../components/drinkCoffeSVG"
+import {motion} from "framer-motion"
+import { useState, useEffect, useRef } from "react";
 const aboutInfo = {
   name: "Kislay Raj",
   title: "Web Developer",
@@ -37,33 +39,113 @@ const aboutInfo = {
 };
 
 const About = () => {
+
+  const aboutRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // const aboutContentMotion = {
+  //   initial: { opacity: 0, y: 300 },
+  //   animate: {
+  //     opacity: isVisible ? 1 : 0, // Control animation based on visibility
+  //     y: isVisible ? 0 : 300,
+  //     transition: {
+  //       duration: 1.5,
+  //       delay: 0.5,
+  //       type: "spring", // You can use different types of transitions like spring
+  //       damping: 10, // Adjust the damping for a smoother animation
+  //     },
+  //   },
+  // };
+
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
+
+
+
+
+
+
   return (
-    <div className="h-screen">
+    <div
+    className="h-screen " ref={aboutRef}>
       <div className="about-top h-1/2 bg-gradient-to-r from-zinc-900 to-zinc-300 relative pt-8">
         <div className="w-full text-start text-3xl pl-12 theme-font font-semibold text-green-400">
           About Me
         </div>
         <div className="w-full p-2 pl-12 lg:px-12 flex justify-between">
           <div className="">
-            <div className="title text-xl">{aboutInfo.title}</div>
-            <div className="location flex gap-2 items-center">
+            <motion.div
+                initial= {{ opacity: 0, x: -300 }}
+                animate ={isVisible ?{ opacity: 1, x:0} : ""}
+                transition={{
+                  type: 'sprig',
+                  duration: 1,
+                }}
+            className="title text-xl">{aboutInfo.title}</motion.div>
+            <motion.div 
+             initial= {{ opacity: 0, x: -300 }}
+             animate ={isVisible ?{ opacity: 1, x:0} : ""}
+             transition={{
+               type: 'sprig',
+               duration: 1,
+               delay:.3
+             }}
+            className="location flex gap-2 items-center">
               {aboutInfo.location}{" "}
               <img src={IndianFlag} alt="" className="h-5" />{" "}
-            </div>
+            </motion.div>
           </div>
           <div className=" lg:w-[300px] w-[200px]">
-            <div className="lg:text-gray-700  text-sm md:text-base">
+            <motion.div
+             initial= {{ opacity: 0, x: 300 }}
+             animate ={isVisible ?{ opacity: 1, x:0} : ""}
+             transition={{
+               type: 'sprig',
+               duration: 1,
+             }}
+            className="lg:text-gray-700  text-sm md:text-base">
               {aboutInfo.summary}
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <span className=" absolute text-4xl lg:text-6xl bottom-[-20px] lg:bottom-[-30px] left-[25%] lg:left-[40%] ">
+        <motion.span
+           initial= {{ opacity: 0, y: 300 }}
+          animate ={isVisible ?{ opacity: 1, y:0} : ""}
+          transition={{
+            type: 'sprig',
+            duration: 1,
+          }}
+        className=" absolute text-4xl lg:text-6xl bottom-[-20px] lg:bottom-[-30px] left-[25%] lg:left-[40%] ">
           <i className="fa-regular fa-fade theme-font font-bold uppercase">
-            {" "}
+           
             {aboutInfo.name}
           </i>
-        </span>
+        </motion.span>
       </div>
       <div className="about-bottom h-1/2 bg-gradient-to-r from-blue-800 to-indigo-900">
         <div className="w-full flex flex-col lg:flex-row justify-between gap-10 items-center  p-2 md:pl-12 pt-12">
@@ -72,12 +154,43 @@ const About = () => {
             <SvgIcon />
           </div>
           <div className="experience text-center ">
-            <div className="md:text-xl text-green-400 font-bold">{aboutInfo.experience[0].title}</div>
-            <div className="text-green-300">{aboutInfo.experience[0].company}</div>
-            <div className="text-green-300">{aboutInfo.experience[0].date}</div>
-            <div className="w-[300px] text-green-300">
+            <motion.div
+             initial= {{ opacity: 0, x: 300 }}
+             animate ={isVisible ?{ opacity: 1, x:0} : ""}
+             transition={{
+               type: 'sprig',
+               duration: 1,
+             }}
+            className="md:text-xl text-green-400 font-bold">{aboutInfo.experience[0].title}</motion.div>
+            <motion.div
+             initial= {{ opacity: 0, x: 300 }}
+             animate ={isVisible ?{ opacity: 1, x:0} : ""}
+             transition={{
+               type: 'sprig',
+               duration: 1,
+               delay:.3
+             }}
+            className="text-green-300">{aboutInfo.experience[0].company}</motion.div>
+            <motion.div
+             initial= {{ opacity: 0, x: 300 }}
+             animate ={isVisible ?{ opacity: 1, x:0} : ""}
+             transition={{
+               type: 'sprig',
+               duration: 1,
+               delay:.4
+             }}
+            className="text-green-300">{aboutInfo.experience[0].date}</motion.div>
+            <motion.div
+             initial= {{ opacity: 0, x: 300 }}
+             animate ={isVisible ?{ opacity: 1, x:0} : ""}
+             transition={{
+               type: 'sprig',
+               duration: 1,
+               delay:.5
+             }}
+            className="w-[300px] text-green-300">
               {aboutInfo.experience[0].description}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

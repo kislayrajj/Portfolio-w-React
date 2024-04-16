@@ -19,6 +19,7 @@ import thumbVideobg4 from "../assests/texhnical-experties.mp4";
 import thumbVideobg5 from "../assests/digital-marketing.mp4";
 import thumbVideobg6 from "../assests/thumbnail-of-maintenance.mp4";
 import About from "./About";
+import Contact from "./Contact";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -41,7 +42,7 @@ const MainContent = () => {
   const serviceRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const aboutContentMotion = {
+  const servicesContentMotion = {
     initial: { opacity: 0, y: 300 },
     animate: {
       opacity: isVisible ? 1 : 0, // Control animation based on visibility
@@ -109,7 +110,7 @@ const MainContent = () => {
           </div>
         </div>
       </div>
-      <div id="services" className="scroll-m-12" ref={serviceRef}>
+      <div id="services" className="scroll-m-16" ref={serviceRef}>
         <div className=" services h-auto w-full text-gray-700 p-5 ">
           <h1
             className=" text-green-400
@@ -123,11 +124,11 @@ const MainContent = () => {
             range of services to help you succeed online. Here's what we can do
             for you:
           </p>
-          <motion.div 
-             variants={aboutContentMotion}
-             initial="initial"
-              animate="animate"  
-          className=" Boxes m-10 flex flex-wrap justify-center gap-5 scroll-smooth ">
+          <motion.div
+            variants={servicesContentMotion}
+            initial="initial"
+            animate="animate"
+            className=" Boxes m-10 flex flex-wrap justify-center gap-5 scroll-smooth ">
             <div className="lg:w-[90%] w-[95%] hidden lg:block px-0.5 pt-5 shadow-[0px_0px_30px_3px_#48bb78] rounded-lg ">
               {" "}
               <Swiper
@@ -384,8 +385,11 @@ const MainContent = () => {
           </Swiper>
         </div>
       </div>
-      <div id="about">
+      <div id="about" className="scroll-m-16">
         <About />
+      </div>
+      <div id="contact" className="scroll-m-16">
+        <Contact />
       </div>
     </div>
   );
