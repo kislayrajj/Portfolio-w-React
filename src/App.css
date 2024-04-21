@@ -24,7 +24,7 @@ html {
 .box-card {
   border: 2px solid rgb(15, 20, 71);
   backdrop-filter: calc(20px);
-  background: rgb(7, 8, 16, 0.5);
+  background: rgba(10, 16, 47, 0.5);
   border-radius: 50px;
 }
 

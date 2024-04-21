@@ -33,8 +33,7 @@ const handleActive=(section)=>{
     <div className="flex justify-center">
       <nav className="navbar h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-10 ">
         <img
-          src={Logo}
-          alt=""
+          sr
           class="company-logo h-12 object-cover hover:scale-150 transition-transform duration-400"
         />
         <div
@@ -54,7 +53,7 @@ const handleActive=(section)=>{
                 initial={{ opacity: 0, y: -200 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1 }}
-                className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="home" ? "text-2xl text-green-500 border-b-2 border-green-500 ":""}`}
+                className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="home" ? "text-2xl text-green-500 border-b-2 border-green-500 ":""}`}
                 onClick={()=>handleActive("home")}>
                 <a href="#main-content">Home</a>
               </motion.li>
@@ -64,7 +63,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.6, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="services" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="services" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("services")}>
             <a href="#services">Services</a>  
             </motion.li>
@@ -76,7 +75,7 @@ const handleActive=(section)=>{
                 transition={{ duration: 1.2, delay: 1 }}
                 className=" cursor-pointer hover:text-green-500 md:hover:font-bold"
                 onClick={()=>handleActive("projects")}>
-                <button className={`border-2 border-green-600 rounded-sm pl-2 pr-2 ${isActive =="projects" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}>
+                <button className={`border-2 border-green-600 rounded-sm pl-2 pr-2 transition-all ease-in-out duration-500 ${isActive =="projects" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}>
                   {" "}
                   Projects
                 </button>{" "}
@@ -87,7 +86,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.4, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="contact" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="contact" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("contact")}>
                 
               Contact
@@ -98,7 +97,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="about" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500 hover:font-bold transition-all ease-in-out duration-500 ${isActive =="about" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("about")}>
               <a href="#about"> About</a>
             </motion.li>
@@ -111,7 +110,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, x: -500 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500 md:hover:scale-[1.4] hover:font-bold ${isActive =="faqs" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="faqs" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("faqs")}>
               FAQs
             </motion.li>
