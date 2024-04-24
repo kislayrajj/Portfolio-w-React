@@ -5,6 +5,7 @@ import ReactCardThumb from "../../assests/ReactCard-Thumb.png";
 import calculator_thum from "../../assests/calculator_thum.png";
 import bmi_thumb from "../../assests/bmilogo.jpg";
 import filterCards_thumb from "../../assests/filterCards_thumb.png";
+import todo_thumb from "../../assests/todo_thumb.png";
 const data = [
     {
       id:1,
@@ -79,6 +80,17 @@ const data = [
       title: "ID Cards",
       description: "Multiple Id Cards built using React.js.",
       languages: ["React", "Tailwind CSS"],
+      width: "256px", 
+      height: "288px",
+      "margin-top": "30px",
+    },
+    {
+      id:8,
+      link: "https://avance-to-do-app-react-shadcn.vercel.app/",
+      image: todo_thumb ,
+      title: "Advanced ToDo App",
+      description: "This App has functionalities such as Priority level , progress and Scheduling",
+      languages: ["React", "shadcn"],
       width: "256px", 
       height: "288px",
       "margin-top": "30px",
