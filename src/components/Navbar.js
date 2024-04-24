@@ -33,7 +33,7 @@ const handleActive=(section)=>{
     <div className="flex justify-center">
       <nav className="navbar h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-10 ">
         <img
-          sr
+          src={Logo}
           class="company-logo h-12 object-cover hover:scale-150 transition-transform duration-400"
         />
         <div
