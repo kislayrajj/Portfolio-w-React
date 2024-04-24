@@ -10,9 +10,7 @@ html {
   backdrop-filter: blur(3px);
 }
 
-.theme-font {
-  font-family: "Kode Mono", monospace;
-}
+
 .main-component {
   font-family: "Kode Mono", monospace;
 }

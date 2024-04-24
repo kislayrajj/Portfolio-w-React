@@ -15,3 +15,13 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-font {
+  font-family: "Kode Mono", monospace;
+}
