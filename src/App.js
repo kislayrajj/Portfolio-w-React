@@ -47,7 +47,7 @@ function App() {
         <Route path="/Services" element={<Services />}></Route> */}
         </Routes>
       </Suspense>
-      <Loading />
+      {/* <Loading /> */}
       {/* <div className="h-screen center">
        
        <Lottie animationData={LoadingAnimation2} className="h-44 md:h-80" />
