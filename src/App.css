@@ -1,4 +1,4 @@
-html {
+html , .background {
   margin: 0;
   background: linear-gradient(45deg, #150c0c, #030321);
   color: white;
