@@ -23,7 +23,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      initial={{ y: -2000 }}
+      initial={{ y: 2000 }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}>
       <div className=" w-full box-border flex flex-wrap  gap-6 items-center  justify-around md:flex-row md:gap-1   pt-32 text-xs">
@@ -35,7 +35,7 @@ const Projects = () => {
           return (
             <Link to={item.link} target="_blank">
               <div
-                className=" box-card border-2 rounded-xl  hover:-translate-y-2 ease-in-out transition-all duration-500 opacity-90 hover:opacity-100 hover:border-b-green-500 overflow-hidden relative"
+                className=" box-card border-2 rounded-xl  hover:-translate-y-2 ease-in-out transition-all duration-500 opacity-90 hover:opacity-100 hover:border-b-green-500 overflow-hidden relative shadow-[inset_0px_0px_33px_18px_#2c5282]"
                 style={{
                   width: item.width,
                   height: item.height,
@@ -47,12 +47,12 @@ const Projects = () => {
                   className="h-44 flex  rounded-xl"
                 />
 
-                <div className="flex items-center justify-center absolute top-0 border-1 rounded-t-xl border-transparent h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <span className="absolute hover:scale-105 ease-in-out duration-500 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">
+                <div className=" center flex-col gap-8 absolute top-0 left-0 border-1 rounded-t-xl border-transparent h-44 w-64 backdrop-blur-[1px] opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <div className="hover:scale-105 ease-in-out duration-500 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">
                     Click To See Demo
-                  </span>
+                  </div>
                   <a href={item.githubLink} target="_blank">
-                    <i className="fa-brands fa-github mt-24 pr-3 text-3xl text-green-500 hover:text-black hover:scale-125 transition-all duration-300"></i>
+                    <i className="fa-brands fa-github  text-3xl text-green-500 hover:text-black hover:scale-125 transition-all duration-300"></i>
                   </a>
                 </div>
 

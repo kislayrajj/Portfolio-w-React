@@ -16,44 +16,41 @@ import Lottie from "lottie-react";
 
 const Projects = lazy(() => import("./pages/Projects.js"));
 function App() {
-
   // increase loading time
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000); 
+    }, 4000);
   }, []);
-
-
 
   return (
     <>
-    {isLoading ? (<div className="h-screen center">
-       
-       <Lottie animationData={LoadingAnimation} className="h-44 md:h-80" />
-     </div> ) : (
-    <div className="Main scroll-smooth">
-      <div className="relative">
-        <Navbar />
-      </div>
+      {isLoading ? (
+        <div className="h-screen center">
+          <Lottie animationData={LoadingAnimation} className="h-44 md:h-80" />
+        </div>
+      ) : (
+        <div className="Main scroll-smooth">
+          <div className="relative">
+            <Navbar />
+          </div>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<MainContent />}></Route>
+              <Route path="/Projects" element={<Projects />}></Route>
 
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route path="/" element={<MainContent />}></Route>
-          <Route path="/Projects" element={<Projects />}></Route>
-
-          {/* <Route path="/About" element={<About />}></Route>
+              {/* <Route path="/About" element={<About />}></Route>
         <Route path="/Services" element={<Services />}></Route> */}
-        </Routes>
-      </Suspense>
-      {/* <Loading /> */}
-      {/* <div className="h-screen center">
+            </Routes>
+          </Suspense>
+          {/* <Loading /> */}
+          {/* <div className="h-screen center">
        
        <Lottie animationData={LoadingAnimation2} className="h-44 md:h-80" />
      </div> */}
-    </div>
-    )}
+        </div>
+      )}
     </>
   );
 }

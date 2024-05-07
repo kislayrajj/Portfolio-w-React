@@ -22,6 +22,7 @@ import About from "./About";
 import Contact from "./Contact";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Slogan from "./Slogan";
 
 // Import Swiper styles
 import "swiper/css";
@@ -105,7 +106,8 @@ const MainContent = () => {
               }}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}>
-              Building Your Brand
+              {/* Building Your Brand */}
+              <Slogan/>
             </h1>
           </div>
         </div>

@@ -6,6 +6,7 @@ import calculator_thum from "../../assests/calculator_thum.png";
 import bmi_thumb from "../../assests/bmilogo.jpg";
 import filterCards_thumb from "../../assests/filterCards_thumb.png";
 import todo_thumb from "../../assests/todo_thumb.png";
+import imageSlider_thumb from "../../assests/imageSlider_thumb.png";
 const data = [
     {
       id:1,
@@ -23,10 +24,10 @@ const data = [
       link: "https://kislayrajj.github.io/DevMen-Portfolio/",
       image: PortfThumb,
       title: "Personalized Portfolio",
-      description: "This was the first Portfolio website I built. This is purely built on HTML, CSS and some internal JavaScript Take a look by visiting the website.",
+      description: "This was the first Portfolio website I built. This is purely built on HTML, CSS.",
       languages: ["HTML", "CSS", "JS"],
-      width: "288px", 
-      height: "320px",
+      width: "256px", 
+      height: "288px",
       "margin-top": "0px",
     },
     {
@@ -94,7 +95,18 @@ const data = [
       width: "256px", 
       height: "288px",
       "margin-top": "30px",
-    }
+    },
+    {
+      id:9,
+      link: "https://image-slider-using-react-tailwind.vercel.app/",
+      image: imageSlider_thumb ,
+      title: "Image Slider",
+      description: "Slide with image as background, Quotes and Quotee",
+      languages: ["React", "Tailwind CSS"],
+      width: "256px", 
+      height: "288px",
+      "margin-top": "30px",
+    },
   ];
   
   export default data;
