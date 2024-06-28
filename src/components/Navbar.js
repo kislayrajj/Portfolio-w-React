@@ -32,10 +32,17 @@ const handleActive=(section)=>{
   return (
     <div className="flex justify-center">
       <nav className="navbar h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-10 ">
-        <img
+        {/* <img
           src={Logo}
           class="company-logo h-12 object-cover hover:scale-150 transition-transform duration-400"
-        />
+        /> */}
+        <motion.div
+         initial={{ opacity: 0, y: -200 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5, delay: 1 }}
+        >
+          <span className="theme-font text-lg md:text-5xl bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent font-bold ">KislayRaj</span>
+        </motion.div>
         <div
           onClick={() => setIsBurger(!IsBurger)}
           className="burger text-2xl absolute right-[-20px] top-4 md:right-0  md:top-4 cursor-pointer lg:hidden">

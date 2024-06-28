@@ -20,7 +20,7 @@ const aboutInfo = {
       location: "India",
       date: "2023 - ",
       description:
-        "Description of your responsibilities and achievements in this role.",
+        "Front-End Developer",
     },
     // Add more experience entries as needed
   ],
@@ -74,7 +74,7 @@ const About = () => {
 
   return (
     <div className="h-screen overflow-hidden" ref={aboutRef}>
-      <div className="about-top h-1/2 bg-gradient-to-r from-zinc-900 to-zinc-300 relative pt-8">
+      <div className="about-top h-1/2 bg-black relative pt-8">
         <div className="w-full text-start text-3xl pl-12 theme-font font-semibold text-green-400">
           About Me
         </div>
@@ -111,13 +111,13 @@ const About = () => {
                 type: "sprig",
                 duration: 1,
               }}
-              className="lg:text-gray-700  text-sm md:text-base">
+              className="  text-sm md:text-base">
               {aboutInfo.summary}
             </motion.div>
           </div>
         </div>
 
-        <motion.span
+        <motion.div
           initial={{ opacity: 0, y: 300 }}
           animate={isVisible ? { opacity: 1, y: 0 } : ""}
           transition={{
@@ -125,20 +125,20 @@ const About = () => {
             duration: 1,
             delay: 1,
           }}
-          className=" absolute text-4xl lg:text-6xl bottom-[-20px] lg:bottom-[-30px] left-[25%] lg:left-[40%] ">
-          <i className="fa-regular fa-fade theme-font font-bold uppercase">
-            {aboutInfo.name}
+          className=" absolute text-4xl lg:text-6xl bottom-[-20px] lg:bottom-[-30px] flex justify-center w-full ">
+          <i className="fa-regular  theme-font font-bold uppercase">
+            {aboutInfo?.name}
           </i>
-        </motion.span>
+        </motion.div>
       </div>
-      <div className="about-bottom h-1/2 bg-gradient-to-r from-blue-800 to-indigo-900">
-        <div className="w-full flex flex-col lg:flex-row justify-between gap-10 items-center  p-2 md:pl-12 pt-12">
-          <div className="dp md:h-60">
+      <div className="about-bottom h-1/2 bg-gradient-to-r from-slate-900 to-slate-900">
+        <div className="w-full flex flex-col lg:flex-row justify-between gap-10 items-center p-2 pt-12">
+          <div className="dp md:h-60 w-72 center">
             {/* <img src={dp} alt="" className="h-44 w-44 rounded-full" /> */}
             <SvgIcon />
           </div>
 
-          <div className="follow lg:pl-12  text-2xl lg:text-4xl flex gap-10">
+          <div className="follow text-2xl lg:text-4xl flex gap-10">
             <motion.span
               initial={{ opacity: 0, y: 100 }}
               animate={isVisible ? { opacity: 1, y: 0 } : ""}
