@@ -36,12 +36,14 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
+import videoLoader from "../components/Loaders/videoLoader.json";
+import Lottie  from "lottie-react";
 
 const MainContent = () => {
   const [isHovered, setIsHovered] = useState(false);
-
   const serviceRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
 
   const servicesContentMotion = {
     initial: { opacity: 0, y: 300 },
@@ -90,10 +92,19 @@ const MainContent = () => {
         <div
           id="main-content"
           className="main-component flex  justify-around items-center  w-full h-screen">
+          {isVideoLoading && (
+            <div className="absolute text-white z-[-1] ">
+              <Lottie
+                animationData={videoLoader}
+                className="h-44 md:h-80" 
+              />
+            </div>
+          )}
           <video
             autoPlay
             muted
             loop
+            onLoadedData={() => setIsVideoLoading(false)}
             className="absolute  inset-0 object-cover ml- w-full h-full z-[-1]">
             <source src={bgVideo} type="video/mp4" />
           </video>
@@ -107,7 +118,7 @@ const MainContent = () => {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}>
               {/* Building Your Brand */}
-              <Slogan/>
+              <Slogan />
             </h1>
           </div>
         </div>
@@ -117,21 +128,17 @@ const MainContent = () => {
           <h1
             className=" text-green-400
           font-bold text-3xl inline theme-font">
-            What we do :
+            What I do :
           </h1>
-          <p className=" md:w-3/4 3/4 m-2 font-light  text-xs md:text-sm text-white">
-            At DevStudio, we specialize in delivering top-notch web development
-            solutions tailored to meet your unique needs. With our expert team
-            of developers, designers, and strategists, we offer a comprehensive
-            range of services to help you succeed online. Here's what we can do
-            for you:
+          <p className=" md:w-3/4 3/4 m-2 font-light  text-xs md:text-base text-white">
+          I specialize in delivering top-notch web development solutions tailored to meet your unique needs. With my expertise as a developer, designer, and strategist, I offer a comprehensive range of services to help you succeed online. Here's what I can do for you
           </p>
           <motion.div
             variants={servicesContentMotion}
             initial="initial"
             animate="animate"
             className=" Boxes m-10 flex flex-wrap justify-center gap-5 scroll-smooth ">
-            <div className="lg:w-[90%] w-[95%] hidden lg:block px-0.5 pt-5 shadow-[0px_0px_30px_3px_#48bb78] rounded-lg ">
+            <div className="larger_screen lg:w-[90%] w-[95%] hidden lg:block px-0.5 pt-5 shadow-[0px_0px_30px_3px_#48bb78] rounded-lg ">
               {" "}
               <Swiper
                 spaceBetween={-200}
@@ -191,7 +198,7 @@ const MainContent = () => {
                     ListThree="Database Management & Cloud Services"
                   />
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   <Service
                     snumber="05"
                     thumbVideo={thumbVideobg5}
@@ -200,7 +207,7 @@ const MainContent = () => {
                     ListTwo="Digital Marketing"
                     ListThree="Search Engine Optimization (SEO)"
                   />
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide>
                   <Service
                     snumber="06"
@@ -274,7 +281,7 @@ const MainContent = () => {
                     ListThree="Database Management & Cloud Services"
                   />
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   <Service
                     snumber="05"
                     thumbVideo={thumbVideobg5}
@@ -283,7 +290,7 @@ const MainContent = () => {
                     ListTwo="Digital Marketing"
                     ListThree="Search Engine Optimization (SEO)"
                   />
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide>
                   <Service
                     snumber="06"
