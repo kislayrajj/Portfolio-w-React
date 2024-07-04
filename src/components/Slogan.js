@@ -7,16 +7,15 @@ const Slogan = () => {
   const sloganRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { duration: .3, ease: 'power3.out' } });
+    const tl = gsap.timeline({ defaults: { duration: .05, ease: 'power3.out' } });
 
     sloganText.forEach((item, index) => {
       tl.fromTo(
         sloganRef.current.children[index],
         { y: 200, opacity: 0 },
-        { y: 0, opacity: 1, delay: index * 0.02 }
+        { y: 0, opacity: 1, delay: .005 }
       );
     });
-
     // Optionally, you can return a cleanup function if needed
     // return () => tl.kill(); // Ensure animations are cleaned up
 

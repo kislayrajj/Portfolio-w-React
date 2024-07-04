@@ -23,12 +23,11 @@ import Contact from "./Contact";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Slogan from "./Slogan";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
+import NameLogoGsap from "./logos/NameLogoGsap";
 // import required modules
 import {
   Autoplay,
@@ -93,7 +92,7 @@ const MainContent = () => {
           id="main-content"
           className="main-component flex  justify-around items-center  w-full h-screen">
           {isVideoLoading && (
-            <div className="absolute text-white z-[-1] ">
+            <div className="absolute bottom-10 text-white z-[-10] ">
               <Lottie
                 animationData={videoLoader}
                 className="h-44 md:h-80" 
@@ -110,7 +109,7 @@ const MainContent = () => {
           </video>
           <div className="sloga mt-32 md:mt-0">
             <h1
-              className=" text-7xl m-2 md:text-8xl font-bold  "
+              className=" text-7xl m-2 md:text-8xl font-bold"
               style={{
                 WebkitTextStroke: "2px white",
                 WebkitTextFillColor: isHovered ? "white" : "transparent",
@@ -399,6 +398,7 @@ const MainContent = () => {
       </div>
       <div id="contact" className="scroll-m-16">
         <Contact />
+        <NameLogoGsap />
       </div>
     </div>
   );

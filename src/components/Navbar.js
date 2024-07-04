@@ -3,6 +3,7 @@ import Logo from "../assests/companylogo.png";
 import { HashLink as Link } from 'react-router-hash-link';
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
+import NameLogoGsap from "./logos/NameLogoGsap";
 const Navbar = () => {
   let [IsBurger, setIsBurger] = useState(false);
   const [isActive, setIsActive]=useState ("");
@@ -41,7 +42,7 @@ const handleActive=(section)=>{
          animate={{ opacity: 1, y: 0 }}
          transition={{ duration: 0.5, delay: 1 }}
         >
-          <span className="theme-font text-lg md:text-5xl bg-gradient-to-r from-teal-400 to-yellow-200 bg-clip-text text-transparent font-bold ">KislayRaj</span>
+          <span className=""><NameLogoGsap /></span>
         </motion.div>
         <div
           onClick={() => setIsBurger(!IsBurger)}
