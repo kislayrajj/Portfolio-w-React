@@ -41,12 +41,12 @@ const NameLogoGsap = () => {
 
   return (
     <div className="relative flex items-center">
-      <h1 ref={textRef} className="text-lg md:text-5xl grad font-bold leading-tight">
+      <h1 ref={textRef} className="text-lg lg:text-2xl xl:text-5xl grad font-bold leading-tight">
         Kislay Raj
       </h1>
       <svg
         ref={svgRef}
-        className="absolute top-1/2 left-2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 md:w-24 md:h-24 -z-10"
+        className="absolute top-1/2 left-2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 lg:w-16 lg:h-16 xl:w-24 xl:h-24 -z-10"
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

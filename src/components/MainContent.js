@@ -27,7 +27,6 @@ import Slogan from "./Slogan";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import NameLogoGsap from "./logos/NameLogoGsap";
 // import required modules
 import {
   Autoplay,
@@ -398,7 +397,7 @@ const MainContent = () => {
       </div>
       <div id="contact" className="scroll-m-16">
         <Contact />
-        <NameLogoGsap />
+      
       </div>
     </div>
   );
