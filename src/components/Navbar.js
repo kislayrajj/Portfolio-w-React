@@ -48,7 +48,7 @@ const handleActive=(section)=>{
           onClick={() => setIsBurger(!IsBurger)}
           className="burger text-2xl absolute right-[-20px] top-4 md:right-0  md:top-4 cursor-pointer lg:hidden">
           <i
-            class="fa-solid fa-ellipsis-vertical h-10 w-10"
+            className="fa-solid fa-ellipsis-vertical h-10 w-10"
             name={IsBurger ? "close" : "menu"}></i>
         </div>
         <div className={`menu-1 m-2 `}>
@@ -63,7 +63,7 @@ const handleActive=(section)=>{
                 transition={{ duration: 0.5, delay: 1 }}
                 className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="home" ? "text-2xl text-green-500 border-b-2 border-green-500 ":""}`}
                 onClick={()=>handleActive("home")}>
-                <a href="#main-content">Home</a>
+                Home
               </motion.li>
             </Link>
             <Link smooth to="/#services">
@@ -73,7 +73,7 @@ const handleActive=(section)=>{
               transition={{ duration: 1.6, delay: 1 }}
               className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="services" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("services")}>
-            <a href="#services">Services</a>  
+            Services
             </motion.li>
             </Link>
             <Link smooth to="/Projects">
@@ -89,7 +89,17 @@ const handleActive=(section)=>{
                 </button>{" "}
               </motion.li>
             </Link>
-            <Link to="#contact">
+            <Link smooth to="/#about">
+            <motion.li
+              initial={{ opacity: 0, y: -200 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1 }}
+              className= {`cursor-pointer hover:text-green-500 hover:font-bold transition-all ease-in-out duration-500 ${isActive =="about" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              onClick={()=>handleActive("about")}>
+           About
+            </motion.li>
+            </Link>
+            <Link smooth to="#contact">
             <motion.li
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
@@ -100,16 +110,7 @@ const handleActive=(section)=>{
               Contact
             </motion.li>
             </Link>
-            <Link smooth to="/#about">
-            <motion.li
-              initial={{ opacity: 0, y: -200 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500 hover:font-bold transition-all ease-in-out duration-500 ${isActive =="about" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
-              onClick={()=>handleActive("about")}>
-              <a href="#about"> About</a>
-            </motion.li>
-            </Link>
+       
           </ul>
         </div>
         <div className="menu-2 m-2">
@@ -142,7 +143,7 @@ const handleActive=(section)=>{
             initial={{ opacity: 0, x: -900 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            className="border-2 border-l-black border-t-black border-r-teal-200 border-b-teal-100 bg-transparent backdrop-blur-[1px] p-1 pl-5 pr-5 hover:text-green-500 absolute md:static top-14 right-6  md:mr-0 md:mt-1">
+            className="border-2 border-l-black border-t-black border-r-teal-200 border-b-teal-100 bg-transparent backdrop-blur-[1px] p-1 pl-5 pr-5 hover:text-green-300 absolute md:static top-14 right-6  md:mr-0 md:mt-1 hover:bg-black/50 hover:border-r-black hover:border-b-black hover:border-l-teal-200 hover:border-t-teal-100 transition-all duration-200">
             Hire
           </motion.button>
         </a>

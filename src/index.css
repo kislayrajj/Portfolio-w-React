@@ -26,3 +26,27 @@ code {
   font-family: "Kode Mono", monospace;
 }
 
+.animated-bg-form-dark {
+  background: linear-gradient(270deg, #1c1818, #172158, #845ec2, #10652b, #0c0a0a);
+  background-size: 1000% 1000%;
+  animation: gradientAnimation 25s ease infinite;
+}
+
+.animated-bg-form-light {
+ 
+  background: linear-gradient(270deg, #f8f9fa, #e9ecef, #dee2e6, #bfc1ec, #a9d6a9);
+  background-size: 1000% 1000%;
+  animation: gradientAnimation 25s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

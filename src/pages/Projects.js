@@ -34,7 +34,7 @@ const Projects = () => {
         {projectData.map((item, index) => {
           return (
             <Link to={item.link} target="_blank">
-              <div
+              <div key={index}
                 className=" box-card border-2 rounded-xl  hover:-translate-y-2 ease-in-out transition-all duration-500 opacity-90 hover:opacity-100 hover:border-b-green-500 overflow-hidden relative shadow-[inset_0px_0px_33px_18px_#2c5282]"
                 style={{
                   width: item.width,
