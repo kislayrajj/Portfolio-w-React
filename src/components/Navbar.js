@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assests/companylogo.png";
+// import Logo from "../assests/companylogo.png";
 import { HashLink as Link } from 'react-router-hash-link';
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
@@ -61,7 +61,7 @@ const handleActive=(section)=>{
                 initial={{ opacity: 0, y: -200 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1 }}
-                className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="home" ? "text-2xl text-green-500 border-b-2 border-green-500 ":""}`}
+                className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive ==="home" ? "text-2xl text-green-500 border-b-2 border-green-500 ":""}`}
                 onClick={()=>handleActive("home")}>
                 Home
               </motion.li>
@@ -71,7 +71,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.6, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="services" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive ==="services" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("services")}>
             Services
             </motion.li>
@@ -83,7 +83,7 @@ const handleActive=(section)=>{
                 transition={{ duration: 1.2, delay: 1 }}
                 className=" cursor-pointer hover:text-green-500 md:hover:font-bold"
                 onClick={()=>handleActive("projects")}>
-                <button className={`border-2 border-green-600 rounded-sm pl-2 pr-2 transition-all ease-in-out duration-500 ${isActive =="projects" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}>
+                <button className={`border-2 border-green-600 rounded-sm pl-2 pr-2 transition-all ease-in-out duration-500 ${isActive ==="projects" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}>
                   {" "}
                   Projects
                 </button>{" "}
@@ -94,7 +94,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500 hover:font-bold transition-all ease-in-out duration-500 ${isActive =="about" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500 hover:font-bold transition-all ease-in-out duration-500 ${isActive ==="about" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("about")}>
            About
             </motion.li>
@@ -104,7 +104,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.4, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="contact" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive ==="contact" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("contact")}>
                 
               Contact
@@ -119,7 +119,7 @@ const handleActive=(section)=>{
               initial={{ opacity: 0, x: -500 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive =="faqs" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
+              className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-500 ${isActive ==="faqs" ? "text-2xl text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("faqs")}>
               FAQs
             </motion.li>

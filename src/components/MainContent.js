@@ -16,7 +16,7 @@ import thumbVideobg from "../assests/website-development.mp4";
 import thumbVideobg2 from "../assests/thumbnail-of-web-application-development.mp4";
 import thumbVideobg3 from "../assests/ux-designer.mp4";
 import thumbVideobg4 from "../assests/texhnical-experties.mp4";
-import thumbVideobg5 from "../assests/digital-marketing.mp4";
+// import thumbVideobg5 from "../assests/digital-marketing.mp4";
 import thumbVideobg6 from "../assests/thumbnail-of-maintenance.mp4";
 import About from "./About";
 import Contact from "./Contact";
@@ -35,7 +35,7 @@ import {
   Navigation,
 } from "swiper/modules";
 import videoLoader from "../components/Loaders/videoLoader.json";
-import Lottie  from "lottie-react";
+import Lottie from "lottie-react";
 
 const MainContent = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -72,14 +72,14 @@ const MainContent = () => {
       },
       { threshold: 0.1 }
     );
-
-    if (serviceRef.current) {
-      observer.observe(serviceRef.current);
+    const currentRef = serviceRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (serviceRef.current) {
-        observer.unobserve(serviceRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -92,10 +92,7 @@ const MainContent = () => {
           className="main-component flex  justify-around items-center  w-full h-screen">
           {isVideoLoading && (
             <div className="absolute bottom-10 text-white z-[-10] ">
-              <Lottie
-                animationData={videoLoader}
-                className="h-44 md:h-80" 
-              />
+              <Lottie animationData={videoLoader} className="h-44 md:h-80" />
             </div>
           )}
           <video
@@ -129,7 +126,10 @@ const MainContent = () => {
             What I do :
           </h1>
           <p className=" md:w-3/4 3/4 m-2 font-light  text-xs md:text-base text-white">
-          I specialize in delivering top-notch web development solutions tailored to meet your unique needs. With my expertise as a developer, designer, and strategist, I offer a comprehensive range of services to help you succeed online. Here's what I can do for you
+            I specialize in delivering top-notch web development solutions
+            tailored to meet your unique needs. With my expertise as a
+            developer, designer, and strategist, I offer a comprehensive range
+            of services to help you succeed online. Here's what I can do for you
           </p>
           <motion.div
             variants={servicesContentMotion}
@@ -397,7 +397,6 @@ const MainContent = () => {
       </div>
       <div id="contact" className="scroll-m-16">
         <Contact />
-      
       </div>
     </div>
   );

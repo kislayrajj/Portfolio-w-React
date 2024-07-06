@@ -1,6 +1,6 @@
 import React from "react";
 import IndianFlag from "../assests/Indianflag.png";
-import dp from "../assests/profilepic2.jpg";
+// import dp from "../assests/profilepic2.jpg";
 import SvgIcon from "../components/drinkCoffeSVG";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
@@ -19,8 +19,7 @@ const aboutInfo = {
       company: "Vedic Technologies",
       location: "India",
       date: "2023 - ",
-      description:
-        "Front-End Developer",
+      description: "Front-End Developer",
     },
     // Add more experience entries as needed
   ],
@@ -60,14 +59,14 @@ const About = () => {
       },
       { threshold: 0.1 }
     );
-
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+    const currentRef = aboutRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -147,19 +146,23 @@ const About = () => {
                 duration: 1,
                 delay: 2,
               }}>
-                <a href="https://github.com/kislayrajj" target="_blank"><motion.i
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: -360,
-                }}
-                transition={{ duration: 0.3 }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className={`fa-brands fa-github hover:text-green-400 ${
-                  isHover ? " " : "fa-beat-fade"
-                }`}></motion.i></a>
-              
+              <a
+                href="https://github.com/kislayrajj"
+                target="_blank"
+                rel="noopener noreferrer">
+                <motion.i
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{
+                    scale: 0.8,
+                    rotate: -360,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className={`fa-brands fa-github hover:text-green-400 ${
+                    isHover ? " " : "fa-beat-fade"
+                  }`}></motion.i>
+              </a>
             </motion.span>
 
             <motion.span
@@ -170,19 +173,23 @@ const About = () => {
                 duration: 1,
                 delay: 2.1,
               }}>
-                <a href="https://www.linkedin.com/in/kislay-raj-b462502a6/" target="_blank" ><motion.i
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: -360,
-                }}
-                transition={{ duration: 0.3 }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className={`fa-brands fa-linkedin hover:text-green-400 ${
-                  isHover ? " " : "fa-beat-fade"
-                }`}></motion.i></a>
-              
+              <a
+                href="https://www.linkedin.com/in/kislay-raj-b462502a6/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <motion.i
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{
+                    scale: 0.8,
+                    rotate: -360,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className={`fa-brands fa-linkedin hover:text-green-400 ${
+                    isHover ? " " : "fa-beat-fade"
+                  }`}></motion.i>
+              </a>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 300 }}
@@ -192,19 +199,24 @@ const About = () => {
                 duration: 1,
                 delay: 2.2,
               }}>
-                <a href="https://www.instagram.com/kislayrajj" target="_blank"> <motion.i
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: -360,
-                }}
-                transition={{ duration: 0.3 }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className={`fa-brands fa-square-instagram  hover:text-green-400 ${
-                  isHover ? " " : "fa-beat-fade"
-                }`}></motion.i></a>
-             
+              <a
+                href="https://www.instagram.com/kislayrajj"
+                target="_blank"
+                rel="noopener noreferrer">
+                {" "}
+                <motion.i
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{
+                    scale: 0.8,
+                    rotate: -360,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className={`fa-brands fa-square-instagram  hover:text-green-400 ${
+                    isHover ? " " : "fa-beat-fade"
+                  }`}></motion.i>
+              </a>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 400 }}
@@ -214,19 +226,23 @@ const About = () => {
                 duration: 1,
                 delay: 2.3,
               }}>
-                <a href="https://www.twitter.com/Kislayrajj" target="_blank"><motion.i
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: -360,
-                }}
-                transition={{ duration: 0.3 }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className={`fa-brands fa-square-x-twitter  hover:text-green-400 ${
-                  isHover ? " " : "fa-beat-fade"
-                }`}></motion.i></a>
-              
+              <a
+                href="https://www.twitter.com/Kislayrajj"
+                target="_blank"
+                rel="noopener noreferrer">
+                <motion.i
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{
+                    scale: 0.8,
+                    rotate: -360,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className={`fa-brands fa-square-x-twitter  hover:text-green-400 ${
+                    isHover ? " " : "fa-beat-fade"
+                  }`}></motion.i>
+              </a>
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 500 }}
@@ -236,19 +252,23 @@ const About = () => {
                 duration: 1,
                 delay: 2.4,
               }}>
-                <a href="mailto:kislayraj751@gmail.com" target="_blank"></a>
-              <motion.i
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: -360,
-                }}
-                transition={{ duration: 0.3 }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                className={`fa-solid fa-envelope hover:text-green-400 ${
-                  isHover ? " " : "fa-beat-fade"
-                }`}></motion.i>
+              <a
+                href="mailto:kislayraj751@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                <motion.i
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{
+                    scale: 0.8,
+                    rotate: -360,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className={`fa-solid fa-envelope hover:text-green-400 ${
+                    isHover ? " " : "fa-beat-fade"
+                  }`}></motion.i>
+              </a>
             </motion.span>
           </div>
 
