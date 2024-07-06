@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 const Contact = () => {
   const contactRef = useRef(null);
-  const [isvisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [isFormDark, setIsFormDark] = useState(true);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,28 +38,28 @@ const Contact = () => {
           <div className="">
             <motion.p
               initial={{ opacity: 0, x: -100 }}
-              animate={isvisible ? { opacity: 1, x: 0 } : ""}
+              animate={isVisible ? { opacity: 1, x: 0 } : ""}
               transition={{ duration: 1, delay: 0.1 }}
               className="text-2xl lg:text-3xl xl:text-5xl tracking-wide">
               Let's talk a bit.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -100 }}
-              animate={isvisible ? { opacity: 1, x: 0 } : ""}
+              animate={isVisible ? { opacity: 1, x: 0 } : ""}
               transition={{ duration: 1, delay: 0.3 }}
               className="text-2xl lg:text-3xl xl:text-5xl tracking-wide md:mt-2">
               Tell me about Your
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -100 }}
-              animate={isvisible ? { opacity: 1, x: 0 } : ""}
+              animate={isVisible ? { opacity: 1, x: 0 } : ""}
               transition={{ duration: 1, delay: 0.5 }}
               className="text-2xl lg:text-3xl xl:text-5xl tracking-wide md:mt-2">
               project.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: -150 }}
-              animate={isvisible ? { opacity: 1, y: 0 } : ""}
+              animate={isVisible ? { opacity: 1, y: 0 } : ""}
               transition={{ duration: 1 }}
               className="text-lg lg:text-xl xl:text-2xl mt-5 md:mt-10">
               Let's turn you idea into{" "}
@@ -69,7 +69,7 @@ const Contact = () => {
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
-              animate={isvisible ? { opacity: 1, scale: 1 } : ""}
+              animate={isVisible ? { opacity: 1, scale: 1 } : ""}
               transition={{ duration: 0.7, delay: 1 }}
               className="mt-3 md:mt-5 lg:mt lg:flex lg:items-center lg:gap-2">
               <div className="center h-full">
@@ -118,7 +118,7 @@ const Contact = () => {
               <form className="space-y-4">
                 <motion.div
                   initial={{ opacity: 0, y: 150 }}
-                  animate={isvisible ? { opacity: 1, y: 0 } : ""}
+                  animate={isVisible ? { opacity: 1, y: 0 } : ""}
                   transition={{ duration: 1, delay: 0.2 }}>
                   <label
                     htmlFor="name"
@@ -142,7 +142,7 @@ const Contact = () => {
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 150 }}
-                  animate={isvisible ? { opacity: 1, y: 0 } : ""}
+                  animate={isVisible ? { opacity: 1, y: 0 } : ""}
                   transition={{ duration: 1, delay: 0.3 }}>
                   <label
                     htmlFor="email"
@@ -167,7 +167,7 @@ const Contact = () => {
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 150 }}
-                  animate={isvisible ? { opacity: 1, y: 0 } : ""}
+                  animate={isVisible ? { opacity: 1, y: 0 } : ""}
                   transition={{ duration: 1, delay: 0.4 }}>
                   <label
                     htmlFor="subject"
@@ -192,7 +192,7 @@ const Contact = () => {
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 150 }}
-                  animate={isvisible ? { opacity: 1, y: 0 } : ""}
+                  animate={isVisible ? { opacity: 1, y: 0 } : ""}
                   transition={{ duration: 1, delay: 0.5 }}>
                   <label
                     htmlFor="message"
@@ -217,14 +217,13 @@ const Contact = () => {
                 </motion.div>
                 <div className="flex justify-end">
                   <div
-                    className={`flex justify-end ${
-                      isFormDark
-                        ? "shadow-[0px_0px_23px_1px_#edf2f7]"
-                        : "shadow-[0px_0px_23px_1px_#48bb78]"
+                    className={`flex justify-end transition-shadow duration-500 delay-1000 ${
+                      isFormDark && isVisible  ? "shadow-[0px_0px_23px_1px_#edf2f7]"  : !isFormDark && isVisible    ? "shadow-[0px_0px_23px_1px_#48bb78]"
+                      : ""
                     }`}>
                     <motion.button
                       initial={{ opacity: 0, y: 150 }}
-                      animate={isvisible ? { opacity: 1, y: 0 } : ""}
+                      animate={isVisible ? { opacity: 1, y: 0 } : ""}
                       transition={{ duration: 1, delay: 0.6 }}
                       type="submit"
                       className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
