@@ -99,7 +99,7 @@ const handleActive=(section)=>{
            About
             </motion.li>
             </Link>
-            <Link smooth to="#contact">
+            <Link smooth to="/#contact">
             <motion.li
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
