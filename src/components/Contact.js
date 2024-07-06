@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   const contactRef = useRef(null);
   const [isvisible, setIsVisible] = useState(false);
-  const [isFromDark, setIsFormDark] = useState(true);
+  const [isFormDark, setIsFormDark] = useState(true);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -102,14 +102,14 @@ const Contact = () => {
             Send me a text <i className="fa-solid fa-paper-plane fa-bounce"></i>
             <div
               className={`relative w-[300px]  sm:w-[400px] lg:w-[500px] xl:w-[600px]  mx-auto p-6  rounded-lg shadow-md ${
-                isFromDark
+                isFormDark
                   ? "text-white animated-bg-form-dark"
                   : "animated-bg-form-light"
               }`}>
               <div
-                onClick={() => setIsFormDark(!isFromDark)}
+                onClick={() => setIsFormDark(!isFormDark)}
                 className="absolute top-1 right-1 size-8 rounded-full center ">
-                {isFromDark ? (
+                {isFormDark ? (
                   <i className="fa-regular fa-sun"></i>
                 ) : (
                   <i className="fa-regular fa-moon text-black"></i>
@@ -123,7 +123,7 @@ const Contact = () => {
                   <label
                     htmlFor="name"
                     className={`block text-sm lg:text-base font-medium 
-            ${isFromDark ? "text-white" : "text-black"} `}>
+            ${isFormDark ? "text-white" : "text-black"} `}>
                     Name
                   </label>
                   <input
@@ -135,7 +135,7 @@ const Contact = () => {
             focus:outline-none
             focus:outline-green-500 sm:text-sm lg:text-base 
             ${
-              isFromDark ? " bg-white/30 text-white" : "text-black bg-violet-50"
+              isFormDark ? " bg-white/30 text-white" : "text-black bg-violet-50"
             }
             `}
                   />
@@ -147,7 +147,7 @@ const Contact = () => {
                   <label
                     htmlFor="email"
                     className={`block text-sm lg:text-base font-medium 
-            ${isFromDark ? "text-white" : "text-black"} `}>
+            ${isFormDark ? "text-white" : "text-black"} `}>
                     Email
                   </label>
                   <input
@@ -158,7 +158,7 @@ const Contact = () => {
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm             focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
               ${
-                isFromDark
+                isFormDark
                   ? " bg-white/30 text-white"
                   : "text-black bg-violet-50"
               }
@@ -172,7 +172,7 @@ const Contact = () => {
                   <label
                     htmlFor="subject"
                     className={`block text-sm lg:text-base font-medium 
-            ${isFromDark ? "text-white" : "text-black"} `}>
+            ${isFormDark ? "text-white" : "text-black"} `}>
                     Subject
                   </label>
                   <input
@@ -183,7 +183,7 @@ const Contact = () => {
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
               ${
-                isFromDark
+                isFormDark
                   ? " bg-white/30 text-white"
                   : "text-black bg-violet-50"
               }
@@ -197,7 +197,7 @@ const Contact = () => {
                   <label
                     htmlFor="message"
                     className={`block text-sm lg:text-base font-medium 
-            ${isFromDark ? "text-white" : "text-black"} `}>
+            ${isFormDark ? "text-white" : "text-black"} `}>
                     Message
                   </label>
                   <textarea
@@ -208,7 +208,7 @@ const Contact = () => {
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
               ${
-                isFromDark
+                isFormDark
                   ? " bg-white/30 text-white"
                   : "text-black bg-violet-50"
               }
@@ -216,19 +216,22 @@ const Contact = () => {
                   />
                 </motion.div>
                 <div className="flex justify-end">
-                  <motion.button
-                    initial={{ opacity: 0, y: 150 }}
-                    animate={isvisible ? { opacity: 1, y: 0 } : ""}
-                    transition={{ duration: 1, delay: 0.6 }}
-                    type="submit"
-                    className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
-              ${
-                isFromDark
-                  ? "text-white shadow-[1px_1px_23px_1px_#edf2f7] "
-                  : "text-black  hover:bg-primary/90  shadow-[1px_1px_23px_1px_#48bb78]"
-              }`}>
-                    Submit
-                  </motion.button>
+                  <div
+                    className={`flex justify-end ${
+                      isFormDark
+                        ? "shadow-[0px_0px_23px_1px_#edf2f7]"
+                        : "shadow-[0px_0px_23px_1px_#48bb78]"
+                    }`}>
+                    <motion.button
+                      initial={{ opacity: 0, y: 150 }}
+                      animate={isvisible ? { opacity: 1, y: 0 } : ""}
+                      transition={{ duration: 1, delay: 0.6 }}
+                      type="submit"
+                      className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
+              ${isFormDark ? "text-white" : "text-black "}`}>
+                      Submit
+                    </motion.button>
+                  </div>
                 </div>
               </form>
             </div>
