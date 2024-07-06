@@ -32,7 +32,7 @@ const Contact = () => {
       <div className="pt-8 w-fll text-start text-3xl pl-12 theme-font font-semibold text-green-400">
           Contact Me
         </div>
-        <div className="h-full flex flex-col md:flex-row justify-evenly">
+        <div className="h-[90%]  flex flex-col md:flex-row justify-evenly">
       <div className="center">
         <div className="">
           <motion.p
