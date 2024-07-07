@@ -26,17 +26,21 @@ code {
   font-family: "Kode Mono", monospace;
 }
 
+.theme-font-normal {
+  font-family: "Poppins", sans-serif;
+}
+
 .animated-bg-form-dark {
-  background: linear-gradient(270deg, #1c1818, #172158, #845ec2, #10652b, #0c0a0a);
+  background: linear-gradient(270deg, #1c1818, #172158, #845ec2, #12b345, #0c0a0a);
   background-size: 1000% 1000%;
-  animation: gradientAnimation 25s ease infinite;
+  animation: gradientAnimation 55s ease infinite;
 }
 
 .animated-bg-form-light {
  
-  background: linear-gradient(270deg, #f8f9fa, #e9ecef, #dee2e6, #bfc1ec, #a9d6a9);
+  background: linear-gradient(270deg, #f8f9fa, #e9ecef, #dee2e6, #dbdbfa, #a9d6a9);
   background-size: 1000% 1000%;
-  animation: gradientAnimation 25s ease infinite;
+  animation: gradientAnimation 55s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -49,4 +53,9 @@ code {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.animate {
+  transition: all ;
+  transition-duration: .3s;
 }

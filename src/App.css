@@ -1,20 +1,56 @@
-html,
+html{
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.godLevelClassFromAppJS,
 .background {
   margin: 0;
   background: linear-gradient(45deg, #150c0c, #030321);
   color: white;
-  font-family: "Poppins", sans-serif;
 }
+
+.godLevelClassFromAppJS-light,
+.background-light {
+  margin: 0;
+  background-image: radial-gradient(circle at 13% 47%, rgba(140, 140, 140,0.03) 0%, rgba(140, 140, 140,0.03) 25%,transparent 25%, transparent 100%),radial-gradient(circle at 28% 63%, rgba(143, 143, 143,0.03) 0%, rgba(143, 143, 143,0.03) 16%,transparent 16%, transparent 100%),radial-gradient(circle at 81% 56%, rgba(65, 65, 65,0.03) 0%, rgba(65, 65, 65,0.03) 12%,transparent 12%, transparent 100%),radial-gradient(circle at 26% 48%, rgba(60, 60, 60,0.03) 0%, rgba(60, 60, 60,0.03) 6%,transparent 6%, transparent 100%),radial-gradient(circle at 97% 17%, rgba(150, 150, 150,0.03) 0%, rgba(150, 150, 150,0.03) 56%,transparent 56%, transparent 100%),radial-gradient(circle at 50% 100%, rgba(25, 25, 25,0.03) 0%, rgba(25, 25, 25,0.03) 36%,transparent 36%, transparent 100%),radial-gradient(circle at 55% 52%, rgba(69, 69, 69,0.03) 0%, rgba(69, 69, 69,0.03) 6%,transparent 6%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+  color: black;
+  z-index: -20000;
+} 
+
 
 .navbar {
   font-family: "Kode Mono", monospace;
   backdrop-filter: blur(3px);
 }
 
-.main-component {
+.landingVideo {
+  font-family: "Kode Mono", monospace;
+
+} 
+.landingVideo-light{
+  background-image: radial-gradient(circle, #d16ba5, #d48ac0, #d8a7d6, #dec3e7, #e8ddf4, #eee9f8, #f6f4fc, #ffffff, #ffffff, #fefefe, #fefefe, #fdfdfd);
   font-family: "Kode Mono", monospace;
 }
+.landingVideo-pink {
+  font-family: "Kode Mono", monospace;
 
+  background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+.projects{
+  background-image: radial-gradient(circle, #dfbce0, #e2c9e8, #e6d6ef, #ece3f5, #f3effa, #f7f4fc, #fbfafe, #ffffff, #ffffff, #fefefe, #fefefe, #fdfdfd);
+}
+.landingVideo-green {
+  font-family: "Kode Mono", monospace;
+  background-image: radial-gradient(circle, #d16ba5, #ea7783, #eb9168, #d8ae60, #b9ca75, #a6d78b, #91e2a5, #7cecc3, #74f0ce, #6df4da, #66f8e5, #5ffbf1);
+}
+
+.landingVideo-blue {
+  font-family: "Kode Mono", monospace;
+  background-image: radial-gradient(circle, #d16ba5, #ea7783, #eb9168, #d8ae60, #b9ca75, #a6d78b, #91e2a5, #7cecc3, #74f0ce, #6df4da, #66f8e5, #5ffbf1);
+}
+.services-light{
+  background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),linear-gradient(309deg, rgba(90, 90, 90,0.05) 0%, rgba(90, 90, 90,0.05) 50%,rgba(206, 206, 206,0.05) 50%, rgba(206, 206, 206,0.05) 100%),linear-gradient(39deg, rgba(13, 13, 13,0.05) 0%, rgba(13, 13, 13,0.05) 50%,rgba(189, 189, 189,0.05) 50%, rgba(189, 189, 189,0.05) 100%),linear-gradient(144deg, rgba(249, 249, 249,0.05) 0%, rgba(249, 249, 249,0.05) 50%,rgba(111, 111, 111,0.05) 50%, rgba(111, 111, 111,0.05) 100%),linear-gradient(166deg, rgba(231, 231, 231,0.05) 0%, rgba(231, 231, 231,0.05) 50%,rgba(220, 220, 220,0.05) 50%, rgba(220, 220, 220,0.05) 100%),linear-gradient(212deg, rgba(80, 80, 80,0.05) 0%, rgba(80, 80, 80,0.05) 50%,rgba(243, 243, 243,0.05) 50%, rgba(243, 243, 243,0.05) 100%),radial-gradient(circle at center center, hsl(107,19%,100%),hsl(107,19%,100%));
+}
 .box-card > div {
   font-family: "Poppins", sans-serif;
 }
@@ -22,7 +58,6 @@ html,
 .box-card {
   border: 2px solid rgb(15, 20, 71);
   backdrop-filter: calc(20px);
-  background: rgba(10, 16, 47, 0.5);
   border-radius: 50px;
 }
 
@@ -118,6 +153,9 @@ html,
   height: auto;
 }
 
+.skills-light {
+  background-image: radial-gradient(circle at 13% 47%, rgba(140, 140, 140,0.03) 0%, rgba(140, 140, 140,0.03) 25%,transparent 25%, transparent 100%),radial-gradient(circle at 28% 63%, rgba(143, 143, 143,0.03) 0%, rgba(143, 143, 143,0.03) 16%,transparent 16%, transparent 100%),radial-gradient(circle at 81% 56%, rgba(65, 65, 65,0.03) 0%, rgba(65, 65, 65,0.03) 12%,transparent 12%, transparent 100%),radial-gradient(circle at 26% 48%, rgba(60, 60, 60,0.03) 0%, rgba(60, 60, 60,0.03) 6%,transparent 6%, transparent 100%),radial-gradient(circle at 97% 17%, rgba(150, 150, 150,0.03) 0%, rgba(150, 150, 150,0.03) 56%,transparent 56%, transparent 100%),radial-gradient(circle at 50% 100%, rgba(25, 25, 25,0.03) 0%, rgba(25, 25, 25,0.03) 36%,transparent 36%, transparent 100%),radial-gradient(circle at 55% 52%, rgba(69, 69, 69,0.03) 0%, rgba(69, 69, 69,0.03) 6%,transparent 6%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+}
 .autoplay-progress {
   position: absolute;
   right: 16px;

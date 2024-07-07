@@ -11,7 +11,7 @@ import { lazy, Suspense } from "react";
 import Loading from "./components/Loading.js";
 import LoadingAnimation from "./components/Loaders/Loader2.json";
 import Lottie from "lottie-react";
-
+import { useSelector } from "react-redux";
 // import LoadingAnimation2 from "./components/Loaders/Loader1.json";
 
 const Projects = lazy(() => import("./pages/Projects.js"));
@@ -24,8 +24,9 @@ function App() {
     }, 4000);
   }, []);
 
+  const themeColor= useSelector((state)=>state.theme.themeColor)
   return (
-    <>
+    <div className={`  ${themeColor === "dark" ? "godLevelClassFromAppJS " : "godLevelClassFromAppJS-light"}`}>
       {isLoading ? (
         <div className="h-screen center">
           <Lottie animationData={LoadingAnimation} className="h-44 md:h-80" />
@@ -51,7 +52,7 @@ function App() {
      </div> */}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

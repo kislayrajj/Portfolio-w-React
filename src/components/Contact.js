@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 const Contact = () => {
   const contactRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isFormDark, setIsFormDark] = useState(true);
+  const themeColor = useSelector((state) => state.theme.themeColor);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -25,12 +28,27 @@ const Contact = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (themeColor !== "dark") {
+      setIsFormDark(false);
+    } else {
+      setIsFormDark(true);
+    }
+  }, [themeColor]);
+
   return (
     <div
       ref={contactRef}
-      className="h-screen  bg-gradient-to-r from-slate-900 to-zinc-900">
+      className={`h-screen ${
+        themeColor === "dark"
+          ? "bg-gradient-to-r from-slate-900 to-zinc-900"
+          : "bg-gradient-to-r from-gray-50 to-fuchsia-50"
+      } `}>
       {/* <h1> hi this where you can contact me</h1> */}
-      <div className="pt-8 w-fll text-start text-3xl pl-12 theme-font font-semibold text-green-400">
+      <div
+        className={`pt-8 w-fll text-start text-3xl pl-12 theme-font font-semibold  ${
+          themeColor === "dark" ? "text-green-400" : "text-blue-600"
+        }`}>
         Contact Me
       </div>
       <div className="h-[90%]  flex flex-col md:flex-row justify-evenly">
@@ -73,8 +91,13 @@ const Contact = () => {
               transition={{ duration: 0.7, delay: 1 }}
               className="mt-3 md:mt-5 lg:mt lg:flex lg:items-center lg:gap-2">
               <div className="center h-full">
-                <div className=" bg-violet-400 hover:bg-green-500 px-2 rounded animate">
-                  <i className="fa-solid fa-envelope hidden lg:block text-6xl hover:scale-105 "></i>
+                <div
+                  className={`${
+                    themeColor === "dark"
+                      ? " bg-violet-400 hover:bg-green-500"
+                      : " bg-pink-300 hover:bg-blue-400 "
+                  } px-2 rounded animate text-white`}>
+                  <i className="fa-solid fa-envelope hidden lg:block text-6xl hover:scale-105"></i>
                 </div>
               </div>
               <div>
@@ -102,6 +125,8 @@ const Contact = () => {
             Send me a text <i className="fa-solid fa-paper-plane fa-bounce"></i>
             <div
               className={`relative w-[300px]  sm:w-[400px] lg:w-[500px] xl:w-[600px]  mx-auto p-6  rounded-lg shadow-md ${
+                themeColor === "dark" ? "shadow-form_dark" : "shadow-form_light"
+              } ${
                 isFormDark
                   ? "text-white animated-bg-form-dark"
                   : "animated-bg-form-light"
@@ -218,8 +243,11 @@ const Contact = () => {
                 <div className="flex justify-end">
                   <div
                     className={`flex justify-end transition-shadow duration-500 delay-1000 ${
-                      isFormDark && isVisible  ? "shadow-[0px_0px_23px_1px_#edf2f7]"  : !isFormDark && isVisible    ? "shadow-[0px_0px_23px_1px_#48bb78]"
-                      : ""
+                      isFormDark && isVisible
+                        ? "shadow-[0px_0px_23px_1px_#edf2f7]"
+                        : !isFormDark && isVisible
+                        ? "shadow-[0px_0px_23px_1px_#48bb78]"
+                        : ""
                     }`}>
                     <motion.button
                       initial={{ opacity: 0, y: 150 }}
