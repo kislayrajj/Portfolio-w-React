@@ -214,3 +214,13 @@ html{
   justify-content: center;
   width: fit-content;
 }
+
+
+.shadow-form_light{
+  box-shadow: 5px 11px 27px 3px #ed64a6, -12px 1px 34px 16px #edf2f7;
+}
+
+.shadow-form_dark{
+  box-shadow: 5px 4px 13px 0px #38a169, -3px 1px 10px 0px #edf2f7;
+}
+

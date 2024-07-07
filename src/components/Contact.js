@@ -39,7 +39,7 @@ const Contact = () => {
   return (
     <div
       ref={contactRef}
-      className={`h-screen ${
+      className={`min-h-screen pb-5 ${
         themeColor === "dark"
           ? "bg-gradient-to-r from-slate-900 to-zinc-900"
           : "bg-gradient-to-r from-gray-50 to-fuchsia-50"
@@ -51,7 +51,7 @@ const Contact = () => {
         }`}>
         Contact Me
       </div>
-      <div className="h-[90%]  flex flex-col md:flex-row justify-evenly">
+      <div className="h-[90%] mt-20 flex flex-col md:flex-row justify-evenly">
         <div className="center">
           <div className="">
             <motion.p
@@ -121,10 +121,10 @@ const Contact = () => {
           </div>
         </div>
         <div className="center">
-          <div>
-            Send me a text <i className="fa-solid fa-paper-plane fa-bounce"></i>
+          <div className="relative mt-10 lg:mt-0 ">
+            <span className={` lg:absolute lg:text-5xl ${themeColor==="dark" ? "text-white" : "text-black"}`}>Send me a text</span> <i className="fa-solid fa-paper-plane lg:absolute lg:text-5xl lg:right-12"></i>
             <div
-              className={`relative w-[300px]  sm:w-[400px] lg:w-[500px] xl:w-[600px]  mx-auto p-6  rounded-lg shadow-md ${
+              className={`relative mt-2 lg:mt-9  w-[300px]  sm:w-[400px] lg:w-[500px] xl:w-[600px]  mx-auto p-6  rounded-lg shadow-md ${
                 themeColor === "dark" ? "shadow-form_dark" : "shadow-form_light"
               } ${
                 isFormDark
@@ -240,25 +240,17 @@ const Contact = () => {
               `}
                   />
                 </motion.div>
-                <div className="flex justify-end">
-                  <div
-                    className={`flex justify-end transition-shadow duration-500 delay-1000 ${
-                      isFormDark && isVisible
-                        ? "shadow-[0px_0px_23px_1px_#edf2f7]"
-                        : !isFormDark && isVisible
-                        ? "shadow-[0px_0px_23px_1px_#48bb78]"
-                        : ""
-                    }`}>
-                    <motion.button
+                <div className={`flex justify-end transition-shadow duration-500 delay-1000`}>
+                          <motion.button
                       initial={{ opacity: 0, y: 150 }}
                       animate={isVisible ? { opacity: 1, y: 0 } : ""}
                       transition={{ duration: 1, delay: 0.6 }}
                       type="submit"
-                      className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary
-              ${isFormDark ? "text-white" : "text-black "}`}>
+                      className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md
+              ${isFormDark ? "shadow-[0px_0px_20px_2px_#e2e8f0] text-white" : "shadow-[0px_0px_20px_2px_#f687b3] text-black"}`}>
                       Submit
                     </motion.button>
-                  </div>
+               
                 </div>
               </form>
             </div>
