@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
+import { useSelector } from 'react-redux';
 
 const NameLogoGsap = () => {
   const textRef = useRef();
   const svgRef = useRef();
+  const themeColor = useSelector((state)=>state.theme.themeColor)
 
   useEffect(() => {
     const splitText = new SplitType(textRef.current, { types: 'chars' });
@@ -51,9 +53,12 @@ const NameLogoGsap = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="50" cy="50" r="40" stroke="white" strokeWidth="5" />
-        <circle cx="50" cy="50" r="30" stroke="blue" strokeWidth="5" />
-        <circle cx="50" cy="50" r="20" stroke="#06D001" strokeWidth="5" />
+        {themeColor ==="dark" ?  <circle cx="50" cy="50" r="40" stroke="white" strokeWidth="5" /> : <circle cx="50" cy="50" r="40" stroke="deepPink" strokeWidth="5" /> }
+       {themeColor ==="dark" ?   <circle cx="50" cy="50" r="30" stroke="blue" strokeWidth="5" /> : <circle cx="50" cy="50" r="30" stroke="#06D001" strokeWidth="5" /> }
+
+       {themeColor ==="dark" ?    <circle cx="50" cy="50" r="20" stroke="#06D001" strokeWidth="5" /> : <circle cx="50" cy="50" r="20" stroke="blue" strokeWidth="5" /> }
+        {/* <circle cx="50" cy="50" r="30" stroke="blue" strokeWidth="5" />
+        <circle cx="50" cy="50" r="20" stroke="#06D001" strokeWidth="5" /> */}
          {/* <circle cx="50" cy="50" r="10" stroke="violet" strokeWidth="5" /> */}
 
       </svg>
