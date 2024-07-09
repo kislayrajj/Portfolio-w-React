@@ -1,10 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import axios from "axios";
 const Contact = () => {
   const contactRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isFormDark, setIsFormDark] = useState(true);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+
   const themeColor = useSelector((state) => state.theme.themeColor);
 
   useEffect(() => {
@@ -35,6 +44,32 @@ const Contact = () => {
       setIsFormDark(true);
     }
   }, [themeColor]);
+
+  //form
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:8000/submit-form", formData)
+      if(response.status === 200){
+        console.log("form submittes successfully : ", response.data);
+        setFormData({
+          name: "",
+          email:"",
+          subject:"",
+          message:"",
+        })
+      }else{
+        console.error("Error occured  : ", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error submitting form : ", error);
+    }
+  };
 
   return (
     <div
@@ -122,7 +157,13 @@ const Contact = () => {
         </div>
         <div className="center">
           <div className="relative mt-10 lg:mt-0 ">
-            <span className={` lg:absolute lg:text-5xl ${themeColor==="dark" ? "text-white" : "text-black"}`}>Send me a text</span> <i className="fa-solid fa-paper-plane lg:absolute lg:text-5xl lg:right-12"></i>
+            <span
+              className={` lg:absolute lg:text-5xl ${
+                themeColor === "dark" ? "text-white" : "text-black"
+              }`}>
+              Send me a text
+            </span>{" "}
+            <i className="fa-solid fa-paper-plane lg:absolute lg:text-5xl lg:right-12"></i>
             <div
               className={`relative mt-2 lg:mt-9  w-[300px]  sm:w-[400px] lg:w-[500px] xl:w-[600px]  mx-auto p-6  rounded-lg shadow-md ${
                 themeColor === "dark" ? "shadow-form_dark" : "shadow-form_light"
@@ -140,7 +181,7 @@ const Contact = () => {
                   <i className="fa-regular fa-moon text-black"></i>
                 )}
               </div>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <motion.div
                   initial={{ opacity: 0, y: 150 }}
                   animate={isVisible ? { opacity: 1, y: 0 } : ""}
@@ -156,6 +197,8 @@ const Contact = () => {
                     id="name"
                     name="name"
                     placeholder="Enter your name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm
             focus:outline-none
             focus:outline-green-500 sm:text-sm lg:text-base 
@@ -179,6 +222,8 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Enter your email"
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm             focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
@@ -204,6 +249,8 @@ const Contact = () => {
                     type="text"
                     id="subject"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="Enter the subject"
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
@@ -228,6 +275,8 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={4}
                     placeholder="Enter your message"
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm focus:outline-none
@@ -240,17 +289,21 @@ const Contact = () => {
               `}
                   />
                 </motion.div>
-                <div className={`flex justify-end transition-shadow duration-500 delay-1000`}>
-                          <motion.button
-                      initial={{ opacity: 0, y: 150 }}
-                      animate={isVisible ? { opacity: 1, y: 0 } : ""}
-                      transition={{ duration: 1, delay: 0.6 }}
-                      type="submit"
-                      className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md
-              ${isFormDark ? "shadow-[0px_0px_20px_2px_#e2e8f0] text-white" : "shadow-[0px_0px_20px_2px_#f687b3] text-black"}`}>
-                      Submit
-                    </motion.button>
-               
+                <div
+                  className={`flex justify-end transition-shadow duration-500 delay-1000`}>
+                  <motion.button
+                    initial={{ opacity: 0, y: 150 }}
+                    animate={isVisible ? { opacity: 1, y: 0 } : ""}
+                    transition={{ duration: 1, delay: 0.6 }}
+                    type="submit"
+                    className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md
+              ${
+                isFormDark
+                  ? "shadow-[0px_0px_20px_2px_#e2e8f0] text-white"
+                  : "shadow-[0px_0px_20px_2px_#f687b3] text-black"
+              }`}>
+                    Submit
+                  </motion.button>
                 </div>
               </form>
             </div>
