@@ -12,7 +12,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
-
+  const [isErrorInFormSubmission, setIsErrorInFormSubmission] = useState(false);
 
   const themeColor = useSelector((state) => state.theme.themeColor);
 
@@ -54,20 +54,34 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/submit-form", formData)
-      if(response.status === 200){
+      const response = await axios.post(
+        "http://localhost:8000/submit-form",
+        formData
+      );
+      if (response.status === 200) {
         console.log("form submittes successfully : ", response.data);
         setFormData({
           name: "",
-          email:"",
-          subject:"",
-          message:"",
-        })
-      }else{
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setIsErrorInFormSubmission(false);
+      } else {
         console.error("Error occured  : ", response.statusText);
+        setIsErrorInFormSubmission(true);
+
+        setTimeout(() => {
+          setIsErrorInFormSubmission(false);
+        }, 5000);
       }
     } catch (error) {
       console.error("Error submitting form : ", error);
+      setIsErrorInFormSubmission(true);
+
+      setTimeout(() => {
+        setIsErrorInFormSubmission(false);
+      }, 5000);
     }
   };
 
@@ -181,7 +195,7 @@ const Contact = () => {
                   <i className="fa-regular fa-moon text-black"></i>
                 )}
               </div>
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form className="space-y-4 relative" onSubmit={handleSubmit}>
                 <motion.div
                   initial={{ opacity: 0, y: 150 }}
                   animate={isVisible ? { opacity: 1, y: 0 } : ""}
@@ -199,6 +213,7 @@ const Contact = () => {
                     placeholder="Enter your name"
                     value={formData.name}
                     onChange={handleChange}
+                    required
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm
             focus:outline-none
             focus:outline-green-500 sm:text-sm lg:text-base 
@@ -224,6 +239,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    required
                     placeholder="Enter your email"
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm             focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
@@ -251,6 +267,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    required
                     placeholder="Enter the subject"
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
@@ -278,6 +295,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
+                    required
                     placeholder="Enter your message"
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
@@ -289,6 +307,14 @@ const Contact = () => {
               `}
                   />
                 </motion.div>
+                <div className="absolute bottom-0 text-[10px] lg:text-sm w-[60%] md:[70%] lg:w-4/5 text-red-300">
+                  {isErrorInFormSubmission && (
+                    <div>
+                      Error Submitting ! Please use email or any socila meadia
+                      plateform.
+                    </div>
+                  )}
+                </div>
                 <div
                   className={`flex justify-end transition-shadow duration-500 delay-1000`}>
                   <motion.button

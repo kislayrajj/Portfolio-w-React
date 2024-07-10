@@ -29,10 +29,18 @@ const handleActive=(section)=>{
   const body = "Hello Kislay,";
 
   const downloadResume = () => {
-    const url = "../assests.krRESUME.pdf";
+    const url = "/kislayRaj_resume_webDeveloper.pdf";
     fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => saveAs(blob, "krRESUME.pdf"))
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.blob();
+      })
+      .then((blob) => {
+        const file = new Blob([blob], { type: 'application/pdf' });
+        saveAs(file, "kislayRaj_resume_webDeveloper.pdf");
+      })
       .catch((error) => console.error("Error downloading file:", error));
   };
 
@@ -191,7 +199,7 @@ const handleActive=(section)=>{
           initial={{ opacity: 0, x: -900 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className=""
+          className="cursor-pointer"
           onClick={()=>setIsThemeMenuHidden(!isThemeMenuHidden)}
           >
         <i className={`fa-solid fa-palette ${!isThemeMenuHidden ? "fa-fade":""}`}></i>
@@ -205,12 +213,12 @@ const handleActive=(section)=>{
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: .3,  }}
-         className={`theme-menu absolute rounded ${themeColor === "dark" ? "bg-white/90 text-black" : "bg-black/90 text-white"}`}>
+         className={`theme-menu absolute -left-3 xl:left-0 rounded p-1 lg:p-2 ${themeColor === "dark" ? "bg-white/90 text-black" : "bg-black/90 text-white"}`}>
         {colorOptions.map((color) => (
           <p
             key={color.value}
             onClick={() => handleThemeSelection(color.value)}
-            className={`cursor-pointer  p-2 rounded-md transition-all ease-in-out duration-300  `}
+            className={`cursor-pointer  px-2 py-1 mt-1 rounded-md transition-all ease-in-out duration-300 center ${themeColor===color.value ? "bg-green-400" : ""}`}
           >
             {color.name}
           </p>
