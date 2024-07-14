@@ -14,7 +14,7 @@ const themeColor = useSelector((state)=> state.theme.themeColor)
 
 useEffect(()=>{
   setSloganKey(prevKey => prevKey + 1);
-  console.log("🐶 ~ LandingVideo ~ sloganKey:", sloganKey)
+  // console.log("🐶 ~ LandingVideo ~ sloganKey:", sloganKey)
 
 },[themeColor]);
 
