@@ -224,3 +224,84 @@ html{
   box-shadow: 5px 4px 13px 0px #38a169, -3px 1px 10px 0px #edf2f7;
 }
 
+@media (max-width: 411px) {
+  .nav{
+    position: relative;
+  }
+.older_smaller_screen_theme_icon{
+  position: absolute;
+  top: 0;
+  right: 2;
+}
+
+.older_smaller_screen_theme_menu_parent{
+position: relative;
+}
+.older_smaller_screen_theme_menu{
+  position: absolute;
+  left: 12 ;
+  font-size : 10px;
+}
+.older_smaller_screen_theme_menu_list{
+  padding: 0.5px;
+}
+}
+@media (max-width: 330px){
+.vss_slogan{
+font-size: 30px;
+}
+}
+
+@media (max-width: 380px){
+  .vss_service_video{
+    display:none ;
+  }
+  
+}
+/**
+* TODO: Complete responsiveness for smaller screen(really small just for the sake of completion.
+*/
+@media (max-width: 305px){
+  .vss_serviceHeading{
+font-size: 10px;
+  }
+
+  .vss_service{
+width: 100px;
+  }
+.vss_service ul{
+  font-size:8px ;
+}
+
+.vss_service_snumber{
+font-size: 50px;
+top:0;
+}
+
+.vss_service_video{
+  display:none ;
+}
+
+.services h1{
+  font-size: 10px;
+}
+}
+
+@media (max-width: 305px){
+  .kr{
+    display: none;
+  }
+
+  .small_screen_msg{
+    font-size: 10px;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle, #c21477, #d35053, #cc824c, #bdaa69, #b5ca9e, #b2d1b3, #b6d7c6, #c1dbd5, #b5d1cc, #a8c7c4, #9cbdbb, #90b3b3);
+        color: black;
+        padding: 10px ;
+
+  }
+}
+

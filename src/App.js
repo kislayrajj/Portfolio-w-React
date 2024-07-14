@@ -26,7 +26,8 @@ function App() {
 
   const themeColor= useSelector((state)=>state.theme.themeColor)
   return (
-    <div className={`  ${themeColor === "dark" ? "godLevelClassFromAppJS " : "godLevelClassFromAppJS-light"}`}>
+    <>
+    <div className={` kr ${themeColor === "dark" ? "godLevelClassFromAppJS " : "godLevelClassFromAppJS-light"}`}>
       {isLoading ? (
         <div className="h-screen center">
           <Lottie animationData={LoadingAnimation} className="h-44 md:h-80" />
@@ -53,6 +54,8 @@ function App() {
         </div>
       )}
     </div>
+    <div className="small_screen_msg">The screen size is too small to display this website properly. Please use a larger device.</div>
+    </>
   );
 }
 

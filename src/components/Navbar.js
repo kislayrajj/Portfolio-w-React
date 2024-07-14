@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // import Logo from "../assets/companylogo.png";
 import { HashLink as Link } from 'react-router-hash-link';
 import { saveAs } from "file-saver";
@@ -194,7 +194,7 @@ const handleActive=(section)=>{
             Hire
           </motion.button>
         </a>
-        <div className="older_smaller_screen lg:center lg:mt-2 text-sm  2xl:text-xl absolute right-10 top-6 md:right-44 lg:right-44  lg:static">        
+        <div className="older_smaller_screen_theme_icon lg:center lg:mt-2 text-sm  2xl:text-xl absolute right-10 top-6 md:right-44 lg:right-44  lg:static">        
         <motion.div
           initial={{ opacity: 0, x: -900 }}
           animate={{ opacity: 1, x: 0 }}
@@ -205,7 +205,7 @@ const handleActive=(section)=>{
         <i className={`fa-solid fa-palette hover:scale-105 ${!isThemeMenuHidden ? "fa-fade":""}`}></i>
        
         </motion.div>
-        <div className="relative">
+        <div className="relative older_smaller_screen_theme_menu_parent">
         {
           !isThemeMenuHidden && 
        
@@ -213,12 +213,12 @@ const handleActive=(section)=>{
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: .3,  }}
-         className={`theme-menu absolute -left-3 xl:left-0 rounded p-1 lg:p-2 ${themeColor === "dark" ? "bg-white/90 text-black" : "bg-black/90 text-white"}`}>
+         className={`theme-menu older_smaller_screen_theme_menu absolute -left-3 xl:left-0 rounded p-1 lg:p-2 ${themeColor === "dark" ? "bg-white/90 text-black" : "bg-black/90 text-white"}`}>
         {colorOptions.map((color) => (
           <p
             key={color.value}
             onClick={() => handleThemeSelection(color.value)}
-            className={`cursor-pointer  px-2 py-1 mt-1 rounded-md transition-all ease-in-out duration-300 center ${themeColor===color.value ? "bg-green-400" : ""}`}
+            className={`older_smaller_screen_theme_menu_list cursor-pointer  px-2 py-1 mt-1 rounded-md transition-all ease-in-out duration-300 center ${themeColor===color.value ? "bg-green-400" : ""}`}
           >
             {color.name}
           </p>

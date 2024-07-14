@@ -74,8 +74,9 @@ const About = () => {
 
   return (
     <div className="h-auto  overflow-hidden bg-red-500" ref={aboutRef}>
+    {/* padding top ..something */}
       <div
-        className={`about-top py-20 lg:py-8p h-1/2  relative pt-8 ${
+        className={`about-top py-20 lg:py-6p h-1/2  relative pt-8 ${
           themeColor === "dark"
             ? "bg-black"
             : "bg-gradient-to-r from-gray-50 via-gray-200 to-gray-50"

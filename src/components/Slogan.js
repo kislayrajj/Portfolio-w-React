@@ -24,7 +24,7 @@ const Slogan = () => {
   return (
     <div ref={sloganRef}>
       {sloganText.map((item, index) => (
-        <span key={index}>{item}</span>
+        <span className='vss_slogan' key={index}>{item}</span>
       ))}
     </div>
   );

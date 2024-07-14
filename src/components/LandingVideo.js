@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import bgVideo from "../assets/bgPortfolio.mp4";
 import videoLoader from "../components/Loaders/videoLoader.json";
 import Lottie from "lottie-react"
@@ -9,7 +9,15 @@ import { useSelector } from 'react-redux';
 const LandingVideo = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [isVideoLoading, setIsVideoLoading] = useState(true);
+    const [sloganKey, setSloganKey] = useState(0);
 const themeColor = useSelector((state)=> state.theme.themeColor)
+
+useEffect(()=>{
+  setSloganKey(prevKey => prevKey + 1);
+  console.log("🐶 ~ LandingVideo ~ sloganKey:", sloganKey)
+
+},[themeColor]);
+
   return (
     <div
     
@@ -32,7 +40,7 @@ const themeColor = useSelector((state)=> state.theme.themeColor)
     </video>
     </>
    ) }
-    <div className="sloga mt-32 md:mt-0 z-10">
+    <div className="mt-32 md:mt-0 z-10">
       <h1
         className=" text-7xl m-2 md:text-8xl font-bold"
         style={themeColor === "dark" ?{
@@ -45,7 +53,7 @@ const themeColor = useSelector((state)=> state.theme.themeColor)
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}>
         {/* Building Your Brand */}
-        <Slogan />
+        <Slogan key={sloganKey}/>
       </h1>
     </div>
   </div>
