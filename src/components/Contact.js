@@ -88,7 +88,7 @@ const Contact = () => {
   return (
     <div
       ref={contactRef}
-      className={`min-h-screen pb-5 ${
+      className={`min-h-screen overflow-hidden pb-5 ${
         themeColor === "dark"
           ? "bg-gradient-to-r from-slate-900 to-zinc-900"
           : "bg-gradient-to-r from-gray-50 to-fuchsia-50"
