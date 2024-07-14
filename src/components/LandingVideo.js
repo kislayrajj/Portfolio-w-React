@@ -1,5 +1,5 @@
 import React from 'react'
-import bgVideo from "../assests/bgPortfolio.mp4";
+import bgVideo from "../assets/bgPortfolio.mp4";
 import videoLoader from "../components/Loaders/videoLoader.json";
 import Lottie from "lottie-react"
 import Slogan from "./Slogan";

@@ -59,3 +59,14 @@ code {
   transition: all ;
   transition-duration: .3s;
 }
+
+@media (max-width: 411px) {
+  .nav{
+    position: relative;
+  }
+.older_smaller_screen{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+}

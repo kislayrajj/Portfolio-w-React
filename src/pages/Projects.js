@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import projectData from "../assests/data/Projects_Data";
+import projectData from "../assets/data/Projects_Data";
 import { useSelector } from "react-redux";
 const Projects = () => {
   const [dateTime, setDateTime] = useState("");
@@ -53,7 +53,7 @@ const Projects = () => {
                   <div className="hover:scale-105 ease-in-out duration-500 hover:opacity-80 text-2xl font-semibold opacity-30 text-green-400">
                     Click To See Demo
                   </div>
-                  <a href={item.githubLink} target="_blank">
+                  <a href={item.githubLink} target="_blank" rel="noopener noreferrer">
                     <i className="fa-brands fa-github  text-3xl text-green-500 hover:text-black hover:scale-125 transition-all duration-300"></i>
                   </a>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Logo from "../assests/companylogo.png";
+// import Logo from "../assets/companylogo.png";
 import { HashLink as Link } from 'react-router-hash-link';
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ const handleActive=(section)=>{
   const body = "Hello Kislay,";
 
   const downloadResume = () => {
-    const url = "/kislayRaj_resume_webDeveloper.pdf";
+    const url = "/kislayRaj_resume_webDeveloper _1yr_exp.pdf";
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -39,7 +39,7 @@ const handleActive=(section)=>{
       })
       .then((blob) => {
         const file = new Blob([blob], { type: 'application/pdf' });
-        saveAs(file, "kislayRaj_resume_webDeveloper.pdf");
+        saveAs(file, "kislayRaj_resume_webDeveloper _1yr_exp.pdf");
       })
       .catch((error) => console.error("Error downloading file:", error));
   };
@@ -194,7 +194,7 @@ const handleActive=(section)=>{
             Hire
           </motion.button>
         </a>
-        <div className="lg:center lg:mt-2 text-sm  2xl:text-xl absolute right-10 top-6 md:right-44 lg:right-44  lg:static">        
+        <div className="older_smaller_screen lg:center lg:mt-2 text-sm  2xl:text-xl absolute right-10 top-6 md:right-44 lg:right-44  lg:static">        
         <motion.div
           initial={{ opacity: 0, x: -900 }}
           animate={{ opacity: 1, x: 0 }}
@@ -202,7 +202,7 @@ const handleActive=(section)=>{
           className="cursor-pointer"
           onClick={()=>setIsThemeMenuHidden(!isThemeMenuHidden)}
           >
-        <i className={`fa-solid fa-palette ${!isThemeMenuHidden ? "fa-fade":""}`}></i>
+        <i className={`fa-solid fa-palette hover:scale-105 ${!isThemeMenuHidden ? "fa-fade":""}`}></i>
        
         </motion.div>
         <div className="relative">

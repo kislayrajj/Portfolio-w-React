@@ -1,18 +1,18 @@
-import PortfThumb from "../../assests/portfolioWeb.png";
-import MAcard from "../../assests/dynamicCard_thumb.png";
-import RockPaperScissor_thumb from "../../assests/RockPaperScissor.png";
-import ReactCardThumb from "../../assests/ReactCard-Thumb.png";
-import calculator_thum from "../../assests/calculator_thum.png";
-import bmi_thumb from "../../assests/bmilogo.jpg";
-import filterCards_thumb from "../../assests/filterCards_thumb.png";
-import todo_thumb from "../../assests/todo_thumb.png";
-import imageSlider_thumb from "../../assests/imageSlider_thumb.png";
+import PortfThumb from "../../assets/portfolioWeb.png";
+import MAcard from "../../assets/dynamicCard_thumb.png";
+import RockPaperScissor_thumb from "../../assets/RockPaperScissor.png";
+import ReactCardThumb from "../../assets/ReactCard-Thumb.png";
+import calculator_thum from "../../assets/calculator_thum.png";
+import bmi_thumb from "../../assets/bmilogo.jpg";
+import filterCards_thumb from "../../assets/filterCards_thumb.png";
+import todo_thumb from "../../assets/todo_thumb.png";
+import imageSlider_thumb from "../../assets/imageSlider_thumb.png";
 const data = [
     {
       id:1,
       link: "https://kislayrajj.github.io/DynamicCard-html-css/",
       image: MAcard,
-      title: "Dynamic Businnes Card",
+      title: "Dynamic Business Card",
       description: "This is card design dedicated to Marcus Aurelius",
       languages: ["HTML", "CSS"],
       width: "256px", 
@@ -35,7 +35,7 @@ const data = [
       link: "https://kislayrajj.github.io/Rock-Paper-Scissor/",
       image: RockPaperScissor_thumb,
       title: "Rock-Paper-Scissor Game",
-      description: "I built this simple version of the game while learnig JavaScript. Give it a go.",
+      description: "I built this simple version of the game while learning JavaScript. Give it a go.",
       languages: ["HTML", "CSS", "JS"],
       width: "256px", 
       height: "288px",

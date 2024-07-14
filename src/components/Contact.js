@@ -59,7 +59,7 @@ const Contact = () => {
         formData
       );
       if (response.status === 200) {
-        console.log("form submittes successfully : ", response.data);
+        console.log("form submitted successfully : ", response.data);
         setFormData({
           name: "",
           email: "",
@@ -68,7 +68,7 @@ const Contact = () => {
         });
         setIsErrorInFormSubmission(false);
       } else {
-        console.error("Error occured  : ", response.statusText);
+        console.error("Error occurred  : ", response.statusText);
         setIsErrorInFormSubmission(true);
 
         setTimeout(() => {
@@ -310,8 +310,8 @@ const Contact = () => {
                 <div className="absolute bottom-0 text-[10px] lg:text-sm w-[60%] md:[70%] lg:w-4/5 text-red-300">
                   {isErrorInFormSubmission && (
                     <div>
-                      Error Submitting ! Please use email or any socila meadia
-                      plateform.
+                      Error Submitting ! Please use email or any social media
+                      platform.
                     </div>
                   )}
                 </div>
