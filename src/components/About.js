@@ -269,7 +269,7 @@ const About = () => {
                 delay: 2.4,
               }}>
               <a
-                href="mailto:kislayraj751@gmail.com"
+                href="mailto:wrkislayraj89@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer">
                 <motion.i

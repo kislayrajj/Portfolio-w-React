@@ -21,7 +21,7 @@ const Projects = () => {
   }, [dateTime]);
 
   return (
-    <div className={`h-[100vh] ${themeColor === "dark" ? "" : "projects"}`}>
+    <div className={`min-h-screen ${themeColor === "dark" ? "" : "projects"}`}>
       <motion.div
         initial={{opacity:0, y: 2000 }}
         animate={{opacity:1, y: 0 }}

@@ -79,7 +79,7 @@ const handleActive=(section)=>{
   
   return (
     <div className="flex justify-center relative">
-      <nav className={`navbar  h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-10 ${themeColor==="dark" ? "":"bg-white/80"}`}>
+      <nav className={`navbar  h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-20 ${themeColor==="dark" ? "":"bg-white/80"}`}>
         {/* <img
           src={Logo}
           class="company-logo h-12 object-cover hover:scale-150 transition-transform duration-400"
@@ -102,7 +102,7 @@ const handleActive=(section)=>{
           <ul
             className={`md:flex lg:text-base xl:text-xl ${themeColor === "dark" ? "text-white" : "text-black"}  lg:gap-20 md:gap-10  absolute lg:static  w-screen md:z-auto left-0 md:w-auto md:pl-0 pl-20 transition-all duration-500 ease-in-out ${
               IsBurger ? "left-0 top-24" : "left-[-800px] top-20"
-            } bg-gray-900/75 md:bg-inherit`}>
+            } ${themeColor === "dark" ? "bg-gray-900/75 md:bg-inherit":" bg-white/75 md:bg-inherit"}`}>
             <Link smooth to="/#main-content">
               <motion.li
                 initial={{ opacity: 0, y: -200 }}
@@ -183,7 +183,7 @@ const handleActive=(section)=>{
           </ul>
         </div>
         <a
-          href={`mailto:kislayraj751@gmail.com?subject=${encodeURIComponent(
+          href={`mailto:wrkislayraj89@gmail.com?subject=${encodeURIComponent(
             subject
           )}&body=${encodeURIComponent(body)}`}>
           <motion.button
