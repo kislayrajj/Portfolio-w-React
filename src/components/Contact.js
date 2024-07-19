@@ -95,7 +95,7 @@ const Contact = () => {
       } `}>
       {/* <h1> hi this where you can contact me</h1> */}
       <div
-        className={`pt-8 w-fll text-start text-3xl pl-12 theme-font font-semibold  ${
+        className={`pt-8 text-start text-3xl pl-12 theme-font font-semibold  ${
           themeColor === "dark" ? "text-green-400" : "text-blue-600"
         }`}>
         Contact Me
@@ -171,13 +171,16 @@ const Contact = () => {
         </div>
         <div className="center">
           <div className="relative mt-10 lg:mt-0 ">
-            <span
-              className={` lg:absolute lg:text-5xl ${
-                themeColor === "dark" ? "text-white" : "text-black"
+            <motion.span
+             whileHover={{ y: -10 }} // Move the text 10px up on hover
+             transition={{ duration: .2 }} //
+              className={` lg:absolute               transition-all duration-500 ease-in-out lg:text-5xl ${
+                themeColor === "dark" ? "text-white lg:hover:bg-gradient-to-r lg:hover:from-slate-300 lg:hover:to-slate-500 lg:hover:bg-clip-text lg:hover:text-transparent" : "text-black lg:hover:bg-gradient-to-r lg:hover:from-rose-400 lg:hover:to-red-500 lg:hover:bg-clip-text lg:hover:text-transparent"
               }`}>
               Send me a text
-            </span>{" "}
-            <i className="fa-solid fa-paper-plane lg:absolute lg:text-5xl lg:right-12"></i>
+            </motion.span>{" "}
+            <i className="fa-solid fa-paper-plane lg:absolute lg:text-5xl lg:right-12 lg:hover:scale-105"
+            ></i>
             <div
               className={`relative mt-2 lg:mt-9  w-[300px]  sm:w-[400px] lg:w-[500px] xl:w-[600px]  mx-auto p-6  rounded-lg shadow-md ${
                 themeColor === "dark" ? "shadow-form_dark" : "shadow-form_light"

@@ -11,7 +11,7 @@ const Services = ({
 
   const themeColor = useSelector((state)=> state.theme.themeColor)
   return (
-    <div className={`border-2 flex justify-between flex-grow p-2  w-[250px]  lg:min-w-[450px]   h-auto md:min-h-72 relative    rounded-md overflow-hidden vss_service  ${themeColor === "dark" ? "text-white/90 bg-black/30" : " text-black/90 bg-pink-300/40"}`}>
+    <div className={`border-2 flex justify-between flex-grow p-2  w-[250px]  2xl:min-w-[450px]   h-auto md:min-h-72 relative    rounded-md overflow-hidden vss_service  ${themeColor === "dark" ? "text-white/90 bg-black/30" : " text-black/90 bg-pink-300/40"}`}>
       <div>
         <div className="font-semibold lg:font-bold text-base md:text-xl tracking-wider pl-2 vss_serviceHeading">
           {service}
@@ -26,10 +26,10 @@ const Services = ({
           {snumber}
         </div>
       </div>
-      <div className=" object-fill h-44 w-44 overflow-hidden  lg:min-w-44 mt-10  ">
+      <div className="lg:absolute 2xl:static lg:opacity-50 2xl:opacity-100 lg:w-full lg:flex 2xl:block lg:justify-center lg:items-center  lg:-z-10 xl:z-0 object-fill h-44 w-44 overflow-hidden  2xl:min-w-44 mt-10 ">
         {/* <img src={img} alt="" className='h-52 rounded-md'/> */}
 
-        <video autoPlay muted loop className=" p-2 rounded-3xl w-24 lg:w-full vss_service_video">
+        <video autoPlay muted loop className=" p-2 rounded-3xl w-24 2xl:w-full   vss_service_video">
           <source src={thumbVideo} type="video/mp4" />
         </video>
       </div>

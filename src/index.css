@@ -16,6 +16,7 @@ code {
 @tailwind components;
 @tailwind utilities;
 
+
 .center{
   display: flex;
   justify-content: center;
