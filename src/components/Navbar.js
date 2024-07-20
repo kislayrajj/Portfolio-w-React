@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect , useRef} from "react";
 // import Logo from "../assets/companylogo.png";
 import { HashLink as Link } from 'react-router-hash-link';
 import { saveAs } from "file-saver";
@@ -7,11 +7,13 @@ import NameLogoGsap from "./logos/NameLogoGsap";
 import { useDispatch, useSelector } from "react-redux";
 import { setThemeColor } from "../redux/themeColorSlice";
 const Navbar = () => {
-  let [IsBurger, setIsBurger] = useState(false);
+  let [isBurger, setIsBurger] = useState(false);
   const [isActive, setIsActive]=useState ("");
   const [isThemeMenuHidden, setIsThemeMenuHidden]= useState(true)
 const themeColor = useSelector((state)=> state.theme.themeColor)
   const dispatch = useDispatch();
+  const menuRef = useRef(null);
+
   
   const handleThemeColor=(color)=>{
     dispatch(setThemeColor(color));
@@ -19,6 +21,16 @@ const themeColor = useSelector((state)=> state.theme.themeColor)
   const handleMenuClick = () => {
     setIsBurger(false); //close the menu
   };
+
+  const handleBurgerMenuClick=()=>{
+    setIsBurger(!isBurger); //toggle the menu
+    setIsThemeMenuHidden(true)
+  }
+
+  const handleThemeMenuClick=()=>{
+    setIsThemeMenuHidden(!isThemeMenuHidden)
+    setIsBurger(false); 
+  }
 
 const handleActive=(section)=>{
   // setIsActive(!isActive);
@@ -57,28 +69,32 @@ const handleActive=(section)=>{
     handleThemeColor(color);
     setIsThemeMenuHidden(true)
   }
- 
-  //hide theme menu by clicking anywhere on the screen
-  // useEffect(()=>{
-  //   const handleClickOutsideOfMenu=(e)=>{
-  //     if(isThemeMenuHidden || !e.target.closest(".theme-menu")){
-  //       setIsThemeMenuHidden(true)
-  //     }
-  //   };
 
-  //   if(!isThemeMenuHidden){
-  //     document.addEventListener("click",handleClickOutsideOfMenu);
-  //     console.log("clickoutside fn ran")
-
-  //   }
-  //   return ()=>{
-  //     document.removeEventListener("click",handleClickOutsideOfMenu)
-  //     console.log("clickoutside fn removed")
-  //   };
-  // },[isThemeMenuHidden])
   
+
+  const handleClickOutside = (e) => {
+    if (e.target !== menuRef?.current && !menuRef?.current?.contains(e.target)) {
+      setIsBurger(false);
+      setIsThemeMenuHidden(true)
+    }
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => handleClickOutside(e);
+
+    if (isBurger || !isThemeMenuHidden ) {
+      document.addEventListener('click', handleOutsideClick);
+    }
+     else {
+      document.removeEventListener('click', handleOutsideClick);
+    }
+
+    return () => document.removeEventListener('click', handleOutsideClick); // Cleanup
+  }, [isBurger,isThemeMenuHidden]);
+
+
   return (
-    <div className="flex justify-center relative">
+    <div ref={menuRef} className="flex justify-center relative">
       <nav className={`navbar  h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-20 ${themeColor==="dark" ? "":"bg-white/80"}`}>
         {/* <img
           src={Logo}
@@ -92,16 +108,18 @@ const handleActive=(section)=>{
           <span className=""><NameLogoGsap /></span>
         </motion.div>
         <div
-          onClick={() => setIsBurger(!IsBurger)}
+          
+          onClick={handleBurgerMenuClick}
           className="burger text-2xl absolute right-[-20px] top-4 md:right-0  md:top-4 cursor-pointer lg:hidden">
-          <i
+            { isBurger ? <i class="fa-solid fa-xmark h-10 w-10"></i> : <i
             className="fa-solid fa-ellipsis-vertical h-10 w-10"
-            name={IsBurger ? "close" : "menu"}></i>
+            ></i>}
+          
         </div>
         <div className={`menu-1 m-2 `}>
           <ul
             className={`md:flex lg:text-base xl:text-xl ${themeColor === "dark" ? "text-white" : "text-black"}  lg:gap-20 md:gap-10  absolute lg:static  w-screen md:z-auto left-0 md:w-auto md:pl-0 pl-20 transition-all duration-500 ease-in-out ${
-              IsBurger ? "left-0 top-24" : "left-[-800px] top-20"
+              isBurger ? "left-0 top-24" : "left-[-800px] top-20"
             } ${themeColor === "dark" ? "bg-gray-900/75 md:bg-inherit":" bg-white/75 md:bg-inherit"}`}>
             <Link smooth to="/#main-content">
               <motion.li
@@ -194,13 +212,14 @@ const handleActive=(section)=>{
             Hire
           </motion.button>
         </a>
-        <div className="older_smaller_screen_theme_icon lg:center lg:mt-2 text-sm  2xl:text-xl absolute right-10 top-6 md:right-44 lg:right-44  lg:static">        
+        <div
+         className="older_smaller_screen_theme_icon lg:center lg:mt-2 text-sm  2xl:text-xl absolute right-10 top-6 md:right-44 lg:right-44  lg:static">        
         <motion.div
           initial={{ opacity: 0, x: -900 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1 }}
           className="cursor-pointer"
-          onClick={()=>setIsThemeMenuHidden(!isThemeMenuHidden)}
+          onClick={handleThemeMenuClick}
           >
         <i className={`fa-solid fa-palette hover:scale-105 ${!isThemeMenuHidden ? "fa-fade":""}`}></i>
        
@@ -213,7 +232,7 @@ const handleActive=(section)=>{
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: .3,  }}
-         className={`theme-menu older_smaller_screen_theme_menu absolute -left-3 xl:left-0 rounded p-1 lg:p-2 ${themeColor === "dark" ? "bg-white/90 text-black" : "bg-black/90 text-white"}`}>
+         className={`older_smaller_screen_theme_menu absolute -left-3 xl:left-0 rounded p-1 lg:p-2 ${themeColor === "dark" ? "bg-white/90 text-black" : "bg-black/90 text-white"}`}>
         {colorOptions.map((color) => (
           <p
             key={color.value}
