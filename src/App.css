@@ -224,6 +224,22 @@ html{
   box-shadow: 5px 4px 13px 0px #38a169, -3px 1px 10px 0px #edf2f7;
 }
 
+.footer {
+  margin: 0;
+  background: linear-gradient(45deg, #1a2433, #1f293e, #2b3648, #19202a);
+
+
+  background-size: 400% 400%;
+  animation: gradientFooterAnimation 15s ease infinite;
+}
+
+@keyframes gradientFooterAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 @media (max-width: 411px) {
   .nav{
     position: relative;

@@ -1,0 +1,41 @@
+import React from "react";
+import webLogo from "../assets/webLogo.png";
+const Footer = () => {
+  return (
+    <div className="footer px-4 lg:px-12 py-5 flex  justify-between lg:items-center bg-gradient-to-r from-slate-900 to-slate-700 text-xs lg:text-base">
+      <div className="">
+        <div className="flex items-center  gap-2">
+          <img src={webLogo} className="h-4 lg:h-8" alt="" />
+          <div>Kislay</div>
+        </div>
+        <div className="mt-8 lg:mt-4 flex items-center gap-2 lg:gap-5 text-[#AF5] ">
+          <span className=" size-6 lg:size-8 bg-black center rounded-lg hover:bg-gray-200 hover:text-black animate">
+            <i className="fa-brands fa-linkedin-in"></i>
+          </span>
+          <span className="size-6 lg:size-8 bg-black center rounded-lg hover:bg-gray-200 hover:text-black animate">
+            {" "}
+            <i className="fa-brands fa-twitter"></i>
+          </span>
+          <span className="size-6 lg:size-8 bg-black center rounded-lg hover:bg-gray-200 hover:text-black animate">
+            <i className="fa-brands fa-instagram"></i>
+          </span>
+          <span className="size-6 lg:size-8 bg-black center rounded-lg hover:bg-gray-200 hover:text-black animate">
+            <i className="fa-brands fa-github"></i>
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <span>2024 Kislay Raj. All rights reserved.</span>
+      </div>
+      <div className="flex flex-col gap-2">
+        <span>Home</span>
+        <span>Projects</span>
+        <span>Blogs</span>
+        <span></span>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

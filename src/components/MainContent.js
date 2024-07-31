@@ -34,6 +34,7 @@ import {
 } from "swiper/modules";
 import LandingVideo from "./LandingVideo";
 import { useSelector } from "react-redux";
+import Footer from "./Footer";
 const MainContent = () => {
   const serviceRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -296,14 +297,14 @@ const MainContent = () => {
               className={`theme-font-normal md:w-3/4 3/4 m-2 font-light  text-xs md:text-base ${
                 themeColor === "dark" ? "text-white" : "text-black"
               }`}>
-           I am a versatile and experienced programmer with a strong foundation in multiple programming languages. My diverse skill set allows me to tackle a wide range of projects.
+              I am a versatile and experienced programmer with a strong
+              foundation in multiple programming languages. My diverse skill set
+              allows me to tackle a wide range of projects.
             </p>
           </div>
           <div
             className={`lg:w-[80%] w-[95%] md:p-5 rounded ${
-              themeColor === "dark"
-                ? ""
-                : "shadow-[0px_0px_30px_3px_#2d3748] "
+              themeColor === "dark" ? "" : "shadow-[0px_0px_30px_3px_#2d3748] "
             }`}>
             <Swiper
               effect={"coverflow"}
@@ -395,6 +396,10 @@ const MainContent = () => {
       <div id="contact" className="scroll-m-16">
         <Contact />
       </div>
+      <div id="footer" className="scroll-m-16">
+        <Footer />
+      </div>
+
     </div>
   );
 };

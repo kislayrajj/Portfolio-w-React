@@ -4,9 +4,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent.js";
-// import Projects from "./pages/Projects.js";
-// import About from "./components/About.js";
-// import Services from "./components/Services.js";
 import { lazy, Suspense } from "react";
 import Loading from "./components/Loading.js";
 import LoadingAnimation from "./components/Loaders/Loader2.json";
@@ -21,40 +18,40 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 2000);
   }, []);
 
-  const themeColor= useSelector((state)=>state.theme.themeColor)
+  const themeColor = useSelector((state) => state.theme.themeColor);
   return (
     <>
-    <div className={` kr ${themeColor === "dark" ? "godLevelClassFromAppJS " : "godLevelClassFromAppJS-light"}`}>
-      {isLoading ? (
-        <div className="h-screen center">
-          <Lottie animationData={LoadingAnimation} className="h-44 md:h-80" />
-        </div>
-      ) : (
-        <div className="Main scroll-smooth">
-          <div className="relative">
-            <Navbar />
+      <div
+        className={` kr ${
+          themeColor === "dark"
+            ? "godLevelClassFromAppJS "
+            : "godLevelClassFromAppJS-light"
+        }`}>
+        {isLoading ? (
+          <div className="h-screen center">
+            <Lottie animationData={LoadingAnimation} className="h-44 md:h-80" />
           </div>
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              <Route path="/" element={<MainContent />}></Route>
-              <Route path="/Projects" element={<Projects />}></Route>
-
-              {/* <Route path="/About" element={<About />}></Route>
-        <Route path="/Services" element={<Services />}></Route> */}
-            </Routes>
-          </Suspense>
-          {/* <Loading /> */}
-          {/* <div className="h-screen center">
-       
-       <Lottie animationData={LoadingAnimation2} className="h-44 md:h-80" />
-     </div> */}
-        </div>
-      )}
-    </div>
-    <div className="small_screen_msg">The screen size is too small to display this website properly. Please use a larger device.</div>
+        ) : (
+          <div className="Main scroll-smooth">
+            <div className="relative">
+              <Navbar />
+            </div>
+            <Suspense fallback={<Loading />}>
+              <Routes>
+                <Route path="/" element={<MainContent />}></Route>
+                <Route path="/Projects" element={<Projects />}></Route>
+              </Routes>
+            </Suspense>
+          </div>
+        )}
+      </div>
+      <div className="small_screen_msg">
+        The screen size is too small to display this website properly. Please
+        use a larger device.
+      </div>
     </>
   );
 }
