@@ -1,14 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import Skills from "./Skills";
-import htmlLogo from "../assets/htmlpng.png";
-import cssLogo from "../assets/csspng.png";
-import jsLogo from "../assets/jspng.png";
-import reactLogo from "../assets/reactpng.png";
-import tailwindLogo from "../assets/tailwindpng.png";
-import jaqueryLogo from "../assets/jqueryblack.png";
-import jiraLogo from "../assets/jiraLogo.png";
-import gitLogo from "../assets/Git-Icon-Black.png";
 import Service from "./Services";
 import websiteDev_img from "../assets/websitedev.png";
 import thumbVideobg from "../assets/website-development.mp4";
@@ -36,23 +28,10 @@ import LandingVideo from "./LandingVideo";
 import { useSelector } from "react-redux";
 import Footer from "./Footer";
 const MainContent = () => {
-  const serviceRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const serviceRef = useRef(null);
   const themeColor = useSelector((state) => state.theme.themeColor);
-  const servicesContentMotion = {
-    initial: { opacity: 0, y: 100 },
-    animate: {
-      opacity: isVisible ? 1 : 0, // Control animation based on visibility
-      y: isVisible ? 0 : 100,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-        type: "spring", // You can use different types of transitions like spring
-        damping: 10, // Adjust the damping for a smoother animation
-      },
-    },
-  };
-
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -64,7 +43,10 @@ const MainContent = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+          setHasAnimated(true);
+        }
       },
       { threshold: 0.1 }
     );
@@ -79,6 +61,20 @@ const MainContent = () => {
       }
     };
   }, []);
+
+  const servicesContentMotion = {
+    initial: { opacity: 0, y: 100 },
+    animate: {
+      opacity: isVisible ? 1 : 0, // Control animation based on visibility
+      y: isVisible ? 0 : 100,
+      transition: {
+        duration: 1.5,
+        delay: 0.5,
+        type: "spring", // You can use different types of transitions like spring
+        damping: 10, // Adjust the damping for a smoother animation
+      },
+    },
+  };
 
   return (
     <div>
@@ -108,7 +104,7 @@ const MainContent = () => {
             <motion.div
               variants={servicesContentMotion}
               initial="initial"
-              animate="animate"
+              animate={isVisible ? 'animate' : 'initial'}
               className=" Boxes m-10 flex flex-wrap justify-center gap-5 scroll-smooth ">
               <div
                 className={`larger_screen lg:w-[90%] w-[95%] hidden lg:block px-0.5 pt-5 rounded-lg ${
@@ -292,7 +288,7 @@ const MainContent = () => {
             className={`w-full text-start text-3xl pl-12 theme-font font-semibold ${
               themeColor === "dark" ? "text-green-400" : "text-blue-600"
             } `}>
-            Experties
+            Expertise
             <p
               className={`theme-font-normal md:w-3/4 3/4 m-2 font-light  text-xs md:text-base ${
                 themeColor === "dark" ? "text-white" : "text-black"
@@ -306,87 +302,7 @@ const MainContent = () => {
             className={`lg:w-[80%] w-[95%] md:p-5 rounded ${
               themeColor === "dark" ? "" : "shadow-[0px_0px_30px_3px_#2d3748] "
             }`}>
-            <Swiper
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={"4"}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              pagination={{ clickable: true }}
-              loop={true}
-              modules={[EffectCoverflow, Pagination]}
-              className="mySwiper h-[230px] md:h-full">
-              <SwiperSlide>
-                <Skills
-                  image={htmlLogo}
-                  bg="bg-gradient-to-r from-purple-600 to-yellow-300"
-                  title="HTML"
-                  disc="Proficient in HTML for web development, creating structured and semantic content."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Skills
-                  image={cssLogo}
-                  title="CSS"
-                  disc="Skilled in styling web, layout elements,, and responsiveness  for visually appealing designs."
-                  bg="bg-gradient-to-br from-blue-600 to-pink-500"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Skills
-                  image={jsLogo}
-                  title="JavaScript"
-                  disc="Competent in JavaScript for interactive and dynamic web development."
-                  bg="bg-gradient-to-br from-pink-600 to-black"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Skills
-                  image={reactLogo}
-                  title="React.js"
-                  disc="Experienced in building UI components for modern web applications."
-                  bg="bg-gradient-to-tr from-blue-500 via-indigo-400 to-purple-300"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Skills
-                  image={tailwindLogo}
-                  title="Tailwind"
-                  disc=" Skilled in leveraging Tailwind utility-first CSS framework CSS for highly efficient styling"
-                  bg="bg-gradient-to-tr from-blue-900 via-blue-600 to-green-400"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Skills
-                  image={jaqueryLogo}
-                  title="jQuery"
-                  disc="Proficient in utilizing jQuery to enhance interactivity within web applications"
-                  bg="bg-gradient-to-br from-purple-900 via-purple-600 to-yellow-400"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Skills
-                  image={jiraLogo}
-                  title="Jira Software"
-                  disc="Skilled in Jira Software for efficient project management and collaboration."
-                  bg="bg-gradient-to-tr from-red-900 via-red-600 to-yellow-400"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Skills
-                  image={gitLogo}
-                  title="Git/Version Control"
-                  disc="Experienced in Git for collaborative code management and version control."
-                  bg="bg-gradient-to-br from-gray-800 via-gray-600 to-gray-400"
-                />
-              </SwiperSlide>
-            </Swiper>
+           <Skills />
           </div>
         </div>
       </div>
