@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import projectData from "../assets/data/projects_data";
+import projectData from "../assets/data/project_data";
 import { useSelector } from "react-redux";
 const Projects = () => {
   const [dateTime, setDateTime] = useState("");

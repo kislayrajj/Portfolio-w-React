@@ -12,7 +12,7 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
-import  skillsData  from "../assets/data/skills_data";
+import  skillsData  from "../assets/data/skill_data";
 const Skills = () => {
   // let logoBg = bg;
   // const settings = {
