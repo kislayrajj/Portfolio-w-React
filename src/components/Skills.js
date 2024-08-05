@@ -14,18 +14,6 @@ import {
 } from "swiper/modules";
 import  skillsData  from "../assets/data/skill_data";
 const Skills = () => {
-  // let logoBg = bg;
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   speed: 2000,
-  //   autoplaySpeed: 2000,
-  //   cssEase: "linear",
-  // };
-  console.log("from slills.js" , skillsData)
   return (
     <div className="swiper-container">
     <Swiper
@@ -42,7 +30,11 @@ const Skills = () => {
       }}
       pagination={{ clickable: true }}
       loop={true}
-      modules={[EffectCoverflow, Pagination]}
+      navigation={true}
+      
+      autoplay={{ delay: 2500, disableOnInteraction: false }} // Enable autoplay
+      modules={[Autoplay,EffectCoverflow, Pagination,Navigation]}
+
       className="mySwiper h-[230px] md:h-full"
     >
       {skillsData?.map((skill, index) => (
