@@ -11,7 +11,7 @@ const Services = ({
 
   const themeColor = useSelector((state)=> state.theme.themeColor)
   return (
-    <div className={`border-2 flex justify-between flex-grow p-2  w-[250px]  2xl:min-w-[450px]   h-auto md:min-h-72 relative    rounded-md overflow-hidden vss_service  ${themeColor === "dark" ? "text-white/90 bg-black/30" : " text-black/90 bg-pink-300/40"}`}>
+    <div className={`border-2 flex justify-between flex-grow p-2  w-[250px] xl:min-w-[350px] 2xl:min-w-[450px] 4xl:min-w-[650px]  h-auto md:min-h-72  relative    rounded-md overflow-hidden vss_service  ${themeColor === "dark" ? "text-white/90 bg-black/30" : " text-black/90 bg-pink-300/40"}`}>
       <div>
         <div className="font-semibold lg:font-bold text-base md:text-xl tracking-wider pl-2 vss_serviceHeading">
           {service}

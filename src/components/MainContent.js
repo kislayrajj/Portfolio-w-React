@@ -133,7 +133,7 @@ const MainContent = () => {
                     {" "}
                     <Service
                       thumbVideo={thumbVideobg}
-                      snumber="01"
+                      sNumber="01"
                       service="Website Developments"
                       img={websiteDev_img}
                       ListOne="Custom Website Design"
@@ -143,7 +143,7 @@ const MainContent = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Service
-                      snumber="02"
+                      sNumber="02"
                       thumbVideo={thumbVideobg2}
                       service="Web Application Development"
                       ListOne="Bespoke Web Applications: "
@@ -153,7 +153,7 @@ const MainContent = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Service
-                      snumber="03"
+                      sNumber="03"
                       thumbVideo={thumbVideobg3}
                       service="UI/UX Design"
                       ListOne="User-Centric Design"
@@ -163,7 +163,7 @@ const MainContent = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Service
-                      snumber="04"
+                      sNumber="04"
                       thumbVideo={thumbVideobg4}
                       service="Technology Expertise"
                       ListOne="Frontend Development"
@@ -171,19 +171,9 @@ const MainContent = () => {
                       ListThree="Database Management & Cloud Services"
                     />
                   </SwiperSlide>
-                  {/* <SwiperSlide>
-                  <Service
-                    snumber="05"
-                    thumbVideo={thumbVideobg5}
-                    service="Digital Strategy & Marketing"
-                    ListOne="Consultation and Planning"
-                    ListTwo="Digital Marketing"
-                    ListThree="Search Engine Optimization (SEO)"
-                  />
-                </SwiperSlide> */}
                   <SwiperSlide>
                     <Service
-                      snumber="06"
+                      sNumber="05"
                       thumbVideo={thumbVideobg6}
                       service="Support and Maintenance"
                       ListOne="Ongoing Support:"
@@ -216,7 +206,7 @@ const MainContent = () => {
                   <SwiperSlide>
                     <Service
                       thumbVideo={thumbVideobg}
-                      snumber="01"
+                      sNumber="01"
                       service="Website Developments"
                       img={websiteDev_img}
                       ListOne="Custom Website Design"
@@ -226,7 +216,7 @@ const MainContent = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Service
-                      snumber="02"
+                      sNumber="02"
                       thumbVideo={thumbVideobg2}
                       service="Web Application Development"
                       ListOne="Bespoke Web Applications: "
@@ -236,7 +226,7 @@ const MainContent = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Service
-                      snumber="03"
+                      sNumber="03"
                       thumbVideo={thumbVideobg3}
                       service="UI/UX Design"
                       ListOne="User-Centric Design"
@@ -246,7 +236,7 @@ const MainContent = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Service
-                      snumber="04"
+                      sNumber="04"
                       thumbVideo={thumbVideobg4}
                       service="Technology Expertise"
                       ListOne="Frontend Development"
@@ -256,7 +246,7 @@ const MainContent = () => {
                   </SwiperSlide>
                   {/* <SwiperSlide>
                   <Service
-                    snumber="05"
+                    sNumber="05"
                     thumbVideo={thumbVideobg5}
                     service="Digital Strategy & Marketing"
                     ListOne="Consultation and Planning"
@@ -266,7 +256,7 @@ const MainContent = () => {
                 </SwiperSlide> */}
                   <SwiperSlide>
                     <Service
-                      snumber="06"
+                      sNumber="06"
                       thumbVideo={thumbVideobg6}
                       service="Support and Maintenance"
                       ListOne="Ongoing Support"

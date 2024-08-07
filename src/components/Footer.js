@@ -1,8 +1,9 @@
 import React from "react";
 import webLogo from "../assets/webLogo.png";
+import { HashLink as Link } from 'react-router-hash-link';
 const Footer = () => {
   return (
-    <div className="footer px-4 lg:px-12 py-5 flex  justify-between lg:items-center bg-gradient-to-r from-slate-900 to-slate-700 text-xs lg:text-base">
+    <div className="footer px-4 lg:px-12 py-5 flex flex-x justify-between lg:items-center bg-gradient-to-r from-slate-900 to-slate-700 text-xs lg:text-base">
       <div className="">
         <div className="flex items-center  gap-2">
           <img src={webLogo} className="h-4 lg:h-8" alt="" />
@@ -26,11 +27,12 @@ const Footer = () => {
       </div>
 
       <div>
-        <span>2024 Kislay Raj. All rights reserved.</span>
+        <span className="">2024 Kislay Raj. All rights reserved.</span>
       </div>
       <div className="flex flex-col gap-2">
-        <span>Home</span>
-        <span>Projects</span>
+        <span><Link smooth to="/#main-content">Home</Link>
+          </span>
+        <span><Link smooth to="/Projects">Projects </Link></span>
         <span>Blogs</span>
         <span></span>
       </div>

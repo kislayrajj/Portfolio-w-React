@@ -12,6 +12,9 @@ module.exports = {
         '8p': '8%', 
         '2p': '2%',
       },
+      screens: {
+        '4xl': '2400px', // Example value, adjust as needed
+      },
 
     },
   },
