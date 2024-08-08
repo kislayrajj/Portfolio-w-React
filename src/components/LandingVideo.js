@@ -30,14 +30,14 @@ useEffect(()=>{
       </div>
     )}
   
-    {/* <video
+    <video
       autoPlay
       muted
       loop
       onLoadedData={() => setIsVideoLoading(false)}
       className="absolute  inset-0 object-cover ml- w-full h-full ">
       <source src={bgVideo} type="video/mp4" />
-    </video> */}
+    </video>
     </>
    ) }
     <div className="mt-32 md:mt-0 z-10">
