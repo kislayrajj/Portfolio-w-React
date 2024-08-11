@@ -73,7 +73,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="h-auto  overflow-hidden bg-red-500" ref={aboutRef}>
+    <div className="h-auto  overflow-hidden" ref={aboutRef}>
     {/* padding top ..something */}
       <div
         className={`about-top py-20 lg:py-6p h-1/2  relative pt-8 ${
@@ -143,7 +143,7 @@ const About = () => {
           </i>
         </motion.div>
       </div>
-      <div className="about-bottom py-6p xl- h-1/2 bg-gradient-to-r from-slate-900 to-slate-900">
+      <div className={`about-bottom py-6p xl- h-1/2  ${themeColor==="dark" ? "bg-gradient-to-r from-slate-900 to-slate-900":"bg-gradient-to-r from-blue-800 to-indigo-900"}`}>
         <div className="w-full flex flex-col lg:flex-row justify-between gap-10 items-center p-2 pt-12">
           <div className="dp md:h-60 w-72 center">
             {/* <img src={dp} alt="" className="h-44 w-44 rounded-full" /> */}

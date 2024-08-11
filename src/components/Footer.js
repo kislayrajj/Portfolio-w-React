@@ -1,9 +1,11 @@
 import React from "react";
 import webLogo from "../assets/webLogo.png";
 import { HashLink as Link } from 'react-router-hash-link';
+import { useSelector } from "react-redux";
 const Footer = () => {
+  const themeColor = useSelector((state) => state.theme.themeColor)
   return (
-    <div className="footer px-4 lg:px-12 py-5 flex flex-x justify-between lg:items-center bg-gradient-to-r from-slate-900 to-slate-700 text-xs lg:text-base">
+    <div className={` px-4 lg:px-12 py-5 flex flex-x justify-between lg:items-center  text-xs lg:text-base  ${themeColor === "dark" ? "bg-gradient-to-r from-slate-900 to-slate-700" : "bg-gradient-to-r from-neutral-50 via-blue-100 to-fuchsia-200"}`}>
       <div className="">
         <div className="flex items-center  gap-2">
           <img src={webLogo} className="h-4 lg:h-8" alt="" />

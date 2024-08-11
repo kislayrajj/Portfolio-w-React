@@ -1,21 +1,6 @@
-import { React, useState, useEffect, useRef } from "react";
+import { React} from "react";
 import { motion } from "framer-motion";
 function Icon() {
-  //   const svgRef = useRef(null)
-  // const [isVisible, setIsvisible]= useState(false);
-
-  // useEffect (()=>{
-  //   const observer =new IntersectionObserver(
-  //     (entries)=>{
-  //       const[entry]=entries;
-  //       setIsvisible(entry.isIntersecting);
-  //     },
-  //     {threshold:.1}
-  //   );
-  //   if(svgRef.current){
-  //     observer.unobserve(svgRef.current)
-  //   }
-  // },[])
 
   return (
     <svg
