@@ -1,22 +1,75 @@
-html{
+html {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  /* cursor: pointer; */
 }
 .godLevelClassFromAppJS,
 .background {
   margin: 0;
   background: linear-gradient(45deg, #150c0c, #030321);
   color: white;
+    cursor:url("./assets/customCursor/icons8-cursor-20-forDarkTheme.png"),auto
+
 }
 
 .godLevelClassFromAppJS-light,
 .background-light {
   margin: 0;
-  background-image: radial-gradient(circle at 13% 47%, rgba(140, 140, 140,0.03) 0%, rgba(140, 140, 140,0.03) 25%,transparent 25%, transparent 100%),radial-gradient(circle at 28% 63%, rgba(143, 143, 143,0.03) 0%, rgba(143, 143, 143,0.03) 16%,transparent 16%, transparent 100%),radial-gradient(circle at 81% 56%, rgba(65, 65, 65,0.03) 0%, rgba(65, 65, 65,0.03) 12%,transparent 12%, transparent 100%),radial-gradient(circle at 26% 48%, rgba(60, 60, 60,0.03) 0%, rgba(60, 60, 60,0.03) 6%,transparent 6%, transparent 100%),radial-gradient(circle at 97% 17%, rgba(150, 150, 150,0.03) 0%, rgba(150, 150, 150,0.03) 56%,transparent 56%, transparent 100%),radial-gradient(circle at 50% 100%, rgba(25, 25, 25,0.03) 0%, rgba(25, 25, 25,0.03) 36%,transparent 36%, transparent 100%),radial-gradient(circle at 55% 52%, rgba(69, 69, 69,0.03) 0%, rgba(69, 69, 69,0.03) 6%,transparent 6%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+  background-image: radial-gradient(
+      circle at 13% 47%,
+      rgba(140, 140, 140, 0.03) 0%,
+      rgba(140, 140, 140, 0.03) 25%,
+      transparent 25%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 28% 63%,
+      rgba(143, 143, 143, 0.03) 0%,
+      rgba(143, 143, 143, 0.03) 16%,
+      transparent 16%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 81% 56%,
+      rgba(65, 65, 65, 0.03) 0%,
+      rgba(65, 65, 65, 0.03) 12%,
+      transparent 12%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 26% 48%,
+      rgba(60, 60, 60, 0.03) 0%,
+      rgba(60, 60, 60, 0.03) 6%,
+      transparent 6%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 97% 17%,
+      rgba(150, 150, 150, 0.03) 0%,
+      rgba(150, 150, 150, 0.03) 56%,
+      transparent 56%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(25, 25, 25, 0.03) 0%,
+      rgba(25, 25, 25, 0.03) 36%,
+      transparent 36%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 55% 52%,
+      rgba(69, 69, 69, 0.03) 0%,
+      rgba(69, 69, 69, 0.03) 6%,
+      transparent 6%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
   color: black;
   z-index: -20000;
-} 
+  cursor:url("./assets/customCursor/icons8-cursor-25.png"),auto
 
+}
 
 .navbar {
   font-family: "Kode Mono", monospace;
@@ -25,31 +78,144 @@ html{
 
 .landingVideo {
   font-family: "Kode Mono", monospace;
-
-} 
-.landingVideo-light{
-  background-image: radial-gradient(circle, #d16ba5, #d48ac0, #d8a7d6, #dec3e7, #e8ddf4, #eee9f8, #f6f4fc, #ffffff, #ffffff, #fefefe, #fefefe, #fdfdfd);
+}
+.landingVideo-light {
+  background-image: radial-gradient(
+    circle,
+    #d16ba5,
+    #d48ac0,
+    #d8a7d6,
+    #dec3e7,
+    #e8ddf4,
+    #eee9f8,
+    #f6f4fc,
+    #ffffff,
+    #ffffff,
+    #fefefe,
+    #fefefe,
+    #fdfdfd
+  );
   font-family: "Kode Mono", monospace;
 }
 .landingVideo-pink {
   font-family: "Kode Mono", monospace;
 
-  background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-image: radial-gradient(
+    circle,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
-.projects{
-  background-image: radial-gradient(circle, #dfbce0, #e2c9e8, #e6d6ef, #ece3f5, #f3effa, #f7f4fc, #fbfafe, #ffffff, #ffffff, #fefefe, #fefefe, #fdfdfd);
+.projects {
+  background-image: radial-gradient(
+    circle,
+    #dfbce0,
+    #e2c9e8,
+    #e6d6ef,
+    #ece3f5,
+    #f3effa,
+    #f7f4fc,
+    #fbfafe,
+    #ffffff,
+    #ffffff,
+    #fefefe,
+    #fefefe,
+    #fdfdfd
+  );
 }
 .landingVideo-green {
   font-family: "Kode Mono", monospace;
-  background-image: radial-gradient(circle, #d16ba5, #ea7783, #eb9168, #d8ae60, #b9ca75, #a6d78b, #91e2a5, #7cecc3, #74f0ce, #6df4da, #66f8e5, #5ffbf1);
+  background-image: radial-gradient(
+    circle,
+    #d16ba5,
+    #ea7783,
+    #eb9168,
+    #d8ae60,
+    #b9ca75,
+    #a6d78b,
+    #91e2a5,
+    #7cecc3,
+    #74f0ce,
+    #6df4da,
+    #66f8e5,
+    #5ffbf1
+  );
 }
 
 .landingVideo-blue {
   font-family: "Kode Mono", monospace;
-  background-image: radial-gradient(circle, #d16ba5, #ea7783, #eb9168, #d8ae60, #b9ca75, #a6d78b, #91e2a5, #7cecc3, #74f0ce, #6df4da, #66f8e5, #5ffbf1);
+  background-image: radial-gradient(
+    circle,
+    #d16ba5,
+    #ea7783,
+    #eb9168,
+    #d8ae60,
+    #b9ca75,
+    #a6d78b,
+    #91e2a5,
+    #7cecc3,
+    #74f0ce,
+    #6df4da,
+    #66f8e5,
+    #5ffbf1
+  );
 }
-.services-light{
-  background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),linear-gradient(309deg, rgba(90, 90, 90,0.05) 0%, rgba(90, 90, 90,0.05) 50%,rgba(206, 206, 206,0.05) 50%, rgba(206, 206, 206,0.05) 100%),linear-gradient(39deg, rgba(13, 13, 13,0.05) 0%, rgba(13, 13, 13,0.05) 50%,rgba(189, 189, 189,0.05) 50%, rgba(189, 189, 189,0.05) 100%),linear-gradient(144deg, rgba(249, 249, 249,0.05) 0%, rgba(249, 249, 249,0.05) 50%,rgba(111, 111, 111,0.05) 50%, rgba(111, 111, 111,0.05) 100%),linear-gradient(166deg, rgba(231, 231, 231,0.05) 0%, rgba(231, 231, 231,0.05) 50%,rgba(220, 220, 220,0.05) 50%, rgba(220, 220, 220,0.05) 100%),linear-gradient(212deg, rgba(80, 80, 80,0.05) 0%, rgba(80, 80, 80,0.05) 50%,rgba(243, 243, 243,0.05) 50%, rgba(243, 243, 243,0.05) 100%),radial-gradient(circle at center center, hsl(107,19%,100%),hsl(107,19%,100%));
+.services-light {
+  background-image: radial-gradient(
+      circle at center center,
+      transparent,
+      rgb(255, 255, 255)
+    ),
+    linear-gradient(
+      309deg,
+      rgba(90, 90, 90, 0.05) 0%,
+      rgba(90, 90, 90, 0.05) 50%,
+      rgba(206, 206, 206, 0.05) 50%,
+      rgba(206, 206, 206, 0.05) 100%
+    ),
+    linear-gradient(
+      39deg,
+      rgba(13, 13, 13, 0.05) 0%,
+      rgba(13, 13, 13, 0.05) 50%,
+      rgba(189, 189, 189, 0.05) 50%,
+      rgba(189, 189, 189, 0.05) 100%
+    ),
+    linear-gradient(
+      144deg,
+      rgba(249, 249, 249, 0.05) 0%,
+      rgba(249, 249, 249, 0.05) 50%,
+      rgba(111, 111, 111, 0.05) 50%,
+      rgba(111, 111, 111, 0.05) 100%
+    ),
+    linear-gradient(
+      166deg,
+      rgba(231, 231, 231, 0.05) 0%,
+      rgba(231, 231, 231, 0.05) 50%,
+      rgba(220, 220, 220, 0.05) 50%,
+      rgba(220, 220, 220, 0.05) 100%
+    ),
+    linear-gradient(
+      212deg,
+      rgba(80, 80, 80, 0.05) 0%,
+      rgba(80, 80, 80, 0.05) 50%,
+      rgba(243, 243, 243, 0.05) 50%,
+      rgba(243, 243, 243, 0.05) 100%
+    ),
+    radial-gradient(
+      circle at center center,
+      hsl(107, 19%, 100%),
+      hsl(107, 19%, 100%)
+    );
 }
 .box-card > div {
   font-family: "Poppins", sans-serif;
@@ -154,7 +320,59 @@ html{
 }
 
 .skills-light {
-  background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(195, 195, 195),rgb(228, 228, 228)); background-blend-mode:overlay,overlay,overlay,normal;
+  background-image: linear-gradient(
+      112.5deg,
+      rgb(214, 214, 214) 0%,
+      rgb(214, 214, 214) 10%,
+      rgb(195, 195, 195) 10%,
+      rgb(195, 195, 195) 53%,
+      rgb(176, 176, 176) 53%,
+      rgb(176, 176, 176) 55%,
+      rgb(157, 157, 157) 55%,
+      rgb(157, 157, 157) 60%,
+      rgb(137, 137, 137) 60%,
+      rgb(137, 137, 137) 88%,
+      rgb(118, 118, 118) 88%,
+      rgb(118, 118, 118) 91%,
+      rgb(99, 99, 99) 91%,
+      rgb(99, 99, 99) 100%
+    ),
+    linear-gradient(
+      157.5deg,
+      rgb(214, 214, 214) 0%,
+      rgb(214, 214, 214) 10%,
+      rgb(195, 195, 195) 10%,
+      rgb(195, 195, 195) 53%,
+      rgb(176, 176, 176) 53%,
+      rgb(176, 176, 176) 55%,
+      rgb(157, 157, 157) 55%,
+      rgb(157, 157, 157) 60%,
+      rgb(137, 137, 137) 60%,
+      rgb(137, 137, 137) 88%,
+      rgb(118, 118, 118) 88%,
+      rgb(118, 118, 118) 91%,
+      rgb(99, 99, 99) 91%,
+      rgb(99, 99, 99) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgb(214, 214, 214) 0%,
+      rgb(214, 214, 214) 10%,
+      rgb(195, 195, 195) 10%,
+      rgb(195, 195, 195) 53%,
+      rgb(176, 176, 176) 53%,
+      rgb(176, 176, 176) 55%,
+      rgb(157, 157, 157) 55%,
+      rgb(157, 157, 157) 60%,
+      rgb(137, 137, 137) 60%,
+      rgb(137, 137, 137) 88%,
+      rgb(118, 118, 118) 88%,
+      rgb(118, 118, 118) 91%,
+      rgb(99, 99, 99) 91%,
+      rgb(99, 99, 99) 100%
+    ),
+    linear-gradient(90deg, rgb(195, 195, 195), rgb(228, 228, 228));
+  background-blend-mode: overlay, overlay, overlay, normal;
 }
 .autoplay-progress {
   position: absolute;
@@ -207,7 +425,44 @@ html{
 } */
 
 .larger_screen .swiper-pagination {
-  background-image: linear-gradient(0, hsla(80,87%,72%,0.44) 0%, hsla(80,87%,72%,0.44) 12.5%,hsla(125,87%,72%,0.44) 12.5%, hsla(125,87%,72%,0.44) 25%,hsla(170,87%,72%,0.44) 25%, hsla(170,87%,72%,0.44) 37.5%,hsla(215,87%,72%,0.44) 37.5%, hsla(215,87%,72%,0.44) 50%,hsla(260,87%,72%,0.44) 50%, hsla(260,87%,72%,0.44) 62.5%,hsla(305,87%,72%,0.44) 62.5%, hsla(305,87%,72%,0.44) 75%,hsla(350,87%,72%,0.44) 75%, hsla(350,87%,72%,0.44) 87.5%,hsla(35,87%,72%,0.44) 87.5%, hsla(35,87%,72%,0.44) 100%),linear-gradient(90deg, hsl(348,83%,76%) 0%, hsl(348,83%,76%) 12.5%,hsl(33,83%,76%) 12.5%, hsl(33,83%,76%) 25%,hsl(78,83%,76%) 25%, hsl(78,83%,76%) 37.5%,hsl(123,83%,76%) 37.5%, hsl(123,83%,76%) 50%,hsl(168,83%,76%) 50%, hsl(168,83%,76%) 62.5%,hsl(213,83%,76%) 62.5%, hsl(213,83%,76%) 75%,hsl(258,83%,76%) 75%, hsl(258,83%,76%) 87.5%,hsl(303,83%,76%) 87.5%, hsl(303,83%,76%) 100%);
+  background-image: linear-gradient(
+      0,
+      hsla(80, 87%, 72%, 0.44) 0%,
+      hsla(80, 87%, 72%, 0.44) 12.5%,
+      hsla(125, 87%, 72%, 0.44) 12.5%,
+      hsla(125, 87%, 72%, 0.44) 25%,
+      hsla(170, 87%, 72%, 0.44) 25%,
+      hsla(170, 87%, 72%, 0.44) 37.5%,
+      hsla(215, 87%, 72%, 0.44) 37.5%,
+      hsla(215, 87%, 72%, 0.44) 50%,
+      hsla(260, 87%, 72%, 0.44) 50%,
+      hsla(260, 87%, 72%, 0.44) 62.5%,
+      hsla(305, 87%, 72%, 0.44) 62.5%,
+      hsla(305, 87%, 72%, 0.44) 75%,
+      hsla(350, 87%, 72%, 0.44) 75%,
+      hsla(350, 87%, 72%, 0.44) 87.5%,
+      hsla(35, 87%, 72%, 0.44) 87.5%,
+      hsla(35, 87%, 72%, 0.44) 100%
+    ),
+    linear-gradient(
+      90deg,
+      hsl(348, 83%, 76%) 0%,
+      hsl(348, 83%, 76%) 12.5%,
+      hsl(33, 83%, 76%) 12.5%,
+      hsl(33, 83%, 76%) 25%,
+      hsl(78, 83%, 76%) 25%,
+      hsl(78, 83%, 76%) 37.5%,
+      hsl(123, 83%, 76%) 37.5%,
+      hsl(123, 83%, 76%) 50%,
+      hsl(168, 83%, 76%) 50%,
+      hsl(168, 83%, 76%) 62.5%,
+      hsl(213, 83%, 76%) 62.5%,
+      hsl(213, 83%, 76%) 75%,
+      hsl(258, 83%, 76%) 75%,
+      hsl(258, 83%, 76%) 87.5%,
+      hsl(303, 83%, 76%) 87.5%,
+      hsl(303, 83%, 76%) 100%
+    );
   border-radius: 20px;
   padding: 5px 0;
   display: flex;
@@ -215,99 +470,107 @@ html{
   width: fit-content;
 }
 
-
-.shadow-form_light{
+.shadow-form_light {
   box-shadow: 5px 11px 27px 3px #ed64a6, -12px 1px 34px 16px #edf2f7;
 }
 
-.shadow-form_dark{
+.shadow-form_dark {
   box-shadow: 5px 4px 13px 0px #38a169, -3px 1px 10px 0px #edf2f7;
 }
 
-
-
 @media (max-width: 411px) {
-  .nav{
+  .nav {
     position: relative;
   }
-.older_smaller_screen_theme_icon{
-  position: absolute;
-  top: 0;
-  right: 2;
-}
-
-.older_smaller_screen_theme_menu_parent{
-position: relative;
-}
-.older_smaller_screen_theme_menu{
-  position: absolute;
-  left: 12 ;
-  font-size : 10px;
-}
-.older_smaller_screen_theme_menu_list{
-  padding: 0.5px;
-}
-}
-@media (max-width: 330px){
-.vss_slogan{
-font-size: 30px;
-}
-}
-
-@media (max-width: 380px){
-  .vss_service_video{
-    display:none ;
+  .older_smaller_screen_theme_icon {
+    position: absolute;
+    top: 0;
+    right: 2;
   }
-  
+
+  .older_smaller_screen_theme_menu_parent {
+    position: relative;
+  }
+  .older_smaller_screen_theme_menu {
+    position: absolute;
+    left: 12;
+    font-size: 10px;
+  }
+  .older_smaller_screen_theme_menu_list {
+    padding: 0.5px;
+  }
+}
+@media (max-width: 330px) {
+  .vss_slogan {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .vss_service_video {
+    display: none;
+  }
 }
 /**
 * TODO: Complete responsiveness for smaller screen(really small just for the sake of completion.
 */
-@media (max-width: 305px){
-  .vss_serviceHeading{
-font-size: 10px;
+@media (max-width: 305px) {
+  .vss_serviceHeading {
+    font-size: 10px;
   }
 
-  .vss_service{
-width: 100px;
+  .vss_service {
+    width: 100px;
   }
-.vss_service ul{
-  font-size:8px ;
-}
-
-.vss_service_snumber{
-font-size: 50px;
-top:0;
-}
-
-.vss_service_video{
-  display:none ;
-}
-
-.services h1{
-  font-size: 10px;
-}
-}
-@media (min-width: 305px){
-  .small_screen_msg{
-    display: none;
+  .vss_service ul {
+    font-size: 8px;
   }
-}
-@media (max-width: 305px){
-  .kr{
+
+  .vss_service_snumber {
+    font-size: 50px;
+    top: 0;
+  }
+
+  .vss_service_video {
     display: none;
   }
 
-  .small_screen_msg{
+  .services h1 {
+    font-size: 10px;
+  }
+}
+@media (min-width: 305px) {
+  .small_screen_msg {
+    display: none;
+  }
+}
+@media (max-width: 305px) {
+  .kr {
+    display: none;
+  }
+
+  .small_screen_msg {
     font-size: 10px;
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(circle, #c21477, #d35053, #cc824c, #bdaa69, #b5ca9e, #b2d1b3, #b6d7c6, #c1dbd5, #b5d1cc, #a8c7c4, #9cbdbb, #90b3b3);
-        color: black;
-        padding: 10px ;
-
+    background-image: radial-gradient(
+      circle,
+      #c21477,
+      #d35053,
+      #cc824c,
+      #bdaa69,
+      #b5ca9e,
+      #b2d1b3,
+      #b6d7c6,
+      #c1dbd5,
+      #b5d1cc,
+      #a8c7c4,
+      #9cbdbb,
+      #90b3b3
+    );
+    color: black;
+    padding: 10px;
   }
 }
-
