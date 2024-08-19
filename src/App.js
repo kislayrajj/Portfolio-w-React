@@ -9,6 +9,7 @@ import Loading from "./components/Loading.js";
 import LoadingAnimation from "./components/Loaders/Loader2.json";
 import Lottie from "lottie-react";
 import { useSelector } from "react-redux";
+import NavigationButton from "./components/NavigationButton.js";
 // import LoadingAnimation2 from "./components/Loaders/Loader1.json";
 
 const Projects = lazy(() => import("./pages/Projects.js"));
@@ -39,6 +40,9 @@ function App() {
             <div className="relative">
               <Navbar />
             </div>
+            <div className="absolute bottom-12 lg:bottom-14 right-12 lg:right-14 z-20">
+  <NavigationButton />
+</div>
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<MainContent />}></Route>

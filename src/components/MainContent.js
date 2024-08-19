@@ -27,6 +27,7 @@ import {
 import LandingVideo from "./LandingVideo";
 import { useSelector } from "react-redux";
 import Footer from "./Footer";
+import NavigationButton from "./NavigationButton";
 const MainContent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
