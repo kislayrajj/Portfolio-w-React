@@ -148,7 +148,7 @@ const handleActive=(section)=>{
                 transition={{ duration: 1.2, delay: 1 }}
                 className=" cursor-pointer hover:text-green-500 md:hover:font-bold"
                 onClick={()=>handleActive("projects")}>
-                <button className={`border-2 border-green-600 rounded-sm pl-2 pr-2 transition-all ease-in-out duration-500 ${isActive ==="projects" ? "xl:text-2xl lg:text-lg text-green-500 border-b-2 border-green-500":""}`}>
+                <button className={`border-2 border-green-600 rounded-sm pl-2 pr-2 transition-all ease-in-out duration-500 ${isActive ==="projects" ? "xl:text-2xl lg:text-lg text-green-500 border-b-2 border-green-500":""} button-glitch`}>
                   {" "}
                   Projects
                 </button>{" "}

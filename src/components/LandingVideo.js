@@ -42,7 +42,7 @@ useEffect(()=>{
    ) }
     <div className="mt-32 md:mt-0 z-10">
       <h1
-        className=" text-7xl m-2 md:text-8xl font-bold"
+        className="text-7xl m-2 md:text-8xl font-bold"
         style={themeColor === "dark" ?{
           WebkitTextStroke: "2px white",
           WebkitTextFillColor: isHovered ? "white" : "transparent",

@@ -41,8 +41,8 @@ function App() {
               <Navbar />
             </div>
             <div className="absolute bottom-12 lg:bottom-14 right-12 lg:right-14 z-20">
-  <NavigationButton />
-</div>
+              <NavigationButton />
+            </div>
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<MainContent />}></Route>
