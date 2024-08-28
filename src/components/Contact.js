@@ -307,7 +307,7 @@ const Contact = () => {
                     value={formData.company}
                     onChange={handleChange}
                     required
-                    placeholder="Enter Your company name"
+                    placeholder="Enter Your company"
                     className={`mt-1 py-2 px-2 block w-full rounded-md shadow-sm focus:outline-none
               focus:outline-green-500 sm:text-sm lg:text-base 
               ${
