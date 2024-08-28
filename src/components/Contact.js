@@ -230,12 +230,11 @@ const Contact = () => {
                   </div>
                 )}
                 {/* Success Message */}
-                {/* {submissionSuccess && ( )} */}
-
-                <div className="absolute -bottom-3 md:bottom-0  text-[10px] md:text-xs lg:text-base w-min md:w-auto mr-2 p-2 bg-green-500/60 text-white rounded">
-                  Form submitted successfully!
-                </div>
-
+                {submissionSuccess && (
+                  <div className="absolute -bottom-3 md:bottom-0  text-[10px] md:text-xs lg:text-base w-min md:w-auto mr-2 p-2 bg-green-500/60 text-white rounded">
+                    Form submitted successfully!
+                  </div>
+                )}
                 <motion.div
                   initial={{ opacity: 0, y: 150 }}
                   animate={isVisible ? { opacity: 1, y: 0 } : ""}
