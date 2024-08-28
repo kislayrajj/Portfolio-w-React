@@ -74,7 +74,7 @@ const Contact = () => {
       const result = await response.json();
 
       if (result.success) {
-        console.log("form submitted successfully : ", result.data);
+        // console.log("form submitted successfully : ", result.data);
         setFormData({
           name: "",
           email: "",
