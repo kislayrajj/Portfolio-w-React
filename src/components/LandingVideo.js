@@ -21,7 +21,7 @@ const LandingVideo = () => {
     <div
       className={` ${
         themeColor === "dark" ? "landingVideo" : "landingVideo-light"
-      } flex  justify-around items-center  w-full h-[90vh]`}>
+      } flex  justify-around items-center  w-full h-screen`}>
       {themeColor === "dark" && (
         <>
           {isVideoLoading && (
