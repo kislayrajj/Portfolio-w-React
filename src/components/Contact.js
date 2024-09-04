@@ -252,10 +252,8 @@ const Contact = () => {
               </div>
               <form className="space-y-4 relative" onSubmit={handleSubmit}>
                 {isSubmitting && (
-                  <div className="absolute  inset-0  size-full center">
-                    <div className="flex items-center justify-center bg-white/40  z-10 rounded-md w-1/2 h-[40%] ">
-                      <div className="formSubLoader"></div>
-                    </div>
+                  <div className="absolute  bottom-0 ">
+                    <div className="formSubLoader"></div>
                   </div>
                 )}
                 {/* Success Message */}
