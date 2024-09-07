@@ -46,7 +46,7 @@ function App() {
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<MainContent />}></Route>
-                <Route path="/Projects" element={<Projects />}></Route>
+                <Route path="/projects" element={<Projects />}></Route>
               </Routes>
             </Suspense>
           </div>

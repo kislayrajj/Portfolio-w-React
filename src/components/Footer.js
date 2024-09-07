@@ -34,7 +34,7 @@ const Footer = () => {
       <div className="flex flex-col gap-2">
         <span><Link smooth to="/#main-content">Home</Link>
           </span>
-        <span><Link smooth to="/Projects">Projects </Link></span>
+        <span><Link smooth to="/projects">Projects </Link></span>
         <span>Blogs</span>
         <span></span>
       </div>
