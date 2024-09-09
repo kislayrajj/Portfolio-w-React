@@ -13,10 +13,20 @@ module.exports = {
         '2p': '2%',
       },
       screens: {
-        '4xl': '2400px', // Example value, adjust as needed
+        '4xl': '2400px',
       },
+      colors: {
+        'custom-light': '#d9fdff',
+        'custom-blue': '#0096FF',  
 
+      },
+      textShadow: {
+        'custom-shadow-light': '0 0 2rem #00f0ff',
+        'custom-shadow-blue': '0 0 2rem #00D7FF',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow'), // Add this plugin
+  ],
 };

@@ -1,0 +1,49 @@
+
+.trainOne_font_text {
+  font-family: "Train One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.letter-2 {
+  transform: translate(-0.2rem, 1rem) rotate(10deg);
+  animation: flicker 2s ease-in-out infinite alternate;
+}
+
+.letter-6 {
+  transform: translate(-0.2rem, 1rem) rotate(10deg);
+  animation: flicker 2s ease-in-out 1.5s infinite alternate;
+
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  5% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  5.5% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  6% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  7% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(13deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+}

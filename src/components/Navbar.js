@@ -41,7 +41,7 @@ const handleActive=(section)=>{
   const body = "Hello Kislay,";
 
   const downloadResume = () => {
-    const url = "/kislayRaj_resume_webDeveloper _1yr_exp.pdf";
+    const url = "/kislayRaj_resume_webDeveloper _1.5yr_exp.pdf";
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -51,7 +51,7 @@ const handleActive=(section)=>{
       })
       .then((blob) => {
         const file = new Blob([blob], { type: 'application/pdf' });
-        saveAs(file, "kislayRaj_resume_webDeveloper _1yr_exp.pdf");
+        saveAs(file, "kislayRaj_resume_webDeveloper _1.5yr_exp.pdf");
       })
       .catch((error) => console.error("Error downloading file:", error));
   };

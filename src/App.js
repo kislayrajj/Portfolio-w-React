@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
@@ -16,13 +16,19 @@ const Projects = lazy(() => import("./pages/Projects.js"));
 function App() {
   // increase loading time
   const [isLoading, setIsLoading] = useState(true);
+  const themeColor = useSelector((state) => state.theme.themeColor);
+  const {pathname} = useLocation()
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   }, []);
 
-  const themeColor = useSelector((state) => state.theme.themeColor);
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[pathname])
+
+
   return (
     <>
       <div
