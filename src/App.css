@@ -80,7 +80,7 @@ html {
   font-family: "Kode Mono", monospace;
 }
 .landingVideo-light {
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     circle,
     #d16ba5,
     #d48ac0,
@@ -94,7 +94,8 @@ html {
     #fefefe,
     #fefefe,
     #fdfdfd
-  );
+  ); */
+  background-image: linear-gradient(to right bottom, #6cc2f0, #90c0f3, #afbef1, #c7bdeb, #d9bde2, #ddbfe0, #e0c2de, #e2c5dc, #dfc9e0, #dccce2, #dad0e4, #d8d3e5);
   font-family: "Kode Mono", monospace;
 }
 .landingVideo-pink {

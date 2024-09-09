@@ -5,13 +5,31 @@
   font-style: normal;
 }
 
+.letter_light {
+  color: #d9fdff; 
+  text-shadow: 0 0 2rem #00f0ff; 
+}
 
-.letter-2 {
+.letter_blue {
+  color: #0096FF;
+  text-shadow: 0 0 2rem #00D7FF; 
+}
+
+.letter_white {
+  color: white; 
+  text-shadow: 0 0 2rem #81c2c7; 
+}
+
+.letter_pink {
+  color: #F0A8D0;
+  text-shadow: 0 0 2rem #c7a0c9; 
+}
+.letter_2 {
   transform: translate(-0.2rem, 1rem) rotate(10deg);
   animation: flicker 2s ease-in-out infinite alternate;
 }
 
-.letter-6 {
+.letter_6 {
   transform: translate(-0.2rem, 1rem) rotate(10deg);
   animation: flicker 2s ease-in-out 1.5s infinite alternate;
 

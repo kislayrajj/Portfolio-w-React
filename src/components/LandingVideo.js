@@ -47,11 +47,12 @@ const LandingVideo = () => {
             themeColor === "dark"
               ? {
                   WebkitTextStroke: "2px white",
-                  WebkitTextFillColor: isHovered ? "white" : "transparent",
+                  color:"transparent",
                 }
               : {
                   WebkitTextStroke: "2px white",
-                  WebkitTextFillColor: isHovered ? "black" : "transparent",
+                  color: "transparent",
+                
                 }
           }
           onMouseEnter={() => setIsHovered(true)}
