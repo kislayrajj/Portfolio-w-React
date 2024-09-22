@@ -24,7 +24,7 @@ const Projects = () => {
     <div
       className={`min-h-screen ${
         themeColor === "dark" ? "" : "projects"
-      } overflow-hidden px-5 py-12`}>
+      } overflow-hidden px-5 xl:px-10 py-12`}>
       <div className=" pt-20 center">
         {" "}
         <motion.div
@@ -40,12 +40,13 @@ const Projects = () => {
           dangerouslySetInnerHTML={{ __html: dateTime }}></motion.div>
       </div>
       {/* beginner level */}
-      <div className="theme-font px-6 text-green-400 font-semibold text-xl">
-        <h1 className="fancy w-fit px-2 py-1">Beginner</h1>
+      <div className={`theme-font px-6 
+        ${themeColor === "dark" ? "text-green-400 " : "text-blue-400"}  font-semibold text-xl xl:text-2xl`}>
+        <h1 className={`fancy w-fit px-2 py-1`}>Beginner</h1>
       </div>
       <div
-        className={`mt-2 w-full  flex flex-wrap  gap-6 items-center  justify-between md:flex-row md:gap-8  text-xs`}>
-        {projectData?.beginner?.map((item, index) => {
+        className={`mt-6 xl:8 w-full  flex flex-wrap  gap-6 items-center  justify-between md:flex-row md:gap-8  text-xs`}>
+        {projectData?.beginnerLevel.map((item, index) => {
           return (
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -114,12 +115,13 @@ const Projects = () => {
 
       {/* Mid level */}
       <div className="mt-12">
-        <div className="theme-font px-6 text-green-400 font-semibold text-xl ">
+        <div className={`theme-font px-6 
+        ${themeColor === "dark" ? "text-green-400 " : "text-blue-400"}  font-semibold text-xl xl:text-2xl`}>
           <h1 className="fancy w-fit px-2 py-1">Mid</h1>
         </div>
         <div
           className={`mt-2 w-full  flex flex-wrap  gap-6 items-center  justify-between md:flex-row md:gap-8  text-xs`}>
-          {projectData?.medium?.map((item, index) => {
+          {projectData?.mediumLevel?.map((item, index) => {
             return (
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -193,14 +195,15 @@ const Projects = () => {
         </div>
       </div>
 
-            {/* Expert level */}
-            <div className="mt-12">
-        <div className="theme-font px-6 text-green-400 font-semibold text-xl ">
+      {/* Expert level */}
+      <div className="mt-12">
+        <div className={`theme-font px-6 
+        ${themeColor === "dark" ? "text-green-400 " : "text-blue-400"}  font-semibold text-xl xl:text-2xl`}>
           <h1 className="fancy w-fit px-2 py-1">Expert</h1>
         </div>
         <div
           className={`mt-2 w-full  flex flex-wrap  gap-6 items-center  justify-between md:flex-row md:gap-8  text-xs`}>
-          {projectData?.expert?.map((item, index) => {
+          {projectData?.expertLevel?.map((item, index) => {
             return (
               <motion.div
                 initial={{ opacity: 0, y: 50 }}

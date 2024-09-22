@@ -8,8 +8,7 @@ html {
   margin: 0;
   background: linear-gradient(45deg, #150c0c, #030321);
   color: white;
-    cursor:url("./assets/customCursor/icons8-cursor-20-forDarkTheme.png"),auto
-
+  cursor: url("./assets/customCursor/icons8-cursor-20-forDarkTheme.png"), auto;
 }
 
 .godLevelClassFromAppJS-light,
@@ -67,8 +66,7 @@ html {
     linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
   color: black;
   z-index: -20000;
-  cursor:url("./assets/customCursor/icons8-cursor-25.png"),auto
-
+  cursor: url("./assets/customCursor/icons8-cursor-25.png"), auto;
 }
 
 .navbar {
@@ -95,7 +93,21 @@ html {
     #fefefe,
     #fdfdfd
   ); */
-  background-image: linear-gradient(to right bottom, #6cc2f0, #90c0f3, #afbef1, #c7bdeb, #d9bde2, #ddbfe0, #e0c2de, #e2c5dc, #dfc9e0, #dccce2, #dad0e4, #d8d3e5);
+  background-image: linear-gradient(
+    to right bottom,
+    #6cc2f0,
+    #90c0f3,
+    #afbef1,
+    #c7bdeb,
+    #d9bde2,
+    #ddbfe0,
+    #e0c2de,
+    #e2c5dc,
+    #dfc9e0,
+    #dccce2,
+    #dad0e4,
+    #d8d3e5
+  );
   font-family: "Kode Mono", monospace;
 }
 .landingVideo-pink {

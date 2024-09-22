@@ -6,7 +6,7 @@ import websiteDev_img from "../assets/websitedev.png";
 import thumbVideobg from "../assets/website-development.mp4";
 import thumbVideobg2 from "../assets/thumbnail-of-web-application-development.mp4";
 import thumbVideobg3 from "../assets/ux-designer.mp4";
-import thumbVideobg4 from "../assets/texhnical-experties.mp4";
+import thumbVideobg4 from "../assets/technical-expertise.mp4";
 // import thumbVideobg5 from "../assets/digital-marketing.mp4";
 import thumbVideobg6 from "../assets/thumbnail-of-maintenance.mp4";
 import About from "./About";
@@ -61,7 +61,7 @@ const MainContent = () => {
         observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [hasAnimated]);
 
   const servicesContentMotion = {
     initial: { opacity: 0, y: 100 },
@@ -87,7 +87,7 @@ const MainContent = () => {
           themeColor === "dark" ? "text-white" : "services-light"
         }`}>
         <div id="services" className={`scroll-m-16 `} ref={serviceRef}>
-          <div className=" services h-auto w-full  p-5 ">
+          <div className=" services h-auto w-full  p-5 pl-12 ">
             <h1
               className={`${
                 themeColor === "dark" ? "text-green-400" : " text-blue-600"
