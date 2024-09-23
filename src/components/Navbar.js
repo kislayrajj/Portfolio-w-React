@@ -98,7 +98,7 @@ const handleActive=(section)=>{
       <nav className={`navbar  h-auto w-11/12 m-2 rounded-3xl flex justify-around p-3 fixed  z-20 ${themeColor==="dark" ? "":"bg-white/80"}`}>
         {/* <img
           src={Logo}
-          class="company-logo h-12 object-cover hover:scale-150 transition-transform duration-400"
+          className="company-logo h-12 object-cover hover:scale-150 transition-transform duration-400"
         /> */}
         <motion.div
          initial={{ opacity: 0, y: -200 }}
@@ -111,7 +111,7 @@ const handleActive=(section)=>{
           
           onClick={handleBurgerMenuClick}
           className="burger text-2xl absolute right-[-20px] top-4 md:right-0  md:top-4 cursor-pointer lg:hidden">
-            { isBurger ? <i class="fa-solid fa-xmark h-10 w-10"></i> : <i
+            { isBurger ? <i className="fa-solid fa-xmark h-10 w-10"></i> : <i
             className="fa-solid fa-ellipsis-vertical h-10 w-10"
             ></i>}
           
