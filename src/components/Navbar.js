@@ -180,14 +180,14 @@ const handleActive=(section)=>{
         </div>
         <div className="menu-2 m-2">
           <ul className="flex gap-5 md:gap-10">
-            <motion.li
+            {/* <motion.li
               initial={{ opacity: 0, x: -500 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}
               className= {`cursor-pointer hover:text-green-500  hover:font-bold transition-all ease-in-out duration-100 ${isActive ==="faqs" ? "xl:text-2xl lg:text-lg text-green-500 border-b-2 border-green-500":""}`}
               onClick={()=>handleActive("faqs")}>
               FAQs
-            </motion.li>
+            </motion.li> */}
             <motion.li
               initial={{ opacity: 0, x: -700 }}
               animate={{ opacity: 1, x: 0 }}
