@@ -11,6 +11,7 @@ import easyM2MThumb from "../../assets/images/project_data_thumbnails/medium/eas
 import clinicManagementThumb from "../../assets/images/project_data_thumbnails/expert/clinic_management_thumb.png";
 import reactPlayThumb from "../../assets/images/project_data_thumbnails/beginner/reactPlayThumb.jpg";
 import portfolioWithBootstrapThumb from "../../assets/images/project_data_thumbnails/beginner/portfolio_with_bootstrap_thumb.png";
+import academicProjCatalogueThumb from "../../assets/images/project_data_thumbnails/medium/academicProjCatalogueThumb.png"
 const data = {
   beginnerLevel: [
     {
@@ -163,6 +164,18 @@ const data = {
       description:
         "Website for EasyM2M Technologies Pvt. Ltd., Bangalore, India",
       languages: ["React", "Tailwind CSS"],
+      width: "256px",
+      height: "288px",
+      "margin-top": "30px",
+    },
+    {
+      id: 2,
+      link: "https://academic-project-catalogue.vercel.app/",
+      githubRepoLink: "https://github.com/kislayrajj/Academic-Project-Catalogue",
+      image: academicProjCatalogueThumb,
+      title: "Academic Project Catalogue",
+      description: "All projects done in college at one place",
+      languages: ["React", "Tailwind"],
       width: "256px",
       height: "288px",
       "margin-top": "30px",

@@ -28,7 +28,7 @@ code {
 
 .theme-font-normal {
   font-family: "Poppins", sans-serif;
-} 
+}
 
 .animated-bg-form-dark {
   background: linear-gradient(
@@ -193,8 +193,7 @@ code {
   }
 } */
 
-.formSubLoader{
-
+.formSubLoader {
   border: 8px solid rgba(0, 0, 0, 0.1);
   border-left: 8px solid #1291cc;
   border-radius: 50%;
@@ -204,10 +203,13 @@ code {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 
 .fancy {
   position: relative;
@@ -225,4 +227,16 @@ code {
     background-repeat: round;
     background-position: 0em;
   }
+}
+
+.neon_text_light {
+  color: #fdfdfd;
+  text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
+    0 0 8px #03edf975;
+}
+
+.neon_text_dark {
+  color: #000000;
+  text-shadow: 0 0 1px #001716, 0 0 2px #33333475, 0 0 3px #33333475,
+    0 0 5px #33333475;
 }

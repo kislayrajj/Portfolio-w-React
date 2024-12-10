@@ -14,6 +14,9 @@ const Contact = () => {
     company: "",
     message: "",
   });
+  const slidingTexts = ["project", "idea", "vision", "requirements"];
+  const [currentSlidingText, setCurrentSlidingText] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const themeColor = useSelector((state) => state.theme.themeColor);
 
@@ -45,6 +48,16 @@ const Contact = () => {
       setIsFormDark(true);
     }
   }, [themeColor]);
+
+  //sliding text animation
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlidingText(
+        (prevIndex) => (prevIndex + 1) % slidingTexts?.length
+      );
+    }, 5000);
+    return () => clearInterval(slideInterval);
+  }, []);
 
   //form
   const handleChange = (e) => {
@@ -120,6 +133,8 @@ const Contact = () => {
   return (
     <div
       ref={contactRef}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className={`min-h-screen overflow-hidden pb-5 ${
         themeColor === "dark"
           ? "bg-gradient-to-r from-slate-900 to-zinc-900"
@@ -134,7 +149,7 @@ const Contact = () => {
       </div>
       <div className="h-[90%] mt-20 flex flex-col md:flex-row justify-evenly">
         <div className="center">
-          <div className="group">
+          <div className={`group`}>
             <motion.p
               initial={{ opacity: 0, x: -100 }}
               animate={isVisible ? { opacity: 1, x: 0 } : ""}
@@ -153,8 +168,21 @@ const Contact = () => {
               initial={{ opacity: 0, x: -100 }}
               animate={isVisible ? { opacity: 1, x: 0 } : ""}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-2xl lg:text-3xl xl:text-5xl tracking-wide md:mt-2">
-              project.
+              className="text-2xl lg:text-3xl xl:text-5xl tracking-wide md:mt-2 ">
+              <motion.p
+                key={currentSlidingText}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.8 }}
+                className={`${
+                  themeColor === "dark"
+                    ? `${isHovered ? "letter_white" : ""}`
+                    : `${isHovered ? "letter_pink" : ""}`
+                } transition-all duration-500 ease-in-out`}>
+                {slidingTexts[currentSlidingText]}.
+              </motion.p>
+              {/* project. */}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: -150 }}

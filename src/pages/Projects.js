@@ -40,8 +40,11 @@ const Projects = () => {
           dangerouslySetInnerHTML={{ __html: dateTime }}></motion.div>
       </div>
       {/* beginner level */}
-      <div className={`theme-font px-6 
-        ${themeColor === "dark" ? "text-green-400 " : "text-blue-400"}  font-semibold text-xl xl:text-2xl`}>
+      <div
+        className={`theme-font px-6 
+        ${
+          themeColor === "dark" ? "text-green-400 " : "text-blue-400"
+        }  font-semibold text-xl xl:text-2xl`}>
         <h1 className={`fancy w-fit px-2 py-1`}>Beginner</h1>
       </div>
       <div
@@ -87,8 +90,10 @@ const Projects = () => {
                   <div className="pt-3">
                     <ul className="list-disc list-outside pl-7">
                       <li
-                        className={`  ${
-                          themeColor === "dark" ? "text-gray-300" : "text-black"
+                        className={`neon_text  ${
+                          themeColor === "dark"
+                            ? "neon_text_light"
+                            : "text-black font-semibold"
                         } `}>
                         {item.title}
                       </li>
@@ -115,12 +120,16 @@ const Projects = () => {
 
       {/* Mid level */}
       <div className="mt-12">
-        <div className={`theme-font px-6 
-        ${themeColor === "dark" ? "text-green-400 " : "text-blue-400"}  font-semibold text-xl xl:text-2xl`}>
+        <div
+          className={`theme-font px-6 
+        ${
+          themeColor === "dark" ? "text-green-400 " : "text-blue-400"
+        }  font-semibold text-xl xl:text-2xl`}>
           <h1 className="fancy w-fit px-2 py-1">Mid</h1>
         </div>
         <div
-          className={`mt-2 w-full  flex flex-wrap  gap-6 items-center  justify-between md:flex-row md:gap-8  text-xs`}>
+          className={`mt-2 w-full  flex flex-wrap  gap-6 items-center  justify- md:flex-row md:gap-20  text-xs`}>
+          {/* give justify-between above if enough project is there to cover the width */}
           {projectData?.mediumLevel?.map((item, index) => {
             return (
               <motion.div
@@ -162,10 +171,10 @@ const Projects = () => {
                     <div className="pt-3">
                       <ul className="list-disc list-outside pl-7">
                         <li
-                          className={`  ${
+                          className={`neon_text  ${
                             themeColor === "dark"
-                              ? "text-gray-300"
-                              : "text-black"
+                              ? "neon_text_light"
+                              : "text-black font-semibold"
                           } `}>
                           {item.title}
                         </li>
@@ -197,8 +206,11 @@ const Projects = () => {
 
       {/* Expert level */}
       <div className="mt-12">
-        <div className={`theme-font px-6 
-        ${themeColor === "dark" ? "text-green-400 " : "text-blue-400"}  font-semibold text-xl xl:text-2xl`}>
+        <div
+          className={`theme-font px-6 
+        ${
+          themeColor === "dark" ? "text-green-400 " : "text-blue-400"
+        }  font-semibold text-xl xl:text-2xl`}>
           <h1 className="fancy w-fit px-2 py-1">Expert</h1>
         </div>
         <div
@@ -244,10 +256,10 @@ const Projects = () => {
                     <div className="pt-3">
                       <ul className="list-disc list-outside pl-7">
                         <li
-                          className={`  ${
+                          className={`neon_text  ${
                             themeColor === "dark"
-                              ? "text-gray-300"
-                              : "text-black"
+                              ? "neon_text_light"
+                              : "text-black font-semibold"
                           } `}>
                           {item.title}
                         </li>

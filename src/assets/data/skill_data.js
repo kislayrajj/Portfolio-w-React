@@ -13,6 +13,7 @@ import reactNativeLogo from '../logos/react_native_icon.png';
 import nodejsLogo from '../logos/node_icon.png';
 import expressLogo from '../logos/expressjs-logo.svg'; 
 import mongodbLogo from '../logos/mongodb_icon.png'; 
+import pythonLogo from "../logos/skills/python-logo.png"
 
  const skillsData = [
   {
@@ -92,6 +93,12 @@ import mongodbLogo from '../logos/mongodb_icon.png';
     bg: 'bg-gradient-to-r from-emerald-500 to-emerald-900',
     title: 'MongoDB',
     disc: 'Skilled in utilizing MongoDB for NoSQL database management and development.'
+  },
+  {
+    title: 'Python',
+    image: pythonLogo,
+    bg: 'bg-gradient-to-r from-blue-500 to-emerald-800',
+    disc: 'Skilled in Python for scripting, data analysis, and automation.'
   }
   
 ];
