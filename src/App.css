@@ -129,23 +129,7 @@ html {
     #5ffbf1
   );
 }
-.projects {
-  background-image: radial-gradient(
-    circle,
-    #dfbce0,
-    #e2c9e8,
-    #e6d6ef,
-    #ece3f5,
-    #f3effa,
-    #f7f4fc,
-    #fbfafe,
-    #ffffff,
-    #ffffff,
-    #fefefe,
-    #fefefe,
-    #fdfdfd
-  );
-}
+
 .landingVideo-green {
   font-family: "Kode Mono", monospace;
   background-image: radial-gradient(
@@ -330,6 +314,8 @@ html {
     linear-gradient(90deg, rgb(8, 8, 8), rgb(221, 221, 221));
   background-blend-mode: overlay, overlay, overlay, overlay, normal;
   height: auto;
+  background-size: 100%;
+  transition: background-size 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
 }
 
 .skills-light {
@@ -386,7 +372,15 @@ html {
     ),
     linear-gradient(90deg, rgb(195, 195, 195), rgb(228, 228, 228));
   background-blend-mode: overlay, overlay, overlay, normal;
+  background-size: 100%;
+  transition: background-size 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
 }
+
+.skills:hover, .skills-light:hover{
+  background-size: 120%;
+
+}
+
 .autoplay-progress {
   position: absolute;
   right: 16px;

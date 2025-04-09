@@ -52,7 +52,7 @@ const Skills = () => {
             <div className="title text-center text-sm lg:text-xl font-bold p-2 pb-1">
               {skill.title}
             </div>
-            <div className="disc p-1 pt-0 text-[8px] lg:text-base">
+            <div className="disc p-1 pt-0 text-[8px] lg:text-base text-center">
               {skill.disc}
             </div>
             <div className="text-center text-white/90">

@@ -12,6 +12,7 @@ import clinicManagementThumb from "../../assets/images/project_data_thumbnails/e
 import reactPlayThumb from "../../assets/images/project_data_thumbnails/beginner/reactPlayThumb.jpg";
 import portfolioWithBootstrapThumb from "../../assets/images/project_data_thumbnails/beginner/portfolio_with_bootstrap_thumb.png";
 import academicProjCatalogueThumb from "../../assets/images/project_data_thumbnails/medium/academicProjCatalogueThumb.png"
+import aiFusionThumb2 from "../../assets/images/project_data_thumbnails/medium/aiFusionThumb2.png"
 const data = {
   beginnerLevel: [
     {
@@ -176,6 +177,19 @@ const data = {
       title: "Academic Project Catalogue",
       description: "All projects done in college at one place",
       languages: ["React", "Tailwind"],
+      width: "256px",
+      height: "288px",
+      "margin-top": "30px",
+    },
+    {
+      id: 3,
+      link: "https://ai-fusion-client.vercel.app/",
+      githubRepoLink: "https://github.com/kislayrajj/AiFusion-client",
+      image: aiFusionThumb2,
+      title: "AI Fusion",
+      description:
+        "Bringing Various AI Model and Expert Systems at one place",
+      languages: ["React", "Tailwind CSS"],
       width: "256px",
       height: "288px",
       "margin-top": "30px",

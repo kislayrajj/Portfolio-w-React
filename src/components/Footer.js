@@ -1,5 +1,6 @@
 import React from "react";
-import webLogo from "../assets/webLogo.png";
+import webLogo from "../assets/logos/verySmall/favicon.ico";
+// import webLogo from "../assets/webLogo.png";
 import { HashLink as Link } from 'react-router-hash-link';
 import { useSelector } from "react-redux";
 const Footer = () => {
@@ -29,13 +30,13 @@ const Footer = () => {
       </div>
 
       <div>
-        <span className="">2024 Kislay Raj. All rights reserved.</span>
+        <span className="">2025 Kislay Raj. All rights reserved.</span>
       </div>
       <div className="flex flex-col gap-2">
         <span><Link smooth to="/#main-content">Home</Link>
           </span>
         <span><Link smooth to="/projects">Projects </Link></span>
-        <span>Blogs</span>
+        {/* <span>Blogs</span> */}
         <span></span>
       </div>
     </div>

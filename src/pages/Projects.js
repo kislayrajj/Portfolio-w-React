@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <div
       className={`min-h-screen ${
-        themeColor === "dark" ? "" : "projects"
+        themeColor === "dark" ? "projects-dark" : "projects-light"
       } overflow-hidden px-5 xl:px-10 py-12`}>
       <div className=" pt-20 center">
         {" "}

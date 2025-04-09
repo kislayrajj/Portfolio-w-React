@@ -28,6 +28,7 @@ import LandingVideo from "./LandingVideo";
 import { useSelector } from "react-redux";
 import Footer from "./Footer";
 import NavigationButton from "./NavigationButton";
+import FAQ from "./FAQ";
 const MainContent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -105,7 +106,7 @@ const MainContent = () => {
             <motion.div
               variants={servicesContentMotion}
               initial="initial"
-              animate={isVisible ? 'animate' : 'initial'}
+              animate={isVisible ? "animate" : "initial"}
               className=" Boxes m-10 flex flex-wrap justify-center gap-5 scroll-smooth ">
               <div
                 className={`larger_screen lg:w-[90%] w-[95%] hidden lg:block px-0.5 pt-5 rounded-lg ${
@@ -293,20 +294,23 @@ const MainContent = () => {
             className={`lg:w-[80%] w-[95%] md:p-5 rounded ${
               themeColor === "dark" ? "" : "shadow-[0px_0px_30px_3px_#2d3748] "
             }`}>
-           <Skills />
+            <Skills />
           </div>
         </div>
       </div>
       <div id="about" className="scroll-m-16">
         <About />
       </div>
+      <div id="faq" className="scroll-m-16">
+        <FAQ />
+      </div>
       <div id="contact" className="scroll-m-16">
         <Contact />
       </div>
+
       <div id="footer" className="scroll-m-16">
         <Footer />
       </div>
-
     </div>
   );
 };

@@ -1,0 +1,48 @@
+/* .faqs-dark {
+  background: radial-gradient(
+      circle at top left,
+      rgb(33, 29, 75) 0%,
+      rgb(33, 29, 75) 4%,
+      rgb(29, 39, 97) 4%,
+      rgb(29, 39, 97) 39%,
+      rgb(24, 49, 120) 39%,
+      rgb(24, 49, 120) 45%,
+      rgb(20, 59, 142) 45%,
+      rgb(20, 59, 142) 69%,
+      rgb(15, 69, 164) 69%,
+      rgb(15, 69, 164) 71%,
+      rgb(11, 79, 186) 71%,
+      rgb(11, 79, 186) 75%,
+      rgb(6, 89, 209) 75%,
+      rgb(6, 89, 209) 79%,
+      rgb(2, 99, 231) 79%,
+      rgb(2, 99, 231) 100%
+    ),
+    rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+
+  background-size: 100%;
+  transition: background-size 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.faqs-dark:hover,
+.faqs-light:hover {
+  background-size: 120%;
+} */
+
+
+.projects-light {
+  background-image: radial-gradient(circle at top right, rgb(49, 157, 235) 0%, rgb(49, 157, 235) 13%,rgb(76, 166, 234) 13%, rgb(76, 166, 234) 23%,rgb(103, 176, 232) 23%, rgb(103, 176, 232) 33%,rgb(130, 185, 231) 33%, rgb(130, 185, 231) 46%,rgb(156, 194, 230) 46%, rgb(156, 194, 230) 48%,rgb(183, 203, 229) 48%, rgb(183, 203, 229) 63%,rgb(210, 213, 227) 63%, rgb(210, 213, 227) 83%,rgb(237, 222, 226) 83%, rgb(237, 222, 226) 100%);
+  background-size: 100%;
+  transition: background-size 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.projects-dark {
+  background-image: radial-gradient(circle at top left, rgb(33, 29, 75) 0%, rgb(33, 29, 75) 4%,rgb(29, 39, 97) 4%, rgb(29, 39, 97) 39%,rgb(24, 49, 120) 39%, rgb(24, 49, 120) 45%,rgb(20, 59, 142) 45%, rgb(20, 59, 142) 69%,rgb(15, 69, 164) 69%, rgb(15, 69, 164) 71%,rgb(11, 79, 186) 71%, rgb(11, 79, 186) 75%,rgb(6, 89, 209) 75%, rgb(6, 89, 209) 79%,rgb(2, 99, 231) 79%, rgb(2, 99, 231) 100%);
+  background-size: 100%;
+  transition: background-size 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.projects-light:hover,.projects-dark:hover {
+  background-size: 120%;
+}
