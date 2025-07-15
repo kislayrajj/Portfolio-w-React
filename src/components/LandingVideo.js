@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import bgVideo from "../assets/bgPortfolio.mp4";
+import bgVideo1 from "../assets/heroBgVideos/bgPortfolio1.mp4";
+import bgVideo2 from "../assets/heroBgVideos/bgPortfolio2.mp4";
 import videoLoader from "../components/Loaders/videoLoader.json";
 import Lottie from "lottie-react";
 import Slogan from "./Slogan";
@@ -11,12 +12,15 @@ const LandingVideo = () => {
   const [isVideoLoading, setIsVideoLoading] = useState(true);
   const [sloganKey, setSloganKey] = useState(0);
   const themeColor = useSelector((state) => state.theme.themeColor);
+  const currentHeroBgVideo = useSelector((state)=> state.heroBgVideo.currentHeroBgVideo)
+  const heroBgVideoSources = [bgVideo2, bgVideo1]; 
 
   useEffect(() => {
     setSloganKey((prevKey) => prevKey + 1);
     // console.log("🐶 ~ LandingVideo ~ sloganKey:", sloganKey)
   }, [themeColor]);
 
+  
   return (
     <div
       className={` ${
@@ -31,12 +35,13 @@ const LandingVideo = () => {
           )}
 
           <video
+          key={currentHeroBgVideo}
             autoPlay
             muted
             loop
             onLoadedData={() => setIsVideoLoading(false)}
             className="absolute inset-0 object-cover w-full h-full ">
-            <source src={bgVideo} type="video/mp4" />
+            <source src={heroBgVideoSources[currentHeroBgVideo]} type="video/mp4" />
           </video>
         </>
       )}

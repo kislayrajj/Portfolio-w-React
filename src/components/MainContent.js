@@ -20,14 +20,13 @@ import "swiper/css/pagination";
 // import required modules
 import {
   Autoplay,
-  EffectCoverflow,
   Pagination,
   Navigation,
 } from "swiper/modules";
 import LandingVideo from "./LandingVideo";
 import { useSelector } from "react-redux";
 import Footer from "./Footer";
-import NavigationButton from "./NavigationButton";
+// import NavigationButton from "./NavigationButton";
 import FAQ from "./FAQ";
 const MainContent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,13 +66,13 @@ const MainContent = () => {
   const servicesContentMotion = {
     initial: { opacity: 0, y: 100 },
     animate: {
-      opacity: isVisible ? 1 : 0, // Control animation based on visibility
+      opacity: isVisible ? 1 : 0, 
       y: isVisible ? 0 : 100,
       transition: {
         duration: 1.5,
         delay: 0.5,
-        type: "spring", // You can use different types of transitions like spring
-        damping: 10, // Adjust the damping for a smoother animation
+        type: "spring",
+        damping: 10, 
       },
     },
   };

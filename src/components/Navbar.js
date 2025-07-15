@@ -6,11 +6,13 @@ import { motion } from "framer-motion";
 import NameLogoGsap from "./logos/NameLogoGsap";
 import { useDispatch, useSelector } from "react-redux";
 import { setThemeColor } from "../redux/themeColorSlice";
+import {setHeroBgVideo} from "../redux/heroBgVideoSlice"
 const Navbar = () => {
   let [isBurger, setIsBurger] = useState(false);
   const [isActive, setIsActive] = useState("");
   const [isThemeMenuHidden, setIsThemeMenuHidden] = useState(true);
   const themeColor = useSelector((state) => state.theme.themeColor);
+  const currentHeroBgVideo= useSelector((state)=> state.heroBgVideo.currentHeroBgVideo)
   const dispatch = useDispatch();
   const menuRef = useRef(null);
 
@@ -36,6 +38,7 @@ const Navbar = () => {
     setIsActive(section);
     handleMenuClick();
   };
+
   const subject = "Let's work together (edit as per requirement)";
   const body = "Hello Kislay,";
 
@@ -70,6 +73,7 @@ const Navbar = () => {
     // { name: "Purple", value: "purple", bgColor: "bg-purple-500" },
     // { name: "Orange", value: "orange", bgColor: "bg-orange-500" },
   ];
+ 
 
   const handleThemeSelection = (color) => {
     handleThemeColor(color);
@@ -98,6 +102,14 @@ const Navbar = () => {
     return () => document.removeEventListener("click", handleOutsideClick); // Cleanup
   }, [isBurger, isThemeMenuHidden]);
 
+  
+  // toggle bg video
+  const toggleHeroBgVideo =()=>{
+    const nextVideo = currentHeroBgVideo === 0?1:0;
+    dispatch(setHeroBgVideo(nextVideo))
+    console.log("toogle btn clicked");
+    console.log(nextVideo) 
+  }
   return (
     <div ref={menuRef} className="flex justify-center relative">
       <nav
@@ -285,6 +297,13 @@ const Navbar = () => {
                     {color.name}
                   </p>
                 ))}
+                <div onClick={toggleHeroBgVideo} title="Toggle BackGround" className={`older_smaller_screen_theme_menu_list cursor-pointer  px-2 py-1 mt-1 rounded-md transition-all ease-in-out duration-300 center ${
+                  themeColor === "dark"
+                    ? "hover:bg-blue-400 text-black"
+                    : "hover:bg-blue-400 text-white"
+                }`}>
+                  BG
+                </div>
               </motion.div>
             )}
           </div>
