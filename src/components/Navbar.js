@@ -107,8 +107,8 @@ const Navbar = () => {
   const toggleHeroBgVideo =()=>{
     const nextVideo = currentHeroBgVideo === 0?1:0;
     dispatch(setHeroBgVideo(nextVideo))
-    console.log("toogle btn clicked");
-    console.log(nextVideo) 
+    // console.log("toggle btn clicked");
+    // console.log(nextVideo) 
   }
   return (
     <div ref={menuRef} className="flex justify-center relative">

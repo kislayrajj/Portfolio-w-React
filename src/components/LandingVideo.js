@@ -19,7 +19,10 @@ const LandingVideo = () => {
     setSloganKey((prevKey) => prevKey + 1);
     // console.log("🐶 ~ LandingVideo ~ sloganKey:", sloganKey)
   }, [themeColor]);
+useEffect(()=>{
+  setIsVideoLoading(true);
 
+},[currentHeroBgVideo])
   
   return (
     <div
